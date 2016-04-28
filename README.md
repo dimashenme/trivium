@@ -23,3 +23,38 @@ had a right to skip 2k problems with a simple asterisk.
 The repository contains the original Russian LaTeX source of the
 course as well as the English translation.
 
+Compiled PDFs are available at [http://shenme.de/listki/]
+
+## Table of contents
+
+### Algebra
+
+1. Groups, rings and fields. ps, pdf
+2. Divisibility in rings and Euclid's algorithm.
+3. Vector spaces and linear maps.
+4. Algebraic numbers.
+5. Algebras over a field.
+6. Grassmann algebra and determinant.
+7. Matrices and determinants.
+8. Linear algebra: characteristic polynomial.
+9. Artinian rings and idempotents.
+10. Normal groups and representations.
+11. Galois theory.
+12. Semisimple and nilpotent operators.
+
+### Geometry
+
+1. Real numbers.
+2. Real numbers, part 2.
+3. Metric spaces and norm.
+4. Topology of metric spaces.
+5. Set-theoretic topology.
+6. Set-theoretic topology: product of spaces.
+7. Set-theoretic topology: compactness.
+8. Pointwise and uniform convergence.
+9. Connectedness.
+10. The fundamental group and the loop space.
+11. Galois coverings.
+12. Fundamental group and homotopies.
+
+
