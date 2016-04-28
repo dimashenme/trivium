@@ -29,7 +29,7 @@ Compiled PDFs are available at [http://shenme.de/listki/]
 
 ### Algebra
 
-1. Groups, rings and fields. ps, pdf
+1. Groups, rings and fields.
 2. Divisibility in rings and Euclid's algorithm.
 3. Vector spaces and linear maps.
 4. Algebraic numbers.
