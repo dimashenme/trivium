@@ -23,7 +23,7 @@ had a right to skip 2k problems with a simple asterisk.
 The repository contains the original Russian LaTeX source of the
 course as well as the English translation.
 
-Compiled PDFs are available at [http://shenme.de/listki/]
+Compiled PDFs are available at <http://shenme.de/listki/>
 
 ## Table of contents
 
