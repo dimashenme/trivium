@@ -1,0 +1,438 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{4}{GEOMETRY 4: Topology of metric spaces.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie} Let $M$ be a metric space and $X\subseteq M$.
+Then $X$ is called {\bf open} when it contains,
+together with any point $x\in X$, some  $\epsilon$-ball with the center in $x$.
+A subset is called {\bf closed} if its complement is open.
+\end{opredelenie}
+
+\begin{zadacha} Prove that $X$ is open iff for any sequence $\{a_i\}$
+  converging to $x\in X$ all but a finite number of $a_i$ belong
+  to $X$.
+\end{zadacha}
+
+\begin{zadacha} Prove that the union of any number of open sets is
+  open. Prove that the intersection of a finite number of closed sets
+  is closed.
+\end{zadacha}
+
+\begin{zadacha} Prove that the closed ball
+$$ 
+\overline B_\epsilon(x) = \{ y \in X \ \ | \ \ d(x,y)\leq \epsilon\}
+$$
+is a closed subset.
+\end{zadacha}
+
+\begin{zadacha} Prove that a set is closed iff it contains all its
+  accumulation points.
+\end{zadacha}
+
+\begin{opredelenie} The {\bf closure} of a set $A\subset M$ 
+is the union of  $A$ and the set of all the accumulation points of $A$.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider a metric space, a closed ball $\overline B_\epsilon(x)$ 
+and an open ball $B_\epsilon(x)$. 
+Is it always true that  $\overline B_\epsilon(x)$ is
+the closure of $B_\epsilon(x)$? Prove that the closure of any subset is
+always closed.
+\end{zadacha}
+
+\begin{zadacha} \label{_DISKRE_Zadacha_}
+Let $A$ be a subset of $M$ which has no accumulation points (such a
+subset is called {\bf discrete}). Prove that $M \backslash A$ is open.
+\end{zadacha}
+
+\begin{opredelenie} Let $M$ be a %compact (must've been a typo - it's too
+              % early for compactness here
+metric space and $\epsilon > 0$ be a number. 
+Consider $R\subseteq M$ such that $M$ can be covered by
+  a union of all $\epsilon$-balls with center in $R$. Then $R$ is
+  called an {\bf $\epsilon$-net}.
+\end{opredelenie}
+
+\begin{zadacha} Let any sequence in $M$ have an accumulation
+  point. Prove that for any $\epsilon >0$ in $M$ there exists a
+  finite $\epsilon$-net.
+\end{zadacha}
+
+\begin{ukazanie} 
+  Suppose that there is no such net, then for any finite set $R$
+  there exists a point $x$, whose distance to $R$ is more than
+  $\epsilon$. Add $x$ to $R$, and, using this operation as induction
+  step, obtain an infinite discrete subset of $M$.
+\end{ukazanie}
+
+\begin{opredelenie} Let $X\subset M$ and $U_i\subset M$ be
+  a collection of open sets.  
+If $X \subset \cup U_i$ then one says that $U_i$ is a {\bf cover of $X$}. 
+A collection of sets obtained from
+  $\{U_i\}$ by throwing out some open sets in such a way that it remains 
+  a cover, is called a {\bf subcover}.
+\end{opredelenie}
+
+\begin{zadacha} \label{_shar_v_pokry_Zadacha_} Let $M$ be a metric
+  space, $S$ be an open cover of $M$.  Let every subsequence of elements
+  of $M$ have an accumulation point. Prove that there exists such an
+  $\epsilon>0$, that any ball of radius $<\epsilon$ is contained in
+  one of the sets of the cover $S$.
+\end{zadacha}
+
+\begin{ukazanie} 
+Suppose that for any $\epsilon$ there exists a point $x_\epsilon$ such that a
+corresponding $\epsilon$-ball is not contained entirely in any of the
+sets of the cover. Consider a sequence $\{\epsilon_i\}$
+which converges to zero and let $x$ be an accumulation point
+of $\{x_{\epsilon_i}\}$. Prove that $x$ is not contained in any of the sets
+of $S$.
+\end{ukazanie}
+
+\begin{zadacha}[!]\label{comp.defn}
+(Bolzano-Weierstrass lemma) 
+Let $X\subset M$ be a subset of a metric space. Prove that the
+following conditions are equivalent
+\begin{enumerate}
+\item Every sequence of points from $X$ has an accumulation point in
+  $X$. 
+\item Every open cover of $X$ has a finite subcover.
+\end{enumerate}
+\end{zadacha}
+
+\begin{ukazanie} Use problem~\ref{_DISKRE_Zadacha_} to deduce (a) from
+  (b).  In order to deduce (b) from (a), take an arbitrary cover $S$,
+  a number $\epsilon$ from the problem~\ref{_shar_v_pokry_Zadacha_}
+  and a finite $\epsilon$-net. Every ball of the $\epsilon$-net is
+  contained in some of the elements $U_i\in S$. Prove that $\{U_i\}$
+  is a finite subcover.
+\end{ukazanie}
+
+\begin{opredelenie} Let $M$, $M'$ be metric spaces, and $f:\; M \to
+  M'$ be a function. Then $f$ is called {\bf continuous}, if $f$
+  maps any sequence that converges to $x$ to a sequence that converges to
+  $f(x)$, for all $x\in M$.
+\end{opredelenie}
+
+\begin{zadacha}[!] Let $X$ be any subset of $M$.  Prove that a function
+  $f:\; M \to \R$, $x \overset f \mapsto d(\{x\}, X)$ is continuous,
+  where $d(\{x\}, X)$ (distance between $x$ and $X$) is defined as
+  $d(\{x\}, X):=\inf_{x'\in X}d(x, x')$.
+\end{zadacha}
+
+\begin{opredelenie} Let $M$ be a metric space, $X\subset M$.
+  One says that $X$ is a {\bf compact set},
+  if any of the statements of the problem~\ref{comp.defn} holds. Note
+  that these conditions do not depend on inclusion $X\hookrightarrow
+  M$, but only on the metric on $X$.
+\end{opredelenie}
+
+\begin{zadacha}[!] Consider the completion of $\Z$ with respect to the norm
+  $\nu_p$ defined above (it is called ``a ring of integer $p$-adic
+  numbers'' and is denoted $\Z_p$). Prove that it is compact.
+\end{zadacha}
+
+\begin{ukazanie} Prove that any $p$-adic number can be represented in
+  the from $\sum a_i p^i$, where $a_i$ are integers between 0
+  and $p-1$.
+\end{ukazanie}
+
+\begin{zadacha} Prove that a compact subset of $M$ is always closed. 
+\end{zadacha}
+
+\begin{ukazanie} Prove that it contains all its accumulation points.
+\end{ukazanie}
+
+\begin{zadacha} Prove that a closed subspace of a compact set is
+  always compact.
+\end{zadacha}
+
+\begin{zadacha} Prove that a union of a compact sets is compact.
+\end{zadacha}
+
+\begin{zadacha}[!] Let $f:\; X \to \R$ be a continuous function
+defined on a compact set. Prove that $f$ achieves maximum on $X$.
+\end{zadacha}
+
+\begin{opredelenie} Let $X$, $Y$ be two subsets
+of a metric space. Denote the number $\inf_{x\in X, y \in
+  Y}(d(x,y))$ by $d(X, Y)$.
+\end{opredelenie}
+
+\begin{zadacha}[!] Let $X$, $Y$ be two compact subsets of a metric
+  space. Prove that there exist points $x, y$ in $X, Y$ such that 
+ $d(x,y) = d(X,Y)$.
+\end{zadacha}
+
+\begin{opredelenie} A subset $Z\subset M$ is called bounded
+if it is contained in a ball $B_r(x)$ for some 
+$r\in\R, x\in M$.
+\end{opredelenie}
+
+\begin{zadacha} Let $Z\subset M$ be compact.
+Prove that it is bounded.
+\end{zadacha}
+
+\begin{opredelenie} Let $M$ be a metric space and $X\subset M$. The 
+  union of all open $\epsilon$-balls with centers in all points of $X$ is
+  called the {\bf $\epsilon$-neighbourhood} of $X$.
+\end{opredelenie}
+
+\begin{opredelenie} Let $M$ be a metric space and let $X$ and $Y$ be
+  its bounded subsets. The {\bf Hausdorff distance} $d_{H}(X,Y)$ is the 
+  infimum of all $\epsilon$ such that $Y$ is contained in an
+  $\epsilon$-neighborhood of $X$ and $X$ is contained in an
+  $\epsilon$-neighborhood $Y$.
+\end{opredelenie}
+
+\begin{zadacha}[!] Prove that the Hausdorff distance defines a metric on
+  the set $\cal M$ of all closed bounded subsets of $M$.
+\end{zadacha}
+
+\begin{zadacha} Let $X$, $Y$ be bounded subsets of $M$
+and $x\in X$. Prove that it is always the case that $d_{H}(X, Y) \geq
+d(x, Y)$.
+\end{zadacha}
+
+\begin{zadacha}[!] Let $M$ be a complete metric space. Prove 
+that $\cal M$ is also complete. 
+\end{zadacha}
+
+\begin{ukazanie} Consider a Cauchy sequence $\{ X_i\}$ of subsets of $M$.
+  Let $\mathfrak S$ be the set of Cauchy sequences $\{x_i\}$ with 
+$x_i \in X_i$. Let $X$ be the set of accumulation points of sequences
+  from $\mathfrak S$. Prove that $\{X_i\}$ converges to $X$.
+\end{ukazanie}
+
+\begin{zadacha}[*] Let $\{ X_i\}$ be a Cauchy sequence of compact
+  subsets of $M$ and $X$ be its limit. Prove that $X$
+is compact.
+\end{zadacha}
+
+\begin{ukazanie} One can identify $\{X_i\}$ with its subsequence such
+  that \begin{equation}\label{eq:d_H}
+d_H(X_i, X_j)< 2^{-\min(i,j)}.
+\end{equation}  Consider a sequence 
+$\{x_i\}$ of points from  $X$. For every $X_j$ find a sequence 
+ $\{x_i(j)\in X_j\}$ such  that $d(x_i(j), x_i)= d(x_i, X_j)$. Since $X_j$
+ is compact, this sequence has an accumulation point. Choose an
+ accumulation point $x(0)$ in $\{x_i(0)\}$ and replace $\{x_i\}$ with
+ its subsequence such that $\{x_i(0)\}$ converges to $x(0)$. Then
+ replace $\{x_i\}, i>0$ with a subsequence such that
+$\{x_i(1)\}$ converges to $x(1)$.  We replace $\{x_i\},
+i>k$ with a subsequence on $k$-the step in such a way that
+$\{x_i(k)\}$ converges  to $x(k)$. Prove that we will finally obtain a
+sequence $\{x_i\}$ such that $\{x_i(k)\}$ converges to $x(k)$  for all
+$k$. Prove that this operation can be carried out in such a way that
+$d(x_i(k), x(k)) < 2^{-i}$. Use \eqref{eq:d_H}
+to prove that $d(x_i(k), x_i)<
+2^{-\min(k,j)+2}$. Deduce that $\{x_i\}$ is a Cauchy sequence.
+\end{ukazanie}
+
+\begin{zadacha}[!] Let $M$ be compact and $X\subset M$.
+  Prove that for any  $\epsilon >0$ there is a finite
+  set $R\subset M$ such that $d_H(R, X)<\epsilon$. 
+(This statement can be rephrased as follows: ``$X$ allows approximation
+by finite sets with any prescribed accuracy'')
+\end{zadacha}
+
+\begin{ukazanie} Find a finite $\epsilon$-net in $X$.
+\end{ukazanie}
+
+\begin{zadacha}[*] Let $M$ be compact. Prove that $\cal M$ is also
+  compact.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous problem.
+\end{ukazanie}
+
+\begin{opredelenie} Let $M$ be a metric space.
+One says that $M$ is {\bf locally compact}, if for any point 
+$x\in M$ there exists a number $\epsilon>0$, such that the closed ball
+$\overline{B}_\epsilon(x)$ is compact.
+\end{opredelenie}
+
+\begin{zadacha} Let $M$ be a locally compact metric space
+and $\overline{B}_\epsilon(x)$ be a closed compact ball. Prove that 
+$\overline{B}_\epsilon(x)$ is contained in an open set $Z$ with compact
+closure.
+\end{zadacha}
+
+\begin{ukazanie} Cover $\overline B_\epsilon(x)$ with balls such that
+  their closures are compact, and find a finite subcover.
+\end{ukazanie}
+
+\begin{zadacha}[!] Prove in the previous problem setting that for some
+  $\epsilon'> 0$ the ball $\overline{B}_{\epsilon+\epsilon'}(x)$ is
+  also compact.
+\end{zadacha}
+
+\begin{ukazanie} Take $Z$ as in the previous problem. Take $\epsilon'$
+  to be $d (M \backslash Z, \overline B_\epsilon(x))$.
+\end{ukazanie}
+
+\begin{opredelenie} Let $(M, d)$ be a metric space.
+One says that $M$ {\bf satisfies Hopf-Rinow condition} if 
+for any two points $x, y\in M$ and for any two numbers $r_x, r_y >0$
+such that $r_x+r_y < d(x,y)$ 
+$$
+d(B_{r_x}(x), B_{r_y}(y)) = d(x,y) - r_x-r_y.
+$$
+\end{opredelenie}
+
+\begin{zadacha}[**] If you know the definition of a Riemannian (or
+  Finsler) manifold, prove that the Hopf-Rinow condition holds for the
+  natural metric on such a manifold. Justify all the facts that you
+  use in the proof.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $M$ be a complete locally compact metric space
+  which satisfies Hopf-Rinow condition,
+$x\in M$ be a point and $\epsilon>0$ be a number such that $\overline
+B_{\epsilon'}(x)$ is compact for all $\epsilon'<\epsilon$.
+Prove that the ball $\overline B_{\epsilon}(x)$ is compact.
+\end{zadacha}
+
+\begin{ukazanie} Let $\{\epsilon_i\}$, with $\epsilon_i<\epsilon$, 
+be a sequence that
+  converges to $\epsilon$. Use the Hopf-Rinow condition to prove that
+  $\{\overline B_{\epsilon_i}(x)\}$ is a Cauchy sequence with respect
+  to Hausdorff metric, $\overline B_{\epsilon}(x)$. Use the fact that
+  the limit of such a sequence is compact (you have already proved it
+  before).
+\end{ukazanie}
+
+\begin{zadacha}[*] (Hopf-Rinow theorem, I) Let $M$ be a complete
+  locally compact metric space which satisfies Hopf-Rinow condition.
+  Prove that every closed ball $\overline B_{\epsilon}(x)$ in $M$ is
+  compact.
+\end{zadacha}
+
+\begin{zadacha} Let $M$ be a metric space such that every closed ball
+  $\overline B_{\epsilon}(x)$ in $M$ is compact. Prove that $M$ is complete.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $M$ be a locally compact complete metric space
+  which satisfies Hopf-Rinow condition, $x, y\in M$. Prove that there
+  is a point $z\in M$ such that $d(x,z) = d (y, z)= \frac 1 2 d(x,y)$.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $S$ be a set of all rational numbers of the
+  form $\frac{n}{2^k}$, $n\in \Z$ which belong to the interval
+  $[0,1]$. Prove in the previous problem setting that there exists a
+  mapping $S\overset \xi\to M$ such that $d(\xi(a), \xi(b)) = |a-b|
+  d(x,y)$ and $\xi(0)=x$ and $\xi(1)=y$.
+\end{zadacha}
+
+\begin{zadacha}[*] (Hopf-Rinow theorem, II)   
+  Let $M$ be a locally compact complete metric space which satisfies
+  Hopf-Rinow condition, $x, y\in M$. Prove that the mapping $\xi$ can be
+  naturally extended to the completion of $S$ with respect to the
+  standard metric,  so  that the resulting mapping $[0,1]\overset
+  {\overline\xi}\to M$ satisfies $\overline\xi(0)=x$,
+  $\overline\xi(1)=y$ and $d((\overline\xi(a), \overline\xi(b)) = |a-b| 
+  d(x,y)$ for any two reals $a,b\in [0,1]$.
+\end{zadacha}
+
+\begin{zamechanie} Such a mapping $\overline\xi$ 
+is called {\bf geodesic}. The
+  Hopf-Rinow theorem can be restated as follows: for any two points in
+  a complete metric locally compact space which satisfies Hopf-Rinow
+  condition there is a geodesic that connects them.
+\end{zamechanie}
+
+\begin{opredelenie} 
+Such a space is called {\bf geodesically connected}.
+\end{opredelenie}
+
+\begin{zadacha}[*] Give an example of a metric space,
+which is not locally compact but geodesically connected.
+\end{zadacha}
+
+\begin{zadacha} Let $V= \R^n$ be the metric space with the standard
+  (Euclidean) metric. Prove that geodesics in
+  $V$ are intervals (sets of the form $a x + (1-a) y$ where $a$
+  belongs to $[0, 1] \subset \R$, and $x, y \in V$).
+\end{zadacha}
+
+\begin{zadacha} Let $V$ be a finite dimensional vector space with a
+  norm that defines a metric $d$ and $d_0$ be the Euclidean metric on
+$V$. Prove that the identity mapping $(V, d) \to (V, d_0)$
+is continuous iff a unit ball in $(V, d)$
+contains a ball from $(V, d_0)$. Prove that the inverse mapping is
+continuous provided that a unit ball in $(V, d)$ 
+is contained in a ball from $(V, d_0)$. 
+\end{zadacha}
+
+\begin{zadacha} In the previous problem settings,
+  consider a function $D(x): = d(0,x)$  on a unit sphere
+  $S^{n-1}\subset V $ 
+$$
+S^{n-1} = \{x\in V \mid d_0(0,x)=1\}
+$$
+Let $D$ be a continuous function on $S^{n-1}$. Prove that 
+the mapping $(V, d) \to (V, d_0)$ is continuous and the inverse
+mapping is continuous.
+\end{zadacha}
+
+\begin{ukazanie} Use the fact that a continuous function on a compact set 
+achieves its
+  minimum and maximum values.
+\end{ukazanie}
+
+\begin{zadacha}[**] Prove that $D$ is a continuous function.
+\end{zadacha}
+
+\begin{zadacha} Let $V$ be a finite dimensional vector space with a norm
+that defines the metric $d$. Suppose that the identity mapping
+ $(V, d) \to (V, d_0)$ is continuous and the inverse mapping 
+ is also continuous. Prove that $(V, d)$ is complete and locally
+ compact. 
+\end{zadacha}
+
+\begin{zadacha}[*] Let $d$ be the metric on $\R^n$ associated with the norm
+ $(x_1, x_2, ... ) \mapsto \max |x_i|$. Prove that it satisfies the
+Hopf-Rinow condition. Prove that $\R^n$ with such a metric is
+geodesically connected. Describe how the geodesics look like.
+\end{zadacha}
+
+\begin{zadacha}[*] Is it true that the metric $d$ defined by a norm always
+  satisfies the Hopf-Rinow condition?
+\end{zadacha}
+
+\begin{opredelenie} Let $X$ be a metric space and $0<k<1$ be a real
+  number. A mapping $f:\; X \to X$ is called {\bf contraction mapping
+    with a contraction coefficient $k$} if $k d(x,y) \geq d(f(x),
+  f(y))$.
+\end{opredelenie}
+
+\begin{zadacha}[!] Let $X$ be a meric space and $f:\; X \to X$ be a
+  contraction mapping. Prove that for any
+$x \in X$ the sequence  $\{a_i\}$, $a_0 :=x, a_1:=f(x),
+a_2:=f(f(x)), a_3:=f(f(f(x))), \dots$ is Cauchy sequence.
+\end{zadacha}
+
+\begin{ukazanie} Use the fact that $d(a_i, a_{i+1}) = k^i d(x, f(x))$,
+and deduce that the series $\sum d(a_i, a_{i+1})$ converges.
+\end{ukazanie}
+
+\begin{zadacha}[!] (The Contraction Mapping Theorem)
+Let $X$ be a complete metric space and $f:\; X \to X$ be a contraction
+mapping. Prove that $f$ has a fixed point.
+\end{zadacha}
+
+\begin{ukazanie} Find the limit of the sequence 
+$x, f(x), f(f(x)), f(f(f(x))), \ldots$.
+\end{ukazanie}
+\end{document}

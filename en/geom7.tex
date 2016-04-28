@@ -1,0 +1,561 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{7}{GEOMETRY 7: Point-set topology: compactness}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{opredelenie} 
+Consider a topological space $M$. We call any collection of open
+subsets $U_i\subset M$ (possibly infinite or even uncountable) such
+that $M= \bigcup U_i$ a {\bf cover} of $M$ .
+The topological space $M$ is called {\bf compact} (or {\bf a
+  compactum}) if it is possible to find a finite subcover of every
+open cover of $M$. A subset $Z \subset M$ of the topological space
+$M$ is called compact if it is compact in the induced topology.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that the interval $[0,1]$ is compact.
+In which case a set with discrete topology is compact?
+With codiscrete topology? 
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider the following topology on $M$: 
+open sets are complements of finite sets (this topology is called
+{\bf cofinite}). Find all compact subsets of $M$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a compact space $Z$ and a closed subset $Z' \subset Z$.
+Prove that $Z'$ is also compact. Does compactness of a set follow from 
+its closedness?
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a Hausdorff topological space $M$, 
+an arbitrary subset $Z$ of
+$M$ and a point $x\notin Z$.
+\begin{enumerate}
+\item  Prove that there is an open cover  $\{U_i\}$ of $Z$ such that
+  the closure of every $U_i$ does not contain $x$. 
+
+\item\sttr Give an example of a non-Hausdorff $T_1$-space where this
+  is not true.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a Hausdorff space $M$.
+Prove that every compact subset of $M$ is closed.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha} 
+Consider two compact subsets of a Hausdorff space.
+Prove that there exist two non-intersecting open neighborhoods of 
+these subsets.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a compact Hausdorff topological space.
+Prove that it satisfies the $T_4$ separation axiom.
+\end{zadacha}
+
+\begin{opredelenie}
+A topological space is called  {\bf locally compact} if every point has
+a neighborhood such that its closure is compact.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider a locally compact Hausdorff topological space.
+Prove that is satisfies the $T_3$ separation axiom.
+\end{zadacha}
+
+\begin{zadacha}[**]
+Does there exist a locally compact topological space which does not
+satisfy the first countability axiom?
+\end{zadacha}
+
+\begin{zadacha}[**]
+Does there exist a countable topological space which is not locally
+compact?
+\end{zadacha}
+
+\begin{zadacha}
+  Consider a topological space $X$. Denote by $\widehat{X}$ the set $X
+  \bigcup \{\infty\}$ ($X$ with one point added, this point is denoted
+  by $\infty$) with the following topology: $U \subset \widehat{X}$ is
+  open if either $\infty \in U$ and the complement of $U$ is compact
+  as a subset of $X$, or if $\infty \not\in X$ and $U$ is open as a
+  subset of $X$.  Prove that this is indeed a topology and that the
+  space $\widehat{X}$ is compact.
+\end{zadacha}
+
+\begin{opredelenie}
+The space $\widehat{X}$ is called a {\bf one-point compactification}
+of the space $X$.
+\end{opredelenie}
+
+\begin{zadacha}[*]
+Consider a Hausdorff space $X$. Is it true that $\widehat{X}$ is also
+Hausdorff?
+\end{zadacha}
+
+\begin{zadacha}
+Consider the space $X = \R^n$ with the natural topology. Prove that 
+  $\widehat{X}$ is homeomorphic to the $n$-dimensional sphere.
+\end{zadacha}
+
+\begin{zadacha}
+\label{_DISKR_Opredelenie_Zadacha_}
+Consider a topological space  $M$ and a subset $Z$. Prove that the
+following are equivalent:
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\item Every point $z\in Z$ has a neighborhood
+$U\ni z$ that contains no other points from $Z$.
+
+\item $M$ induces the discrete topology on $Z$.
+
+\item $Z$ does not contain any of its accumulation points.
+\end{enumerate}
+\end{zadacha}
+
+\begin{opredelenie}
+A closed subset $Z\subset M$ that satisfies one of the conditions from
+the statement of Problem~\ref{_DISKR_Opredelenie_Zadacha_} is called
+{\bf discrete}.
+\end{opredelenie}
+
+\begin{zadacha}
+Consider a Hausdorff space $M$ and suppose it has an infinite discrete
+subset $Z\subset M$. Prove that $M$ is non-compact.
+\end{zadacha}
+
+Consider a collection $Z_i$ of subsets of a set $M$. We say that the
+collection is {\bf incomplete}, if for every finite subcollection
+$Z_1,Z_2,\dots,Z_k$ the intersection $Z_1 \cap Z_2 \cap \dots \cap
+Z_k$ is non-empty. A {\bf monotone collection} $Z_i$ of subsets of the
+set $M$ is a collection of subsets that is linearly ordered by inclusion
+(i.e.\ for all $Z_i$, $Z_j$ from the collection either $Z_i \subset
+Z_j$, or $Z_j \subset Z_i$).
+
+\begin{zadacha}\label{cap.2}
+Prove that a topological space $M$ is compact iff every incomplete
+collection of closed subsets $Z_i \subset M$ has a non-empty
+intersection $\cap_i Z_i$. 
+\end{zadacha}
+
+\begin{zadacha}\label{cap.1}
+Prove that if a topological space $M$ is compact then every monotone
+collection of non-empty closed subsets $Z_i \subset M$ has a non-empty
+intersection $\cap_i Z_i$.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{diskr}
+Consider a Hausdorff topological space $M$ with a countable base.
+Prove that $M$ is compact iff $M$ does not have infinite discrete
+subsets. 
+\end{zadacha}
+
+\begin{ukazanie}
+If $M$ has an infinite discrete subset then it follows from the
+Problem~\ref{cap.1} that $M$ is non-compact. Conversely, if 
+$M$ is non-compact then $M$ has a countable cover 
+$S$ such that no finite subset of
+$S$ covers покрывает $M$. 
+%
+% TODO: clean it up !!!
+%
+% в $M\backslash W_\alpha$. По определению,
+% $m_\alpha$ лежит в $U_\alpha$ и не лежит 
+% в объединении всех остальных $U\in S$. Рассмотрим
+% множество $\{m_\alpha\}$. Пусть у него
+% есть предельная точка $m$. Возьмем 
+% $U\in S$, содержащее $m$. Тогда $U$
+% содержит бесконечное количество
+% точек из $\{m_\alpha\}$ -- противоречие.
+\end{ukazanie}
+
+\begin{zadacha}
+Consider a Hausdorff topological space $M$ with a countable
+base. Prove that $M$ is compact iff every sequence of points from $M$
+has an accumulation point.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider a topological space $M$, not necessarily Hausdorff.
+\begin{enumerate}
+\item Is it possible that a compact subset of $M$ contains an infinite
+  discrete subset?
+
+\item Is it possible that there is a non-compact subset of $M$ that
+  contains no infinite discrete subsets?
+
+\item\doublesttr{} Consider a Hausdorff space $M$.
+Does there exist a non-compact subset of $M$ that does not contain 
+infinite discrete subsets?
+
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a continuous mapping $f:\; M \arrow N$ of topological
+spaces. Prove that for any compact subset $Z\subset M$, $f(Z)$ is
+compact.  
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a subset $Z\subset\R$.
+\begin{enumerate}
+\item Prove that $Z$ is compact iff it is closed and bounded
+(i.e.\ contained in an interval $[a, b]$).
+
+\item 
+Prove that $Z$ is compact iff every subset of it has an infimum and
+supremum in $Z$. 
+
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a continuous mapping $f:\; M \arrow \R$ of topological
+spaces. Prove that $f$ reaches its maximum and minimum on any compact
+subset of $M$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider a non-compact Hausdorff topological space with a countable
+base that satisfies the $T_4$ separation axiom. Construct a continuous
+function $f:\; M \arrow \R$ that has no maximum.
+\end{zadacha}
+
+\begin{ukazanie}
+  Consider $\{x_i\}$, a countable discrete subset of $M$. Use the
+  $T_4$ separation axiom to construct a collection of neighborhoods
+  $U_i\supset x_i$ such that the closure of $U_i$ does not intersect
+  with the closure of $\bigcup_{j\neq i} U_j$. Now apply Urysohn lemma
+  to closed sets $\{x_i\}$, $M\backslash U_i$ and sum up the Urysohn
+  functions $f_i$ obtained with the right coefficients.
+\end{ukazanie}
+
+\begin{zadacha} 
+Consider a continuous mapping $f:\; M \arrow N$ of topological spaces,
+where $M$ is compact and $N$ is Hausdorff. Prove that  
+$f$ maps closed sets to closed sets.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a continuous mapping $f:\; M \arrow N$ of topological spaces,
+where $M$ is compact and $N$ is Hausdorff. Suppose that $f$ is
+bijective. Prove that $f$ is a homeomorphism.
+\end{zadacha}
+
+\begin{zadacha} 
+Give an example of a continuous mapping 
+$f:\; M \arrow N$, where $M$ is compact, such that $f$ is not a
+homeomorphism ($N$ is not Hausdorff here).
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Compact sets and products}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+A continuous mapping $f:X \to Y$ of topological spaces is called 
+{\bf proper} if for every compact $K \subset Y$ the preimage
+$f^{-1}(K) \subset X$ is compact.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+Consider a Hausdorff space $Y$ with a countable base. Prove that a
+proper mapping $f:X \to Y$ maps closed subsets of $X$ to closed
+subsets of $Y$. 
+\end{zadacha}
+
+\begin{ukazanie}
+Take a closed set $Z \subset Y$ which has a non-closed image. Take a
+sequence of points $y_i \in f(Z)$ which converges to
+$y \in Y$ that does not belong to $f(Z)$.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Is the previous problem statement true if we do not require
+existence of a countable base?
+\end{zadacha}
+
+\begin{zadacha}[*]\label{prop}
+Consider a continuous mapping $f:\; X \to Y$ that maps closed sets to
+closed sets and the preimage $f^{-1}(y)$ of any point $y \in Y$ is
+compact. Prove that the mapping $f$ is proper.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the compactness criterion from the Problem~\ref{cap.2}.
+\end{ukazanie}
+
+\begin{opredelenie}
+A continuous mapping $f:X \to Y$ is called {\bf closed} if the image of
+any any closed subset is closed. The mapping is called {\bf universally
+  closed} if for any continuous mapping $g:Z \to Y$ the induced
+mapping  $X \times_Y Z \to Z$ is closed ($X \times_Y Z$ is a subset of
+$X \times Z$ that contains all pairs $\langle x,z\rangle$ such that
+$f(x)=g(z)$). 
+\end{opredelenie}
+
+\begin{zadacha}[*]
+Consider a continuous mapping $F:X \to Y$ which is universally
+closed. Prove that it is a proper mapping.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the Problem~\ref{prop} to justify that only the case when $Y$ is
+a one point space can be considered. Then use the
+Problem~\ref{diskr}: if $X$ contains an infinite discrete subset $M$
+then take $Z = \widehat{M}$, i.e.\ a one-point compactification of
+$M$ and deduce the contradiction.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Consider compact topological spaces $X$, $Y$. Prove that the product
+$X \times Y$ is compact.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the fact that sets of the form $U \times V$, where $U$ is open
+in $X$ and $V$ is open in $Y$, form a base of the topology on $X
+\times Y$ and prove that it suffices to consider covers of $X \times
+Y$ that contain only sets of this form. Then for every point $y \in
+Y$ choose a finite subcover of the subset $X \times \{y\} \subset X
+\times Y$ that contains sets of the form $U_i \times V_i$, and
+notice that sets $V_y = \cap V_i$ form an open cover of $Y$.
+\end{ukazanie}
+
+Thus every projection $X \times Y \to Y$ for any $Y$ and compact 
+$X$ is a proper mapping.
+
+\begin{zadacha}
+Consider a subset $X\subset \R^n$. Prove that the following are
+equivalent:
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\item $X$ is compact
+
+\item $X$ is closed and bounded (i.e.\ lies within a ball).
+\end{enumerate}
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Tychonoff's theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{zadacha}
+Consider a sequence $a_i(n)$ of mappings from $\N$ to $[0,1]$. Prove
+that one can select a subsequence $a_{i_1}, a_{i_2}, a_{i_3}, \dots$
+such that $\{a_{i_k}(n)\}$ converges for any $n$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Deduce that the Tychonoff cube $[0,1]^\N$ is compact.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Consider a topological space $M$.  Consider a (possibly uncountable)
+  collection $\{ V_{\alpha}\}$ of covers of $M$, such that every
+  $V_{\alpha}$ either contains $V_{\alpha'}$ or is contained in it (in
+  other words, in $\{ V_{\alpha}\}$ every cover can be obtained from
+  any other cover by adding or removing some elements). Suppose every
+  $V_{\alpha}$ does not have a finite subcover. Prove that the union
+  of all $V_{\alpha}$ does not have a finite subcover either.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Use the Zorn's lemma to prove that every non-compact subset
+$X\subset M$ has a cover $\{ V_{\alpha}\}$ that does not have a
+finite subcover, but if one adds to $\{ V_{\alpha}\}$ any open set
+that does not belong to it, then the cover obtained has a finite
+subcover.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+We will call such covers {\bf maximal}.
+
+\begin{zadacha}[*]
+Consider a maximal cover 
+$\{V_{\alpha}\}$ of a non-compact topological space $M$. Prove that if
+open sets $U_1$, $U_2$ do not belong to
+$\{V_{\alpha}\}$ and they have a non-empty intersection then the
+intersection does not belong to $\{ V_{\alpha}\}$ either. Prove that
+any non-empty finite intersection of open sets that do not belong to  
+$\{V_{\alpha}\}$, does not belong to $\{ V_{\alpha}\}$ either.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+  Consider a topological space $M$ with a given prebase of topology
+  $R$.  Consider then a non-compact subset $X\subset M$ and a maximal
+  cover $\{ V_{\alpha}\}$. Prove that $\{ V_{\alpha}\}$ has a subcover
+  whose elements belong to $R$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zamechanie}
+We have proved the following theorem
+(Alexander's theorem about prebase).
+Consider a topological space $M$ with a given
+prebase $S$. Then a subset 
+$X\subset M$ is compact iff
+every cover of $X$ whose elements are from 
+$S$ has a finite subcover.
+Alexander's theorem uses the Axiom of Choice and is equivalent to it
+(that was shown by Cayley).
+\end{zamechanie}
+
+\begin{zadacha}[*]
+  Deduce that the Tychonoff cube $[0,1]^I$ is compact for any index
+  set $I$.
+\end{zadacha}
+
+\begin{ukazanie}
+Consider a prebase of the topology on the Tychonoff cube that
+consists of subsets of the form 
+$[0,1]\times [0,1]\times \dots \times ]a,b[ \times [0,1]\times \dots$
+(an open interval occurs once).
+Use Alexander's theorem.
+\end{ukazanie}
+
+\begin{zamechanie} 
+Compactness of the Tychonoff cube is equivalent to the following
+statement. Consider a space $\Map(I, [0,1])$ of mappings from a set
+$I$ to the interval $[0,1]$, endowed with the topology of the pointwise
+convergence. Then $\Map(I, [0,1])$ is compact.
+In particular, every sequence $\{a_{i}(x)\}$ of mappings has a
+subsequence $\{a_{i_k}(x)\}$ such that $\{a_{i_k}(x)\}$ converges for
+all $x\in I$.
+\end{zamechanie}
+
+\begin{opredelenie}
+Consider a topological space $M$, a set
+$I$ and $M^I$, the set of all mappings from $I$ to $M$, that is, the
+product of $I$ copies of $M$. For an arbitrary $x\in I$ and an open set
+$U\subset M$ consider a subset 
+$U(x)\subset M^I$ which consists of all mappings that
+ map $x$ to an element of $U$.  
+Define a topology on $M^I$ using the prebase that consists of all
+$U(x)$. This topology is called {\bf Tychonoff topology} (or {\bf weak
+  topology} or {\bf topology of pointwise convergence}).
+\end{opredelenie}
+
+\begin{zadacha}[*]
+Consider a compact space $M$. Deduce from Alexander's theorem
+that $M^I$ endowed with Tychonoff topology is compact.
+\end{zadacha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Fundamental theorem of algebra}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Consider a polynomial $P(x)= x^n + a_{n-1} x^{n-1} + \dots + a_0 $ of
+a positive degree with complex coefficients.  We look at $P$ as a
+function from $\C$ to $\C$. $\C$ is identified with $\R^2$ as a
+topological space.
+
+\begin{zadacha}
+Prove that $P$ is continuous.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that if $|x|> 2\max \left(1, \sum |a_i|\right)$, then
+$\frac{|P(x)-x^n|}{|x^n|} <1/2$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that if $|x|> 2R \max \left(1, \sum |a_i|\right)$,
+then $|P(x)| > R^n$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Deduce that $|P|$ reaches its local minimum at a point $a\in \C$. 
+\end{zadacha}
+
+\begin{ukazanie}
+We approximated the polynomial $|P|$ with the polynomial $x^n$,
+for which we know how fast it grows. We deduce that $|P(x)|>  R^n$,
+when $|x|$ is big enough. That's why the minimum of $|P|$ on the disc
+$|x|\leq R$ is reached inside the disc and not on its boundary.
+\end{ukazanie}
+
+In order to simplify the notation we will suppose that $|P|$ reaches
+its minimum at zero. We want to prove that the minimum of $|P|$ is
+zero. Suppose it is not true. Then let $k$ be the smallest number among
+$1, 2, 3, \dots, n$, such that $a_k\neq 0$. Multiply $P$ by $a_0^{-1}$
+and perform the substitution $x=z\sqrt[k]{a_k^{-1}}$, so we get a
+polynomial of the form
+ \[ Q(z) = 1 + z^k + b_{k+1} z^{k+1} + b_{k+2} z^{k+2} + \dots \]
+
+\begin{zadacha}
+       Prove that for any complex $z$, such that $|z|< 1$, the
+       following holds:
+       
+       \[
+       |Q(z)-1 - z^k| < |z^{k+1}|(\sum |b_i|).
+       \]
+\end{zadacha}
+
+\begin{zadacha}[!]
+       Prove that for any complex number $z$, such that\\
+$|z|< \frac 1 2 \max \left(1, \sum |b_i|\right)^{-1}$, the following
+holds: 
+       \[
+       \frac{|Q(z)-1 - z^k| }{|z^{k}|}<\frac 1 2.
+       \]
+\end{zadacha}
+
+\begin{zadacha}[!]
+       Deduce that for any positive real $\epsilon< \frac 1 2 \max
+       \left(1, \sum |b_i|\right)^{-1}$ and any complex $z$, such that
+       $z^k=-\epsilon$, the following holds:
+       \[
+       \left|Q(z)-1 +\epsilon\right|< \epsilon/2.
+       \]
+       \end{zadacha}
+
+  \begin{zamechanie} We approximated $Q$ with the polynomial $1- z^k$
+    in a neighbourhood of zero. We can use this approximation to
+    deduce that
+  $|Q(\sqrt[k]{-\epsilon})|<|Q(0)|(1-\frac 1 2 \epsilon)$ for
+  $\epsilon$ that is small enough. It follows that the local minimum of
+  the polynomial is 0.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+  Prove the Fundamental Theorem of Algebra:
+  every polynomial $P$ of positive degree has a root in $\C$. 
+\end{zadacha}
+
+\end{document}

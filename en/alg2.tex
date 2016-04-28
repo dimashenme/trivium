@@ -1,0 +1,401 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\newcommand{\delit}{\operatorname{\vdots}}
+
+\begin{document}
+
+\listok{2}{ALGEBRA 2: divisibility in rings and Euclid's algorithm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subs{Greatest common divisor}
+
+Let $R$ be a ring.
+
+\begin{opredelenie} {\bf Divisors of zero} in ring $R$ are the
+  elements $x$, $y$ such that $xy=0$.  $R$ is called an {\bf integral
+    domain} if there are no divisors of zero in $R$.
+\end{opredelenie}
+
+Throughout this section all rings are supposed to be integral domains.
+
+\begin{opredelenie}
+  An invertible element in $R$ is called a {\bf unit} of ring $R$.
+\end{opredelenie}
+
+\begin{zadacha} 
+Gauss integers are complex numbers of a form $x + y \1$ where $x$, $y$
+are integers. Prove that they form a ring. It is denoted by $\Z[\1]$.
+\end{zadacha}
+
+\begin{zadacha} Describe all the unities in the ring of Gauss integers.
+\end{zadacha}
+
+\begin{ukazanie} If a complex number $z$ is invertible in $\Z[\1]$ then
+  $z \bar z$ is also invertible in $\Z[\1]$.
+\end{ukazanie}
+
+\begin{zadacha} Let us fix a positive integer $n$.
+Consider a set of all complex numbers of the form $x + y \sqrt{-n}$
+where $x$, $y$ are integers. Prove that this is a ring.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Fix a positive integer $n$.  Consider a set of all complex numbers of
+the form $\frac{x + y \sqrt{-3}}2$ where $x$, $y$ are either both even
+or both odd.  Prove that this is a ring and describe all unities.  We
+will denote this ring by $\widetilde{\Z[\sqrt{-3}]}$.
+\end{zadacha}
+
+\begin{opredelenie}
+Let $R$ be a ring and $x, y\in R$ be elements of $R$.  If $x= yz$ in
+$R$ then one says that $x$ is {\bf divisible} by $y$ in $R$ and $y$
+{\bf divides} $x$.  The relation of divisibility is denoted by
+$x\delit y$.
+\end{opredelenie}
+
+\begin{opredelenie} 
+Let $R$ be a ring and $x, y\in R$ be the elements of $R$. {\bf
+Greatest common divisor} (GCD) of $x, y$ is an element $z\in R$ such
+that $z$ divides $x$ and $y$ and for all $z'$ which divides $x$, $z'$
+divides $z$. $x$ and $y$ are called {\bf coprime} if $1$ is the
+greatest common divisor of $x,y$.
+\end{opredelenie}
+
+Strictly speaking, if one considers an arbitrary ring GCD may not
+exist for every pair of elements.
+
+\begin{zadacha}
+Prove that if GCD exists then it is unique up to a unit: if $z$ and
+$z'$ are greatest common divisors $x$ and $y$ in a ring $R$, then $z =
+e z'$, where $e$ is a unit of ring $R$.
+\end{zadacha}
+
+\begin{zadacha} Let $\Q(2)$ be a set of all rational numbers,
+represented as fractions of the form $\frac p q$ with odd denominator
+$q$. Prove that this set is closed under multiplication and addition
+and forms a subring in the ring of rational numbers.
+\end{zadacha}
+
+\begin{zadacha} Give an example of a non-invertible element in $\Q(2)$.
+\end{zadacha}
+
+\begin{zadacha} Describe all unities of the ring $\Q(2)$.
+\end{zadacha}
+
+\begin{zadacha}[!] Prove that in $\Q(2)$ for any two elements there
+ exists a greatest common divisor of them.\end{zadacha}
+
+\begin{ukazanie} Prove that any element of $\Q(2)$ can be represented
+  in the form $e 2^n$, where $e$ is a unit.
+\end{ukazanie}
+
+\begin{opredelenie} Let $p$ be an element of a ring $R$. It is called 
+{\bf prime}, if for any $q,r$ with $p=qr$ either $q$, or $r$ is a
+unit of the ring $R$.
+\end{opredelenie}
+
+\begin{zadacha} What are prime elements of $\Q(2)$?
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Divisibility in the ring of integer numbers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{zadacha} Let $x$, $y$ be positive integer numbers and $z= (x -
+  ky)$ be the remainder when $x$ is divided by $y$. Prove that if 
+GCD($y,z$) exists then GCD($x,y$) exists as well and GCD($x,y$)=
+GCD($y,z$).
+\end{zadacha}
+
+\begin{opredelenie} 
+The Euclid's algorithm takes two positive integer numbers $x$, $y$,
+$x>y$ and return a positive integer number $z$.
+\begin{enumerate}
+\item If $x$ is divisible by $y$ then algorithm stops and returns $y$.
+\item If $x$ is not divisible by $y$ then algorithm loops, taking
+ numbers $x_1 = y$, $y_1= x - ky$ where $x - ky$ is the remainder when
+ $x$ is divided by $y$.
+\end{enumerate}
+\end{opredelenie}
+
+\begin{zadacha} Prove that the Euclid's algorithm terminates after
+ finite number of iterations.
+\end{zadacha}
+
+\begin{zadacha} Prove that the number returned by the Euclid's
+  algorithm applied to integer numbers $x,y$ is GCD($y,z$) 
+\end{zadacha}
+
+\begin{zadacha}
+Solve the problem 1.26 from ALGEBRA 1 (unless you have already solved
+it).
+\end{zadacha}
+
+\begin{zadacha} Prove that the Euclid's algorithm applied to numbers
+  $x$, $y$ can be represented as a linear combination of  $x$ with $y$
+  integer coefficients: $z = ax + by$.
+\end{zadacha}
+
+\begin{zadacha} Let $x$, $y$ be coprime integer numbers and $p$
+  be a prime number. Suppose that $xy$ is divisible by $p^\alpha$ for
+  some natural number $\alpha$. Prove that either $x$ is divisible by
+  $p^\alpha$, or $y$ is divisible by $p^\alpha$.
+\end{zadacha}
+
+\begin{zadacha}[!] \label{int} Deduce that prime multipliers decomposition is
+  unique: if a positive integer number  $x$ can be represented in two
+  ways as a product of prime numbers then these two ways only differ
+  by an order of multipliers.
+\end{zadacha}
+
+\begin{ukazanie} Present $x$ as a product
+$p_i^{\alpha_i}$ where $p_i$ are different prime numbers and use the
+  previous problem to prove that $\alpha_i$ can be defined in unique
+  fashion.
+\end{ukazanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Unique factorization ring}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+  Let $R$ be a ring. Two decompositions of $r\in R$ into prime
+  multipliers $r = p_1 p_2 \ldots p_k$, $r = q_1 q_2 \ldots q_k$ are
+  called equivalent if $r = q_1 q_2 \ldots q_k$ can be obtained after
+  by permuting $p_i$ and by multiplying $p_i$ by ring unit.  It is
+  said that $R$ is a {\bf unique factorization ring}, if for any $r\in
+  R$ there exists decomposition of $r$ into the product of prime
+  elements which is unique up to equivalence.
+\end{opredelenie}
+
+\begin{zadacha}[!] Let a ring $R$ admits decomposition into prime
+multipliers and for each pair of elements $x, y$ there exists a GCD in
+this ring. Let $z$ be represented in $R$ as a linear combination of
+$x, y$: $z = ax + by$ where $a,b \in R$. Prove that $R$ is a unique
+factoriazation ring.
+\end{zadacha}
+
+\begin{ukazanie} Use the hint to the problem~\ref{int}.
+\end{ukazanie}
+
+\begin{zadacha} Consider a positive number $n$. Consider a ring
+$\Z[\sqrt{-n}] \subset \C$ of complex numbers of the form $z= x + y
+\sqrt{-n}$ where $x$ and $y$ are integer. Prove that $|z|^2$ is
+integer for all $z\in \Z[\sqrt{-n}]$.
+\end{zadacha}
+
+\begin{zadacha} Prove that $z$ is a unit in $\Z[\sqrt{-n}]$
+iff $|z|^2=1$.
+\end{zadacha}
+
+\begin{ukazanie} $|z^{-1}|^2 = (|z|^2)^{-1}$.
+\end{ukazanie}
+
+\begin{zadacha}\label{prime.gauss} 
+Let $z$ be an element of $\Z[\sqrt{-n}]$ such that $|z|^2$ is prime in
+$\Z$. Prove that $z$ is prime in $\Z[\sqrt{-n}]$.
+\end{zadacha}
+
+\begin{ukazanie} $|z z'|^2 = |z|^2 |z'|^2$.
+\end{ukazanie}
+
+\begin{zadacha}[!] Consider the ring $\Z[\sqrt{-3}]$.
+Prove that $2$ and $1\pm \sqrt{-3}$ are primes. Deduce that
+$\Z[\sqrt{-3}]$ is not a unique factorization ring.
+\end{zadacha}
+
+\begin{ukazanie} Use the equality $2^2 =4$.
+\end{ukazanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Division with remainder in rings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie} Let $R$ be a ring.
+One says that a ring $R$   {\bf allows division with remainder}  if 
+for every pair $x, y$, $y\neq 0$ in $R$ there are elements  $z, k\in
+R$ defined such that $z = x - ky$. In this case $z$ is called 
+{\bf remainder} and $k$ is called {\bf factor}.
+\end{opredelenie}
+
+\noindent {\bf Examples.} The ring integers allows division with
+remainder.  The ring of polynomials $k[t]$ over a field $k$ allows
+division with remainder as well:
+$$
+\arraycolsep=0.05em
+\begin{array}{rrr@{\,}r|r}
+x^2&{}+2x&{}-12&&\,x+5\\
+\cline{5-5}
+x^2&{}+5x&&&\,x-3\\
+\cline{1-2}
+&{}-3x&{}-12\\
+&{}-3x&{}-15\\
+\cline{2-3}
+&&3
+\end{array}
+$$
+
+\begin{opredelenie} Let $R$ be a ring that allows division with
+  remainder. {\bf Euclid's algorithm in $R$} is applied to a pair $x,
+  y$ of non-zero elements in $R$ and is defined recursively. If $x$ is
+  divisible by $y$ Euclid's algorithm stops and returns $y$.  If $x$
+  is not divisible by $y$ then Euclid's algorithm is applied to $y,
+  z$, where $z$ is a remainder when $x$ is divided by $y$. This
+  process can be infinite, a priori.
+\end{opredelenie}
+
+\begin{zadacha}[!] Let $R$ be a ring that allows division with
+  remainder. Suppose that Euclid's algorithm applied to a pair 
+$x, y\in R$ stopped in some finite number of steps and returned $z\in 
+  R$. Prove that 
+\begin{enumerate}
+\item $z = a x + by$ for some $a, b \in R$.
+
+\item $z$ is the greatest common divisor of $x$ and $y$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{ukazanie} Proof for the arbitrary ring is the same as in the
+  case of ring of natural numbers.
+\end{ukazanie}
+
+\begin{opredelenie} Let $R$ be a ring. One says that {\bf there
+exists a Euclid's algorithm in $R$} or that {\bf $R$ is Euclidean} if
+   $R$ allows division with remainder and for all $x, y \in R$
+  Euclid's algorithm stops in finite number of steps.
+\end{opredelenie}
+
+\begin{zadacha}[!] Let there exists a prime multipliers decomposition
+and an Euclid's algorithm in a ring $R$. Prove that $R$ is a unique
+factorization ring.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous problems.
+\end{ukazanie}
+
+\begin{zadacha} Prove that the ring $k[t]$ of polynomials over a field $k$.
+\end{zadacha}
+
+\begin{zadacha} Prove that an equation $x \cdot y=0$
+has a solution (for $x,y \neq 0$) in $k[t] \mod P$ if and only if a
+polynomial $P$ is irreducible.
+\end{zadacha}
+
+The integer part $[z]$ of a complex number $z= x + y \1$ is defined as
+$[x+0.5] + [y+0.5]\1$ where $[\ ]$ denotes an operation of taking an
+integer part of a real number (if one interprets complex numbers as
+points on a plane $\R^2$ then $[z]$ is a point with integer
+coordinates closest to $z$). Division with remainder in the ring of
+Gauss integers $\Z[\1]$ is defined as follows: the factor of $z_1$ and
+$z_2$ equals $[\frac {z_1}{z_2}]$ and the remainder equals $z_1 -
+[\frac {z_1}{z_2}]z_2$.
+
+\begin{zadacha}
+Prove that $\left|z_1 - \left[\frac {z_1}{z_2}\right]z_2\right| <
+|z_2|$.
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that in the ring of Gauss integers $\Z[\1]$ Euclid's algorithm
+always terminates.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous problem.
+Deduce that with every step of the Euclid's algorithm a quantity
+$\min(|z_1|^2, |z_2|^2)$ decreases.
+\end{ukazanie}
+
+Let $R=\Z[\sqrt{-n}]$ or $R=\widetilde{\Z[\sqrt{-3}]}$. For any $z\in
+\C$ let us denote by $[z]_R$ a point of a complex plane corresponding
+to point from $R$ closest to $z$. If there are several such points let
+us take a point with greatest $Re [z]_R$, if still there are several
+such points, let us take one with the greatest $Im [z]_R$. Define the
+division of  $z_1$ by $z_2$ with remainder in such a way that the
+factor of $z_1$ and $z_2$ is $[\frac{z_1}{z_2}]_R$ and the remainder
+is  $z_1 - [\frac {z_1}{z_2}]_Rz_2$.
+
+\begin{zadacha}[*] Prove that if 
+$n=1$ then it is the usual division with remainder in $\Z[\1]$
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Let  $\left|z - [z]_R\right|<1$ for all $z\in \C$. Prove that with
+every step of the Euclid's algorithm a quantity 
+$|z_2|^2$ decreases.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Let for any point $z\in \C$ there exist $r\in R$ such that
+$|r-z|<1$. Prove that $R$ is Euclidean.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Prove that the following rings are Euclidean: $\Z[\sqrt{-2}]$,
+$\widetilde{\Z[\sqrt{-3}]}$.
+\end{zadacha}
+
+\begin{zadacha} Decompose the number 2 into prime multipliers in
+$\Z[\1]$.
+\end{zadacha}
+
+\begin{ukazanie} Use the problem~\ref{prime.gauss}.
+\end{ukazanie}
+
+\begin{zadacha}[*] Decompose the numbers 3, 5, 7 into prime
+ multipliers in $\Z[\1]$.
+\end{zadacha}
+
+\begin{zadacha}[*] Prove that a prime number in $\Z$ of the form $p=4k+3$
+is prime in $\Z[\1]$.
+\end{zadacha}
+
+\begin{ukazanie} Prove that $p$ cannot be represented as a sum of squares.
+\end{ukazanie}
+
+\begin{zadacha} Let $z= a + b \1$ be a Gauss integer which is not
+  divisible by $1 + \1$. Suppose that $a$ and $b$ are coprime. Prove
+  that $z$ and $\bar z$ are coprime. 
+\end{zadacha}
+
+\begin{ukazanie} Prove that if $a$ and $b$ are coprime in $\Z$
+  then 2 can be represented as a linear combination $a + b \1$, $a - b
+\1$.
+\end{ukazanie}
+
+\begin{zadacha}[!] Let $a, b, c$ be coprime numbers such that
+  $a^2 + b ^2 = c^2$. Prove that $c= |z|^2$ for some $z\in\Z[\1]$.
+\end{zadacha}
+
+\begin{ukazanie} Use the fact that  $c^2 = (a + b \1)(a - b \1)$ and 
+ $a, b$ are coprime. Apply the uniqueness of prime multipliers
+  decomposition in $\Z[\1]$ and deduct that every prime multiplier of
+  $a + b \1$, $a - b \1$ appears twice in the decomposition. 
+\end{ukazanie}
+
+\begin{zadacha}[!] Find all triples of integer numbers $a, b, c$ such
+  that $a^2 + b ^2 = c^2$ (``find'' means ``write a formula that gives
+  all such triples when one substitutes its variables with integer
+  numbers'').
+\end{zadacha}
+
+\begin{ukazanie} Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[*] Find all triples of coprime numbers  $a, b,
+c$ such that $a^2 + 2 b ^2 = c^2$.
+\end{zadacha}
+
+\begin{zadacha} Use the uniqueness of prime multipliers decomposition
+  in $\Z[\sqrt{-2}]$
+\end{zadacha}
+
+\begin{zadacha}[**] Find all triples of coprime numbers $a, b,
+  c$ such that $a^2 + 3 b ^2 = c^2$.
+\end{zadacha}
+
+\end{document}

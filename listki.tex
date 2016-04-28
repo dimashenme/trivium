@@ -1,0 +1,79 @@
+
+
+\addtolength{\topmargin}{-23mm}
+\addtolength{\textheight}{60mm}
+\addtolength{\oddsidemargin}{-20mm}
+\addtolength{\textwidth}{40mm}
+
+\def\eqref#1{(\ref{#1})}
+\newcommand{\goth}{\mathfrak}
+\newcommand{\arrow}{{\:\longrightarrow\:}}
+\def\1{\sqrt{-1}\:}
+\newcommand{\restrict}[1]{{\left|_{{\phantom{|}\!\!}_{#1}}\right.}}
+
+\renewcommand{\bar}{\overline}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\def\rad{\operatorname{\sf rad}}
+\def\tr{\operatorname{\sf tr}}
+\def\rk{\operatorname{\sf rk}}
+\def\Alt{\operatorname{\sf Alt}}
+\def\Sym{\operatorname{\sf Sym}}
+\def\Id{\operatorname{\sf Id}}
+\def\Hom{\operatorname{Hom}}
+\def\Map{\operatorname{Map}}
+\def\Gal{\operatorname{Gal}}
+\def\Aut{\operatorname{Aut}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Mat}{\operatorname{Mat}}
+
+\newcommand{\coker}{\operatorname{Coker}}
+
+\def\chpoly{\operatorname{\sf Chpoly}}
+\def\minpoly{\operatorname{\sf Minpoly}}
+
+\def\cchar{\operatorname{\sf char}}
+
+\def\Z{{\mathbb Z}}
+\def\R{{\mathbb R}}
+\def\C{{\mathbb C}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\F{{\mathbb F}}
+
+\def\Re{\operatorname{Re}}
+\def\Im{\operatorname{Im}}
+
+\makeatletter
+\theoremstyle{definition}
+
+\newtheorem{zadacha}{Задача}[section]
+\newtheorem{opredelenie}{Определение}[section]
+\newtheorem*{ukazanie}{Указание}%[section]
+\newtheorem*{zamechanie}{Замечание}%[section]
+
+%\renewcommand{\labelenumi}{\ralph{enumi}.}
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\newcommand{\subs}[1]{{\bigskip\centerline{\bf\large #1}\bigskip}}
+\newcommand{\sttr}{{\bf(*)}}
+\newcommand{\shrk}{{\bf(!)}}
+\newcommand{\doublesttr}{{\bf(**)}}
+
+\newcommand{\listok}[2]{%
+\setcounter{page}{1}
+\renewcommand{\@oddhead}{\hfil #2 \hfil}
+\renewcommand{\@evenhead}{\hfil #2 \hfil}
+\section*{#2}
+\refstepcounter{section}
+\setcounter{section}{#1}
+}
+
+\@addtoreset{equation}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\let\oldllim=\lim
+\def\lim{\oldllim\limits}
+\makeatother

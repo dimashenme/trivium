@@ -1,0 +1,121 @@
+
+is denoted by
+we denote ... by
+we use ... to denote ...
+we let ... denote ..
+we write ... for ...
+говорят -- one says
+
+В этих предположениях --- ???
+В условиях предыдущей задачи --- In the previous problem setting. (везде поменять!!!)
+
+ALGEBRA 1
+Движения -- motions
+Отображение -- mapping
+шестиугольник -- hexagon
+диэдральная группа -- dihedral group
+симметрическая разность -- symmetric difference
+"\item\sttr Отображения из фиксированного множества $С$ в
+  фиксированную группу $G$, с операцией $(f \cdot g)(s) = f(s)g(s)$."
+какая вторая операция ??
+остаток -- remainder
+характеристика -- characteristic
+малая теорема Ферма -- Fermat's little theorem ???
+формула бинома -- binomial theorem
+в столбик -- long (division,multiplication)
+неравенство треугольника -- triangle inequality
+модуль -- modulus
+формула косинусов -- does not exist
+Архимед -- Archimedes
+неприводимый -- irreducible
+
+GEOMETRY 1
+фундаметальные последовательности -- Cauchy sequences
+сечение Дедекинда -- Dedekind section
+ограниченный сверху -- bounded above (has upper bound)
+ограниченный снизу -- bounded below (has lower bound)
+все, кроме конечного числа -- all but a finite number of
+
+ALGEBRA 2
+алгоритм Евклида -- Euclid's algorithm
+делимость -- divisibility
+наибольший общий делитель -- Greatest common divisor
+Делители нуля -- divisors of zero
+областью целостности -- integral domain
+единица (кольца) -- unity
+Целые гауссовы числа -- Gauss integers
+делиться -- be divisible
+делить -- divide
+взаимно простые --- co-prime (mutually prime исправить!)
+единственный с точностью до единицы --- unique up to unit
+необратимый --- non-invertible
+остаток от деления --- remainder when???
+prime multipliers decomposition ???
+задано деление с остатком -- division with remainder is defined
+частное --- factor
+евклидово --- euclidian
+
+GEOMETRY 2
+свойство Липшица -- Lipschitz property
+предельная точка -- accumulation point
+докажите, что этот инфимум определен -- ??? что имеется в виду ???
+(теорема о двух миллиционерах) --- ?
+Ряд -- series
+Бесконечное произведение -- infinite product
+стремиться к -- converge to / tend to (?)
+знакопеременный -- sign-alternating  
+в полном упорядоченном поле -- in complete oredered field
+
+ALGEBRA 3
+параллельный перенос -- parallel transportЧ
+Линейная оболочка --- linear hull
+линейная оболочка, натянутая на --- linear hull over
+линейно независимый --- linearly independent
+конечномерный --- finite-dimensional
+кососимметричный --- antisymmetric
+ортогональное дополнение --- orthogonal complement
+положительно определённый --- positive
+неравенство Коши --- Cauchy inequality
+неравенство треугольника --- triangle inequality
+
+ALGEBRA 4
+Конечное расширение -- finite extension
+частное --- factor
+
+
+GEOMETRY 3
+отрезок --- segment
+выпуклой вверх --- ???upper convex
+
+
+
+GEOMETRY 4
+a closed compact ball --- ??? (compact is already closed)
+contraction mapping -- сжимающее отображение
+
+ALGEBRA 5
+``Find a set of all isomorphisms
+ $a:\; V \arrow V'$ which are compatible with a given isomorphism''
+--- что значит ``совместимы''?
+алгебра с единицей  -- algebra with unit
+реализована --- realized
+тело --- division algebra
+
+Algebra 6
+
+пространсво детерминантных векторов - space of determinant vectors in
+вырожденный оператор -- singular operator
+невырожденный оператор -- nonsingular operator
+
+Geometry 5
+
+топология, индуцированная с --- a topology induced by
+база -- base
+шар с центром в u --- ball with a center u
+естественная топология (на R^n) -- natural topology
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: utf-8
+%%% End:
+

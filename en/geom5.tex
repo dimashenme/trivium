@@ -1,0 +1,576 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+\usepackage{srcltx}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{5}{GEOMETRY 5: Point-set topology.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+  Consider a set $M$ and a collection of distinguished sets $S\subset
+  \wp(M)$ called {\bf open subsets}. A pair $(M,S)$ (and, by abuse of
+  notation, $M$ itself) is called a {\bf topological space}, if the
+  following conditions are met:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\item An empty set and $M$ are open;
+
+\item The union of any number of open sets is open;
+
+\item The intersection of a finite number of open sets is open.
+\end{enumerate}
+A mapping $\phi:\; M \arrow M'$ of topological spaces is called
+ {\bf continuous}, if the preimage of every open set is
+ open. Continuous mappings are also called {\bf morphisms} of
+ topological spaces. An {\bf isomorphism} of topological spaces is a
+ morphism $\phi:\; M \arrow M'$ such that there is an inverse morphism $\psi:\;
+ M' \arrow M$ (i.e.\ $\phi\circ \psi $ and $\psi\circ \phi $ are
+ identity morphisms). An isomorphism of topological spaces is called
+ {\bf homeomorphism}. 
+
+ A subset $Z\subset M$ is called {\bf closed}, if its complement is
+ open. A {\bf neighborhood } of a point $x\in M$ is an open subset of
+ $M$ which contains $x$. A {\bf neighborhood} of a subset $Z\subset
+ M$ is an open subset of $M$ that contains $Z$.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that a composition of continuous mappings is continuous.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a set $M$ and let $S$ be a set of all subsets of $M$. Prove
+  that $S$ defines a topology on $M$. This topology is called {\bf
+    discrete}. Describe a set of all continuous mappings from $M$ to a
+  given topological space.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a set $M$ and let $S$ be the set containing an empty set and
+  $M$ itself. Prove that $S$ defines a topology on $M$. This topology
+  is called {\bf codiscrete}. Describe a set of all continuous mappings
+  from $M$ to a space with discrete topology.
+\end{zadacha}
+
+\begin{zadacha}
+  Give an example of a continuous 
+bijection between topological spaces that is not
+  a homeomorphism.
+\end{zadacha}
+
+\begin{zadacha} 
+  Consider a subset $Z$ of a topological space $M$.  Open subsets of
+  $Z$ are defined to be intersections of the form $Z\cap U$, where $U$  
+  is open in $M$.
+\begin{enumerate}
+\item Prove that this defines a topology on $Z$. Prove that a natural
+  embedding $Z\hookrightarrow M$ is continuous.
+
+\item\sttr{} Can all the continuous embeddings be obtained in this
+  way?
+\end{enumerate}
+\end{zadacha}
+
+\begin{opredelenie}
+  Such a topology on $Z\subset M$ is called the topology {\bf induced
+    by $M$}.  We will consider any subset of any topological space as
+  a topological space with induced topology.
+\end{opredelenie}
+
+\begin{opredelenie}
+Consider a topological space $M$, and let $S_0$ be such a collection
+of open sets such that any open set can be represented as a union of
+sets from $S_0$. Then $S_0$ is called a {\bf base} of
+$M$.
+\end{opredelenie}
+
+\begin{zadacha}
+  Describe all bases of a space $M$ with discrete topology; of a space
+  $M$ with codiscrete topology.
+\end{zadacha}
+
+\begin{opredelenie}
+Consider a metric space $M$.  Recall that a subset
+$U\subset M$ is called {\bf open}, if for every point $u\in
+U$, $U$ contains a ball of radius $\epsilon >0$ with the center $u$.   
+\end{opredelenie}
+
+\begin{zadacha} 
+Prove that this definition defines a topology on a metric space.
+\end{zadacha}
+
+\begin{opredelenie}
+A topological space is called {\bf metrizable} if it can be
+obtained from a metric space as described above.
+\end{opredelenie}
+
+\begin{zadacha} 
+Prove that a discrete space is metrizable and a codiscrete space is
+not.
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that open balls in a metric space $M$ are open.  Prove that
+open balls define a base of topology on $M$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a topological space $M$ and two topologies $S$, $S'$ on
+  $M$.  Suppose that for every point $m\in M$ and every neighborhood
+  $U'\ni m$ which is open in the topology $S'$ there is a neighborhood
+  $U\ni m$, $U\subset U'$, which is open in the topology $S$. Prove
+  that the identity mapping $(M, S) \overset{i}{\arrow} (M, S')$
+  is continuous. Give an example where $i$ is not a homeomorphism.
+\end{zadacha}
+
+\begin{zamechanie}
+ One says that the topology defined by $S'$ is {\bf  stronger} 
+than the topology defined by $S$.
+\end{zamechanie}
+
+\begin{zadacha}  
+Consider the space $\R^n$ with a norm $\nu$ (see GEOMETRY 3). This norm
+defines a metric and hence a topology on $\R^n$. Denote this topology
+by $S_\nu$. Let $\nu$, $\nu'$ be two norms satisfying
+$C^{-1} \nu'(x) <\nu(x)< C\nu'(x)$ for a fixed $C\in \R$. 
+Prove that the identity mapping on $\R^n$ defines a
+homeomorphism $(\R^n, S_\nu)\arrow (\R^n, S_{\nu'})$. 
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Consider two norms $\nu$, $\nu'$ on $\R^n$ such that the identity
+mapping on $\R^n$ defines a homeomorphism $(\R^n, S_\nu)\arrow (\R^n,
+S_{\nu'})$. Prove that there exists a constant $C$ such that $C^{-1}
+\nu'(x) <\nu(x)< C \nu'(x)$. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Consider a finite-dimensional vector space $V$ endowed with a
+  symmetric positive bilinear form $g$. We will consider $V$ as a metric space
+  with the metric $d_g$, constructed in GEOMETRY 3. Denote by $S_g$ 
+the topology
+  defined by $d_g$. Prove that the corresponding topology on $V$ does
+  not depend upon $g$, i.e.\ for any 
+(symmetric positive bilinear)  $g, g'$, the identity map on
+  $V$ is a homeomorphism $(V, S_g)\arrow (V, S_{g'})$.
+\end{zadacha}
+
+\begin{zadacha}[**]
+  Consider a finite-dimensional vector space $V$ with norm $\nu$.
+  Prove that the topology $S_\nu$ does not depend on norm $\nu$: the
+  identity map on $\R^n$ is a homeomorphism $(\R^n, S_\nu)\arrow
+  (\R^n, S_{\nu'})$. Is it true for a infinite-dimensional $V$?
+\end{zadacha}
+
+\begin{opredelenie}
+Consider a metric $d$ on $\R^n$, defined by the norm
+\[ 
+|(\alpha_1, \dots, \alpha_n)|= \sqrt{\sum_i \alpha_i^2}.
+\]
+The topology on $\R^n$, defined by $d$ is called the {\bf natural}
+topology. The {\bf natural topology} on subsets of $\R^n$ is 
+the topology induced by the natural $\R^n$-topology.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider $\R$ with the natural topology.  Consider a space $M$ with
+discrete topology and a space $M'$ with a codiscrete topology. Find the
+set of all continuous maps 
+\begin{enumerate}
+\item from $\R$ to $M$
+
+\item from $M$ to $\R$
+
+\item from $M'$ to $\R$
+
+\item from $\R$ to $M'$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a mapping $\phi:\; M \arrow M'$, where $M,M'$ are topological
+spaces. Is it true that the continuity of $\phi$ implies that the preimage 
+of any closed set is closed? Is it true that if a preimage of any
+closed set is closed then $\phi$  is continuous?
+\end{zadacha}
+
+\begin{zadacha}
+Give an example of a continuous mapping of topological spaces such
+that the image of an open set is not open. Give an example of a
+continuous mapping of topological spaces such that the image of a
+closed set is closed.
+\end{zadacha}
+
+\begin{opredelenie}
+  Consider a topological space $M$ and arbitrary $Z\subset
+  M$.  The intersection of the closed sets of $M$ containing $Z$
+   is denoted by $\overline{Z}$ and is called the {\bf closure}
+  of $Z$.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that $\overline Z$ is closed.
+\end{zadacha}
+
+\begin{opredelenie}
+Consider a topological space $M$. The following conditions T0-T4
+are called {\bf separation axioms.}
+\begin{enumerate}
+\renewcommand{\labelenumi}{{\bf T\arabic{enumi}.}}
+\setcounter{enumi}{-1}
+\item Let $x\neq y \in M$. Then at least one of
+  the points $x$, $y$ has a neighborhood  containing the other point.
+
+\item Every point in $M$ is closed.
+
+\item For any $x\neq y\in M$ there are non-intersecting
+  neighborhoods $U_x$, $U_y$.
+
+\item For any point $y\in M$, every $M\supseteq U\ni y$ contains an
+  open neighborhood $U'\ni y$ such that $U$ contains the closure of
+  $U'$.
+
+\item For any closed subset $Z\in M$, any neighborhood
+$U\supset Z$ contains an open neighborhood $U'\supset Z$ such that
+$U$ contains the closure of $U'$.
+\end{enumerate}
+The condition $T_2$ is widely known as the {\bf Hausdorff
+  axiom}. A topological space that satisfies the $T_2$ condition is
+called a {\bf Hausdorff}.
+\end{opredelenie}
+
+\begin{zadacha}
+  Prove that the condition $T_1$ is equivalent to the following one:
+  for any two distinct points $x, y\in M$, there exists a
+  neighborhood of $y$, which does not contain $x$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that the condition $T_4$ is equivalent to the following one: any
+two distinct closed sets $X, Y\subset M$ have two non-intersecting
+neighborhoods.
+\end{zadacha}
+
+\begin{zadacha} Let $M$ be a topological space. Consider an
+  equivalence relation on $M$ defined the following way: $x$ is
+  equivalent to $y$ iff $x \in \overline{\{y\}}$ and $y \in
+  \overline{\{x\}}$. Denote the set of equivalence classes as $M'$.
+\begin{enumerate}
+\item Verify that this is indeed an equivalence relation .
+Prove that $M$ satisfies the $T_0$ iff $M=M'$.
+
+\item Define $U \subset M'$ to be open iff its preimage w.r.t. the 
+  mapping $M \to M'$ is open. Prove that this defines a topology on
+  $M'$. Does it satisfy the $T_0$ condition?
+
+\item Prove that the open subsets of $M$ are exactly the preimages of the open
+  subsets of $M'$.
+
+\item Suppose that $M$ has the codiscrete topology. What is $M'$?
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}
+Are $T_0-T_4$ conditions satisfied by a space with the discrete topology?
+With the codiscrete topology?
+\end{zadacha}
+
+\begin{zadacha}
+Prove that $T_0-T_4$ are satisfied by $\R$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that $T_1$ implies $T_0$ and that $T_2$ implies $T_1$.
+\end{zadacha}
+
+\begin{zadacha} 
+Give an example of a space that does not satisfy the $T_1$
+condition. Give an example of a non-Hausdorff space such that all
+the singleton sets are closed in it.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Give an example of a space that satisfies the $T_1$ condition such
+that any two non-empty open sets have an non-empty intersection.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Prove that $T_2$ follows from $T_1$ and $T_3$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Give an example of a space that satisfies $T_4$ but does not satisfy
+  $T_1$.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a metrizable topological space. Prove that it satisfies
+conditions $T_1$, $T_2$, $T_3$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider a metrizable topological space. Prove that it satisfies the
+condition $T_4$. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $M$ be a finite set.
+\begin{enumerate}
+\item Find all topologies on $M$ that satisfy the $T_1$ condition.
+\item Are there any topologies on $M$ that do not satisfy $T_1$?
+\item Are there any topologies on $M$ that do not satisfy $T_1$, but
+  satisfy $T_0$?
+\end{enumerate}
+\end{zadacha}
+
+\begin{opredelenie}
+  A set $M$ is called a {\bf partially ordered set}, if there is a
+  binary relation $x \le y$ (``$x$ less than or equal $y$'') defined
+  on it such that:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\item If $x \le y$ and $y \le z$, then $x \le z$.
+\item If $x \le y$ and $y \le x$, then $x=y$.
+\end{enumerate}
+\end{opredelenie}
+
+\begin{zadacha}[*]
+\begin{enumerate}
+\item Consider a partially ordered set $M$; say that $S \subset M$ 
+is open if together with any  $x \in S$ it
+  contains all $y \in M$ satisfying $y \le x$. Prove that this defines
+  a topology on $M$. When does this topology satisfy the $T_0$
+  condition? The $T_1$ condition?
+\item Consider a finite set $M$ and a topology on $M$ 
+that satisfies the $T_0$
+  condition. Prove that it is induced by a partial order on $M$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{opredelenie}
+  Let $Z\subset M$ be a subset of a topological space.  A subset $Z$
+  is called {\bf dense}, if $Z$ has a non-empty intersection with
+  every open subset of $M$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Prove that $Z$ is dense iff the closure $\overline{Z}$ is the entire
+  $M$.
+\end{zadacha}
+
+\begin{zadacha}
+  Find all dense subsets in a topological space with the discrete
+  topology; with the codiscrete topology.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that $\Q$ is dense in $\R$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+A subset $Z$ in a topological space $M$ is called {\bf nowhere dense},
+if for every open $U\subset M$ the subset $Z\cap U$ is not
+dense in $U$. Prove that $Z$ is nowhere dense iff $M\backslash
+\overline{Z}$ is dense in $M$.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+  Construct a nowhere dense subset of the interval $[0, 1]$ (endowed
+  with the natural topology) of the continuum cardinality.
+\end{zadacha}
+
+\begin{zadacha}
+Find all nowhere dense subsets in a space with discrete topology; with
+codiscrete topology.
+\end{zadacha}
+
+\begin{opredelenie}
+Let $M$ be a topological space and $x\in M$ be an arbitrary
+point. A neighborhood base of $x$ is a collection $B$ of
+neighborhoods of $x$ such that any neighborhood $U\ni x$ contains some
+neighborhood from $B$.
+\end{opredelenie}
+
+\begin{zadacha}
+Consider a collection $B$ of open subsets of a topological space $M$
+such that for any $x\in M$ the collection of all
+$U\in B$ containing $x$ is a neighborhood base of $x$. Prove that
+$B$ is a base of the topology of $M$.
+\end{zadacha}
+
+\begin{opredelenie}
+  Consider a topological space $M$. One can impose two countability
+  conditions on $M$. If every point of $M$ has a countable
+  neighborhood base, then one says that $M$ satisfies {\bf the first
+    countability axiom}. If $M$ has a countable base of open sets,
+  then one says that $M$ satisfies {\bf the second countability
+    axiom}, or that $M$ is a {\bf space with a countable
+    base}. If there exists a countable dense subset of $M$  then one says that $M$ is {\bf separable}.
+\end{opredelenie}
+
+\begin{zadacha}
+Consider a space $M$ with discrete topology. Prove that $M$ satisfies
+the first countability axiom.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a topological space $M$ with a countable base. Prove that it
+is separable.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider a separable topological space $M$. Prove that $M$ has a
+countable base. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a metrizable topological space. Prove that it has a
+  countable neighborhood base for every point.
+\end{zadacha}
+
+\begin{zadacha} 
+Construct a non-separable metrizable topological space.
+\end{zadacha}
+
+\begin{zadacha}[**]
+Give an example of a countable Hausdorff space without a countable
+base.
+\end{zadacha}
+
+\subsection{Topology and convergence}
+
+Topological space were invented as a language to speak about continuous
+functions. In GEOMETRY 4 we defined a continuous function as a
+function that preserves limits of convergent sequences. One can
+consider topology from the axiomatic viewpoint as above, or from the
+point of view of geometric intuition, by giving a class of convergent
+sequences on a space to define its topology and considering a mapping
+continuous if it preserves limits.
+
+The second approach (despite all its obvious advantages) encounters
+set-theoretical problems: if the space does not have a countable base,
+then one has to use well-founded uncountable sequences. We are going
+to work mostly with spaces which have a countable neighborhood base
+and it is convenient to define topology and continuity via limits of
+sequences.
+
+\begin{opredelenie} 
+  Let $M$ be a topological space and $Z\subset M$ be an infinite
+  subset.  A point $x\in M$ is called an {\bf accumulation point} of
+  $Z$, if every neighborhood of $x$ contains some point $z\in
+  Z$. A {\bf limit } of a sequence $\{ x_i\}$ is defined to be a point
+  $x$ such that every neighborhood of $x$ contains almost all $x_i$'s.
+  A sequence is called {\bf convergent} if it has a limit.
+\end{opredelenie}
+
+\begin{zadacha}
+Find all convergent subsequences in a space with discrete topology; in
+a space with codiscrete topology.
+\end{zadacha}
+
+\begin{zadacha}
+Consider a Hausdorff space $M$. Prove that every sequence has at most
+one limit.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Is the converse true (i.e.\ does it follow from the uniqueness of a
+limit that the space is Hausdorff)?  What if $M$ has a countable
+neighborhood base of its point?  
+\end{zadacha}
+
+\begin{zadacha} 
+  Consider a space $M$  where any sequence has at most one limit.
+  Prove that $M$ satisfies the separation axiom $T_1$.
+\end{zadacha}
+
+\begin{zadacha}
+  Consider a continuous mapping $f:\; M \arrow M'$ and a subset
+  $Z\subset M$. Prove that $f$ maps accumulation points of $Z$ to
+  accumulation point of $f(Z)$.  Prove that $f$ maps limits to
+  limits. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a mapping that maps accumulation points to accumulation
+points. Prove that it is continuous.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a space $M$ with a countable neighborhood base for every
+point, and an arbitrary  $Z\subset M$. Prove that the
+closure of $Z$ is the set of limits of all sequences from $Z$.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{lim.seq}
+Consider topological spaces $M$, $M'$ with a countable neighborhood
+base for every point and a mapping $f:\; M \arrow M'$ that preserves
+limits of sequences. Prove that $f$ is continuous.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[*] 
+What happens if we do not require in the previous problem that
+neighborhood bases are countable in $M$? In $M'$?
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider a set $M$ and let some sequences of elements of $M$ be
+declared to {\bf converge} to points from $M$ (it is denoted like this:
+$x\in \lim x_i$; note that there can be more than one limit of a
+sequence\footnote{Thus we talk here 
+about limits of sequences as {\em sets} of points. (DP)}). 
+Let the following conditions hold for the notion of
+convergence: 
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\item The limit of a sequence $x, x, x,x,x, \dots $ contains $x$.
+
+\item If $x\in \lim x_i$ then the limit of any subsequence
+$\{x_{i_\ell}\}$ is nonempty and contains $x$.
+
+\item Consider an infinite number of elements of a sequence $\{x_i\}$.
+  Let us permute them and denote the result by $\{ y_i\}$. If
+  $x\in \lim x_i$ then $x\in \lim y_i$.
+
+\item If $x\in\lim x_i$ and $x\in\lim y_i$ then the sequence $x_1, y_1,
+  x_2, y_2, ...$ converges to $x$.
+\end{enumerate}
+\begin{enumerate}
+\item Define closed subsets of $M$ as these 
+$Z\subset M$ that contain the limits of all sequences
+$\{x_i\}\subseteq Z$.  Define open sets as complements of closed sets.
+Prove that this defines a topology on $M$.
+
+\item Consider a topology $S$ on $M$ with a countable
+  neighborhood base for every point. Define the limits of sequences
+  with respect to this topology. Prove that conditions (i)-(iv) hold
+  for this notion of convergence. Let $S'$ be a topology obtained
+  from limits with the help of construction in (a). Prove that the
+  topologies $S'$ and $S$ coincide.
+
+\item Take a uncountable set with the following topology: open sets
+  are complements of finite sets (this topology is called cofinite).
+  Consider a topology $S'$ defined by limits as above. Describe $S'$.
+  Prove that $S'$ does not satisfy the first countability axiom.
+
+\end{enumerate}
+\end{zadacha}
+
+
+\end{document}

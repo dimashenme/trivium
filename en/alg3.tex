@@ -1,0 +1,670 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+\listok{3}{ALGEBRA 3: vector spaces and linear mappings}
+
+\subs{Vector spaces}
+
+Recall that abelian (or commutative) group is a group where group
+operation is commutative:
+\[
+f \cdot g = g\cdot f
+\]
+Group operation in abelian groups is often denoted by $+$ and called
+``addition''; unity is denoted by $0$ in this case and is called
+``zero''.
+
+\begin{opredelenie}
+{\bf Linear} or {\bf vector} space $V$ over field $k$ is an abelian
+group with an operation $k\times V \mapsto V$
+(``multiplication of vector by element of a field'') which is in
+accordance with the group operation in the following sense:
+\begin{enumerate}
+\item For any $\lambda\in k$, $u, v\in V$, $\lambda(u+v) =
+\lambda u+ \lambda v$. For any $\lambda_1, \lambda_2\in k$, $u\in
+V$,  $(\lambda_1+\lambda_2) u = \lambda_1 u +\lambda_2 u$
+(distributivity of multiplication with respect to addition).
+\item For any $\lambda_1, \lambda_2\in k$, $u\in V$, 
+$\lambda_1(\lambda_2 u) = (\lambda_1 \lambda_2) u$ (associativity of multiplication).
+\item For any $v\in V$, $1v=v$ where $1\in k$ is a unity.
+\end{enumerate}
+Elements of vector space are called vectors and group operation is
+called the addition of vectors.
+\end{opredelenie}
+
+\begin{zadacha} Consider a field $k$. Prove that $k$ is a vector space
+  over itself.
+\end{zadacha}
+
+\begin{zadacha} Prove that the group $k^*$ of invertible elements in
+  $k$ with multiplication as group operation acts on any vector space
+  over $k$.
+\end{zadacha}
+
+\begin{zamechanie} This group is called the multiplicative group of
+  field $k$.
+\end{zamechanie}
+
+\begin{zadacha} Prove that a group of parallel transports of a plane
+  has a structure of vector space over $\R$.
+\end{zadacha}
+
+\begin{zadacha} Consider a vector space $V$ over $k$. Prove that $0_k
+  (v) =0_V$ for any $v\in V$. Here $0_k$ is the zero in $k$ and $0_V$
+  is the unity in $V$.
+\end{zadacha}
+
+\begin{zadacha} Consider a field $ë$ and its subfield $k$. Prove that 
+$ë$ is a vector space over $k$.
+\end{zadacha}
+
+\begin{zadacha} Consider a field $k$. 
+\begin{enumerate}
+\item Denote a set of $n$-tuples $(a_1, a_2, \dots , a_n)$ of elements
+  of $k$ by $k^n$. Define a natural addition on $k^n$ and action of 
+   $k^*$ on it and prove that you obtained a vector space.
+\item Consider a set $S$. Denote by $k[S]$ a set of all collections of
+  elements of $k$ 
+\[
+\langle a_{s_1},a_{s_2},\dots \rangle
+\] 
+each element of a collection corresponding to precisely one element of
+$S$ such that $a_s$ are zero except a finite number of them. Introduce
+a structure of vector space over $k$ on $k[S]$.
+\end{enumerate}
+\end{zadacha}
+
+Vector space $k[S]$ is called a vector space, {\bf generated} by a set
+$S$. Set $S$ can be naturally embedded into $k[S]$ -- every element of
+$s \in S$ corresponds to a vector $[s] \in k[S]$ such that all
+$a_{s'}$ are zeros except $a_s$ which is $1$.
+
+\begin{opredelenie} Let $A$, $B$ be two sets and let $G$ act on them.
+  One says that a mapping $\kappa:\; A \to B$ {\bf is compatible
+    with action $G$} if $\kappa(g(a)) = g(\kappa(a))$.
+\end{opredelenie}
+
+Recall that a homomorphism of abelian groups is a mapping that
+preserves the group operation
+\begin{equation}\label{_homomo_Equation_}
+  f:\; G_1 \to G_2, \ \  f(g+ g') = f(g) + f(g')
+\end{equation}
+
+\begin{opredelenie}
+Homomorphism of vector spaces over $k$ is a mapping which preserves
+addition of vectors (cf. \eqref{_homomo_Equation_}) and is compatible
+with the action of $k^*$.
+\end{opredelenie}
+
+In other words a homomorphism of vector spaces is a mapping $f:\; V_1
+\to V_2$ which satisfies conditions $f(v_1 + v_2) = f(v_1) + f(v_2)$,
+$f(\lambda v) = \lambda f(v)$. Monomorphism, epimorphism, isomorphism
+and automorphism of vector spaces are defined in the same fashion as
+for groups (as well as rings, fields and all other algebraic
+structures). When talking about vector spaces one says ``linear
+operator'' or ``linear mapping'' instead of ``homomorphism''.
+
+Recall that identity mapping of a vector space $V$ is denoted by
+$\Id_V$. $\Id_V$ is obviously an automorphism.
+
+\begin{zadacha} Prove that a linear mapping $\phi:\; V_1 \to
+V_2$ is bijective if and only if it is {\bf invertible},
+i.e. there exists a linear mapping $\psi:\; V_2 \to V_1$
+such that
+\begin{equation}
+\psi \circ \phi = \Id_{V_1}, 
+\phi \circ \psi = \Id_{V_2}.
+\end{equation} 
+Are these conditions sufficient each on its own ?
+\end{zadacha}
+
+\begin{zadacha}\label{iso.equiv} 
+The fact that two vector spaces $V$, $V'$ are isomorphic is denoted by
+$V\cong V'$. Prove that 
+\begin{enumerate}
+\item If $V \cong V'$ and $V' \cong V''$ then $V \cong V''$.
+\item If $V \cong V'$ then $V' \cong V$.
+\item It is always true that $V \cong V$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha} Prove that the set of homomorphisms from $V_1$ to
+  $V_2$ form a vector space (it is often denoted by $\Hom(V_1, V_2)$).
+\end{zadacha}
+
+\begin{zadacha} Prove that the set of automorphisms $V$ forms a group
+  (this group is often denoted by $GL(V)$). Is this a commutative group?
+\end{zadacha}
+
+\begin{opredelenie} Subgroup $V' \subset V$ of a vector space $V$ is
+  called a {\bf vector subspace} or {\bf linear subspace of $V$} if it
+  is preserved under the action of $k^*$ (in other words for any
+  $\lambda\in k$, $v, v'\in V'$ it is true that $\lambda(v) \in V'$,
+  $v+ v'\in V'$).
+\end{opredelenie}
+
+Vector subspace is itself a vector space over the same field.
+
+\begin{zadacha} Consider a set $S$. Prove that a set of all mappings
+  $\Map(S,k)$ from $S$ to $k$ is a vector space.
+\end{zadacha}
+
+\begin{zadacha}[*]\label{univ.gene}
+  Consider a vector space $W$ and a set $S$. Prove that any mapping $S
+  \to W$ can be extended in a unique way to a linear mapping $k[S] \to
+  W$. Is it true if we allow for the infinite non-zero elements of a
+  field in the definition of $k[S]$?
+\end{zadacha}
+
+\begin{zadacha} Let $k[t]$ be a set of polynomials 
+$a_n t^n + a_{n-1} t^{n-1} + ... + a_0$ with coefficients belonging to
+a field $k$. Prove that this is a linear space.
+\end{zadacha}
+
+\begin{zadacha} Consider a set $\Map(k,k)$ of all mappings from the
+  field $k$ to $k$. For any polynomial $P=a_n t^n + a_{n-1} t^{n-1} +
+... + a_0$ and every $\lambda \in k$ define $\Psi_P(\lambda) =
+P(\lambda)$. We obtain the mapping $\Psi:\; k[t]\to \Map(k,k)$, $P
+\mapsto \Phi_P$. Prove that it is a homomorphism.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $k$ be a finite field. Prove that
+$\Psi:\; k[t]\to \Map(k,k)$ is not a monomorphism.  Prove that it is
+an epimorphism.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $k$ be an infinite field. Prove that  $\Psi:\;
+  k[t]\to \Map(k,k)$ is a monomorphism.
+\end{zadacha}
+
+\begin{zadacha}[*] Prove that it is not an epimorphism.
+\end{zadacha}
+
+Consider a set $A$ and a binary relation $\sim$ on
+$A$ (that is, we state for certain pairs of elements $a,b \in A$ that
+$a \sim b$). One says that  $\sim$ is an {\bf equivalence relation}
+if the following holds:
+\begin{enumerate}
+\item For any element  $a \in A$ it is true that $a \sim a$.
+\item If  $a \sim b$ and $b \sim c$ then $a \sim c$ (transitivity).
+\item If $a \sim b$ then  $b \sim a$ (symmetry).
+\end{enumerate}
+
+An equivalence relation $\sim$ having been defined an {\bf equivalence
+  class} of an element $a \in A$ is a set of all elements $a' \in A$
+such that $a' \sim a$. It is easy to check that if $a \sim a'$ then
+the equivalence class of $a$ is the same as the equivalence class of
+$a'$. So we can talk just about an equivalence class without
+mentioning a particular element $a$. A relation $a = b \mod n$ is an
+example of an equivalence relation of the set of natural numbers. The
+problem~\ref{iso.equiv} can be reformulated as follows: ``$V \cong V'$
+is an equivalence relation''.
+
+\begin{zamechanie}
+We work with equivalence relation in Geometry 1 when considering Cauchy
+sequences, although we do not introduce this notion explicitly.
+\end{zamechanie}
+
+\begin{zadacha}
+  Let $V$ be a vector space and $V'\subset V$ be a subspace. Consider
+  the following equivalence relation on $V$: $a \sim b$ iff $a+v = b$
+  for some $v\in V'$. Prove that the set of equivalence classes forms
+  linear space.
+\end{zadacha}
+
+\begin{opredelenie} 
+This space is called a {\bf quotient space} and is denoted by $V/V'$. 
+\end{opredelenie}
+
+\begin{zadacha} Consider a natural mapping $V \to V/V'$ which maps an
+  element to its equivalence class. Prove that this is a homomorphism
+  and an epimorphism.
+\end{zadacha}
+
+\begin{zadacha} Let $\phi:\; V_1 \to V_2$ be a linear mapping and 
+$V_0\subset V_1$ be a set of elements that are mapped to zero. 
+\begin{enumerate}
+\item Prove that $V_0$ is a linear subspace in $V_1$. 
+\item Prove that an image of $\phi$ -- that is, a subset of all $v \in
+  V_2$ of the form $\phi(v')$, $v' \in V_1$ -- is a linear subspace in
+  $V_2$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{opredelenie}
+$V_0$ is called a {\bf kernel of $\phi$}.
+\end{opredelenie}
+
+\begin{zadacha} Let $\phi:\; V_1 \to V_2$ be a linear operator.
+Prove that an image of $\phi$ is isomorphic to a quotient space
+$V_1/V_0$ where $V_0$ is a kernel of $\phi$.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Linear hull, basis, dimension}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{zadacha}
+  Let $V$ be a vector space over the field $k$ and $x_1, \dots, x_n$
+  be vectors from $V$. Any vector of the form $v = \lambda_1 x_1+
+  \lambda_2 x_2 + \dots + \lambda_m x_n$ is called {\bf linear
+    combination} of vectors $x_1, \dots, x_n$ where $\lambda_1$ are
+  arbitrary elements from $k$. Prove that linear combinations of
+  vectors $x_1, \dots, x_n$ form a linear subspace of $V$.
+\end{zadacha}
+
+\begin{opredelenie} This subspace is called a {\bf linear hull} of
+  $x_1, \dots, x_n$ and is denoted $\langle x_1, x_2, \dots,
+  x_n\rangle$. $\langle x_1, x_2, \dots, x_n\rangle$ is called a
+  subspace {\bf generated} by vectors $x_1\dots,x_n$.
+\end{opredelenie}
+
+\begin{zadacha}\label{epi} Construct an epimorphism from $k^n$ into 
+$\langle x_1, x_2, \dots, x_n\rangle$.
+\end{zadacha}
+
+\begin{ukazanie} Map an $n$-tuple
+$(0, 0, 0, \dots, 1, \dots, 0)\in k^n$ (unity is in the $l$-th
+position) to $x_l$.
+\end{ukazanie}
+
+\begin{opredelenie} Vectors $x_1, \dots, x_n$ are called {\bf linear
+    independent} vectors, if for any linear combination $v = \lambda_1
+  x_1+ \lambda_2 x_2 + \dots + \lambda_m x_n$ such that there is at
+  least one $\lambda_i\neq 0$, it is true that $v\neq 0$
+\end{opredelenie}
+
+\begin{zadacha} Let $x_1, \dots, x_n$ be vectors from vector space
+$V$ and $\phi$ be an epimorphism constructed in the
+exercise~\ref{epi}. Prove that $\phi$ is injective iff  $x_1, \dots,
+x_n$ are linearly independent vectors.
+\end{zadacha}
+
+\begin{opredelenie} 
+  Let $x_1, \dots, x_n$ be linearly independent vectors from a vector
+  space $V$ such that $V = \langle x_1, x_2, \dots, x_n\rangle$. $x_1,
+  \dots, x_n$ is called a {\bf basis of} the vector space $V$.
+\end{opredelenie}
+
+\begin{zadacha} Construct a basis of $k^n$.
+\end{zadacha}
+
+\begin{zadacha} Prove that a vector space with a basis $x_1, \dots,
+  x_n$ is isomorphic to $k^n$.
+\end{zadacha}
+
+\begin{zadacha} Let $v$ be a non-zero vector from $V \cong k^n$,
+$\langle v\rangle$ be a subspace generated by it and $V/\langle
+v\rangle$ is a quotient space. Prove that $V/\langle v\rangle$
+is isomorphic $k^{n-1}$.
+\end{zadacha}
+
+\begin{ukazanie} Consider a subspace $V_l\subset V \cong k^n$,
+generated by $n$-tuples of the form
+\[
+\langle \lambda_1, \lambda_2, \dots,
+\lambda_{l-1}, 0, \lambda_{l+1}, \dots, \lambda_n\rangle
+\]
+(there is a $0$ on the $l$-th position). This space is isomorphic to
+$k^{n-1}$. Prove that for some $l= 1, 2, \dots, n$ the natural
+projection $V_l \to V/\langle v\rangle$ is an isomorphism.
+\end{ukazanie}
+
+\begin{zadacha} Let $x_1, \dots, x_l$ be linearly independent vectors 
+  from $V \cong k^n$. Prove that $V /\langle x_1, x_2, \dots,
+  x_l\rangle$ is isomorphic to $k^{n-l}$
+\end{zadacha}
+
+\begin{ukazanie} Use an inductive argument.
+\end{ukazanie}
+
+\begin{zadacha} Let $V_1\subset V_2$ be a subspace of $V_2 \cong k^n$.
+  Suppose that $V_1 \cong k^m$. Prove that $m\leq n$.
+\end{zadacha}
+
+\begin{zadacha} Let $x_1, \dots, x_l$ be a basis of $V \cong k^n$.
+Prove that $l=n$.
+\end{zadacha}
+
+\begin{zadacha}[!] 
+Let vector spaces $k^l$ and $k^m$ be isomorphic. Prove that
+$l=m$.
+\end{zadacha}
+
+\begin{opredelenie} Vector space $V$ over $k$ is called a 
+{\bf finite-dimensional} if it is isomorphic to $k^n$. Number $n$ is
+called a {\bf dimension} of $V$. This is denoted by 
+$\dim V=n$. It follows from the previous exercise that $n$ is uniquely
+defined. 
+\end{opredelenie}
+
+\begin{zadacha} Let $x_1, x_2, \dots, x_l$ be linearly independent
+  vectors in a linear space $V$ such that $V':= V /\langle x_1, x_2,
+\dots, x_l\rangle$ is a non-zero space. Let $x_{l+1}\in V$ be a
+vector such that its natural projection on $V'$ is non-zero. Prove
+that  $x_1, x_2, \dots, x_l, x_{l+1}$ are linearly independent vector. 
+\end{zadacha}
+
+\begin{zadacha}[!] Let $V$ be a linear space which is not
+  finite-dimensional. Prove that there exists an infinite sequence of
+  linearly independent vectors $x_1, x_2, \ldots, x_l, \ldots \in V$. 
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha}[!] Let $V\subset V'$ be a subspace of a finite
+  dimensional vector space. Prove that $V$ is finite-dimensional.
+  Deduce that $\dim V \leq \dim V'$
+\end{zadacha}
+
+\begin{ukazanie} 
+Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha} Let $V =V'/V''$ be a quotient space of finite
+  dimensional space. Prove that $V'$ is finite-dimensional. Prove that
+  $\dim V \leq \dim V'$. Deduce that $\dim V' = \dim V + \dim V''$.
+\end{zadacha}
+
+\begin{ukazanie} Use a proof by contradiction:
+consider an infinite sequence of linearly independent vectors from $V$
+and lift them to $V'$.
+\end{ukazanie}
+
+\begin{zadacha}\label{mono=>iso} 
+  Let $f:\; V \to V'$ be homomorphism of vector spaces of the same
+  dimension $n$. Suppose that $f$ is an injection or surjection. Prove
+  that $f$ is an isomorphism.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Linear forms, bilinear forms}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+  Let $V$ be a linear space over $k$. A {\bf linear form} or {\bf
+    bilinear form} over $V$ is a homomorphism of linear spaces $V$ and
+  $k$. The space of linear forms over $V$ is denoted by $V^*$.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider a finite-dimensional linear space $V$. Prove that $\dim
+V\!=\dim V^*$.
+\end{zadacha}
+
+\begin{zadacha}
+Let $k$ be a field and $S$ be an arbitrary set. Is it true that $(k[S])^*
+\cong \Map(S,k)$?
+\end{zadacha}
+
+\begin{zadacha}[!] 
+Consider a natural map  $V\overset{ev}{\to} V^{**}$, $v
+\mapsto (\lambda \mapsto \lambda(v))$, the vector $v\in V$ maps a form
+$\lambda \mapsto \lambda(v)$ to $V^*$. Let $V$ be finite
+dimensional. Prove that  $V\overset{ev}{\to} V^{**}$ is an isomorphism.
+\end{zadacha}
+
+\begin{ukazanie} 
+Prove that this is an injection and use the exercise~\ref{mono=>iso}.
+\end{ukazanie}
+
+\begin{zadacha}[**] Consider a infinite-dimensional linear space $V$.
+Prove that $V\overset{ev}{\to} V^{**}$ is not an isomorphism.
+\end{zadacha}
+
+\begin{opredelenie}
+  Let $U$, $V$, $W$ be linear spaces over a field $k$. A mapping
+  $U\times V \overset{\mu}{\to} W$, $u, v \mapsto \mu(u, v)$ is called
+  {\bf bilinear} if for every $u$ the mappings $\mu(u, \cdot):\; V \to
+  W$ and $\mu(\cdot, u):\; U \to W$ are linear.
+\end{opredelenie}
+
+\begin{zadacha} Prove that a sum of bilinear mappings is bilinear.
+  Prove that a structure of vector space can be defined on the set of
+  bilinear mappings $U\times V \to W$.
+\end{zadacha}
+
+A space of bilinear mappings is denoted $\Hom(U\otimes V, W)$. The
+reason for that is the following:
+
+\begin{zadacha}[*]
+  Consider vector spaces $U$ and $V$. Consider the set $U \times V$
+  and the vector space generated by it $k[U \times V]$. Let us denote
+  the element of $k[U \times V]$ corresponding to the pair $\langle
+  u,v \rangle \in U \times $ by $u \otimes v$. Consider the subspace
+  generated by the vectors of the form $au \otimes v - a(u \otimes
+  v)$, $u \otimes av - a(u \otimes v)$, $(u_1+u_2) \otimes v - u_1
+  \otimes v - u_2 \otimes v$, $u \otimes (v_1 + v_2) - u \otimes v_1 -
+  u \otimes v_2$ and denote the quotient space by $U \otimes V$.  Prove
+  that for any $W$ the subspace $\Hom(U \otimes V,W)$ is isomorphic to
+  the set of bilinear mappings from $U \times V$ to $W$.
+\end{zadacha}
+
+The space $U \otimes V$ is called a {\bf tensor product}
+of spaces $U$ and $V$.
+
+\begin{zadacha}[*] The dimensions of $U$, $V$, $W$ are $a,b,c$.
+Find the dimension of $\Hom(U\otimes V, W)$.
+\end{zadacha}
+
+\begin{opredelenie} Let $V$ be a vector space over $k$.  Bilinear form
+  over $V$ is a bilinear mapping $V\times V \overset{\mu}{\to} k$. A
+  bilinear symmetric form is a form that satisfies the equality
+  $\mu(x,y) = \mu(y,x)$. Bilinear antisymmetric form is a form is
+  a form that satisfies the equality $\mu(x,y) = -\mu(y,x)$. We will
+  denote the space of bilinear symmetric forms by $S^2 V^*$, the space of
+  bilinear 
+  antisymmetric forms by $\Lambda^2 V^*$ and the space of all
+  bilinear forms by $(V\otimes V)^*$.
+\end{opredelenie}
+
+\begin{opredelenie} One says that the characteristic of a field $k$
+  is not 2 if the number $2=1+1$ is invertible in $k$.
+\end{opredelenie}
+
+\begin{zamechanie} 
+Apparently, this is not true in a field of two elements.
+\end{zamechanie}
+
+\medskip
+
+\noindent
+Up to the end of this section we suppose that the characteristic of a
+field we are talking about is not 2.
+
+\medskip
+
+\begin{opredelenie}
+If $U$, $V$ are vector spaces then the product $U\times V$
+of sets $U$ and $V$ is endowed with a natural structure of vector
+space. This product considered as a vector space is called a {\bf direct
+  sum of $U$ and $V$} and is denoted $U \oplus V$.
+\end{opredelenie}
+
+\begin{zadacha}
+Consider two subspaces $U, V$ of a vector space $W$ such that
+intersection of $U$ and $W$ contains only $0 \in V$ and the linear hull
+over $U$ and $V$ is $W$. Prove that  $W$ is isomorphic to
+$U \oplus V$. 
+\end{zadacha}
+
+\begin{zamechanie}
+Notation that is used in that case: $W=U \oplus V$.
+\end{zamechanie}
+
+\begin{zadacha} Consider the symmetrization mapping that turns any
+  bilinear form into symmetric form $\Sym(\mu)(x,y) =
+\frac{1}{2}(\mu(x,y) +\mu(y,x))$ and alternation mapping 
+$\Alt(\mu)(x,y) = \frac{1}{2}(\mu(x,y) -\mu(y,x))$. Prove that these
+mappings are linear operators
+\[ 
+(V\otimes V)^*\overset{\Sym}{\to} S^2 V^*, \ \ (V\otimes
+V)^*\overset{\Alt}{\to} \Lambda^2 V^*
+\]
+Prove that the sum
+\[
+\Sym \oplus \Alt:\; (V\otimes V)^*\to S^2 V^*\oplus \Lambda^2 V^*
+\]
+is an isomorphism.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Let $\dim V = n$. Find dimension of $S^2 V^*$ and $\Lambda^2
+V^*$.
+\end{zadacha}
+
+\begin{zadacha} Let $\mu$ be a bilinear symmetric form. Prove that
+  $\mu(u+v, u+v) = \mu(v,v) + \mu(u,u) + 2 \mu(u, v)$.
+\end{zadacha}
+
+\begin{zadacha}[!] 
+  Let $\mu$ be a non-zero bilinear symmetric form over $V$. Prove that
+  $\mu(x,x)\neq 0$ for some $x \in V$.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise.
+\end{ukazanie}
+
+\begin{opredelenie}
+Consider $V$ a linear space with a symmetric or antisymmetric bilinear
+form  $\mu:\; V \times V \to k$ defined on it. For any  $v\in V$,
+$\mu$ defines a linear form $\mu(v,
+\cdot):\; V \to k$.  We say that $v$ belongs to the radical {\bf
+  radical} of $\mu$ if this form equals zero.
+\end{opredelenie}
+
+\begin{zadacha}[*] 
+Prove that a radical is a linear subspace of $V$.
+\end{zadacha}
+
+Radical is denoted by $\rad \mu$.
+
+\begin{zadacha}[*] 
+Prove that $\mu(v+r, v'+r')= \mu(v, v')$ where $r, r'\in \rad \mu$.
+\end{zadacha}
+
+\begin{zamechanie} It follows that  $\mu$ is naturally defined on 
+the quotient space $V/\!\rad \mu$.
+\end{zamechanie}
+
+\begin{opredelenie} A symmetric (or antisymmetric) form $\mu$ is
+  called {\bf non-degenerate} if its radical is zero.  Non-degenerate
+  bilinear antisymmetric form is called {\bf symplectic}.
+\end{opredelenie}
+
+\begin{zadacha} Consider a non-degenerate symmetric (or antisymmetric)
+  bilinear form $\mu$ defined on a finite-dimensional vector space
+  $V$. Define the mapping  $V \to V^*$, $v \mapsto
+\mu(v, \cdot)$ that maps  $v$ to the form  $t\mapsto \mu(v, t)$.
+Prove that it is an isomorphism.
+\end{zadacha}
+
+\begin{ukazanie} Prove that it is a monomorphism of spaces of the same
+  dimension.
+\end{ukazanie}
+
+\begin{zadacha} Let $\mu$ be non-degenerate symmetric (or
+  antisymmetric) bilinear form on the finite-dimensional space
+$V$ and $\lambda:\; V \to k$ be a linear functional. Prove that there exists
+a vector $v\in V$ such that $\lambda(t) = \mu(v, t)$.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise.
+\end{ukazanie}
+
+\begin{opredelenie} Let $V$ be a space with a symmetric (or
+  antisymmetric) bilinear form $\mu$ and be $V_1\subset V$ its linear
+  subspace. Define an {\bf orthogonal complement} $V_1^\bot$ to be a
+  set of all vectors $v\in V$ such that $\mu(v, v_1)=0$ for all
+  $v_1\in V_1$.
+\end{opredelenie}
+
+\begin{zadacha}[!] 
+  Let $\mu$ be non-degenerate on $V$ and on $V_1$. Suppose that $V_1$
+  is finite-dimensional. Then $V = V_1 \oplus V_1^\bot$.
+\end{zadacha}
+
+\begin{ukazanie} That $V_1$ and $V_1^\bot$ do not intersect can be
+  shown explicitly. It remains to prove that every vector $v\in V$ can
+  be represented as the sum of vectors from $V_1$ and $V_1^\bot$.
+  Consider $\mu(v, \cdot)$ as a functional over $V_1$. Use the
+  previous exercise and find the vector $v_1\in V_1$ such that a form
+  $\mu(v-v_1, \cdot)$ is zero on $V_1$. It follows that $v-v_1 \in
+  V_1^\bot$.
+\end{ukazanie}
+
+\begin{zadacha}[!] Deduce the following statement from the previous
+  exercise.  Let $\mu$ be a symmetric bilinear non-degenerate form on
+  a vector space $V$. Then there exists a basis $x_1, \dots, x_n$ in
+  $V$ such that $\mu(x_i, x_j)=0$ for all $i\neq j$ and $\mu(x_i,
+  x_i)\neq 0$ for all $i$.
+\end{zadacha}
+
+\begin{ukazanie} Find a vector $x$ such that $\mu(x,x)\neq 0$. Use the
+  decomposition $V = \langle x \rangle
+\oplus \langle x \rangle^\bot$ from the previous exercise and apply an
+inductive argument.
+\end{ukazanie}
+
+\begin{zadacha}[*] Let $\mu$ be a bilinear symmetric form on $V$ Then
+  there exists a basis $x_1, \dots, x_n$ in $V$ such that $\mu(x_i,
+  x_j)=0$ for all $i\neq j$. Such basis is called an {\bf orthogonal
+    basis}.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $\mu$ be a symplectic form 
+on the space $V$. Prove that $V$ dimensions is even. Prove a basis
+$x_1, ..., x_{2n}$ in $V$ such that 
+\[
+\mu(x_{2r-1}, x_{2r}) = - \mu(x_{2r}, x_{2r-1}) =1
+\] 
+when $r = 1, 2, ..., n$ and $\mu(x_i, x_j)=0$ for all other pairs
+$(i,j)$.
+\end{zadacha}
+
+\begin{ukazanie} 
+The proof is analogous to the symmetric case .
+\end{ukazanie}
+
+\begin{opredelenie} Let $V$ be a vector space over $\R$ and $\mu$ be a
+  bilinear symmetric form on it. A form $\mu$ is called {\bf
+    positive} if  $\mu(x,x) >0$  for all non-zero vector $x$.
+\end{opredelenie}
+
+\begin{zadacha} Let $\mu$ be a positive bilinear form on $V$. Then
+  there is a basis $x_1, \dots, x_n$ in $V$ such that $\mu(x_i,
+  x_j)=0$ for all $i\neq j$ and $\mu(x_i, x_i)=1$ for all $i$.
+\end{zadacha}
+
+\begin{opredelenie} Such basis is called {\bf orthonormal}.
+\end{opredelenie}
+
+\begin{zadacha}[*] 
+Let $x,y$ be arbitrary vectors in a space $V$  and $\mu$ be a positive
+bilinear form. Prove the inequality
+\[
+\frac{\mu(x,x) + \mu(y,y)}{2} \geq \mu(x,y).
+\]
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Prove the {\bf Cauchy inequality}:
+\[
+\sqrt{\mu(x,x)\mu(y,y)} \geq \mu(x,y).
+\]
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Prove the {\bf triangle inequality}
+\[ 
+\sqrt{\mu(x,x)} + \sqrt{\mu(y,y)} \geq \sqrt{\mu(x+y,x+y)}.
+\] 
+\end{zadacha}
+
+\end{document}

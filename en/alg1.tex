@@ -1,0 +1,706 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{1}{ALGEBRA 1: groups, rings and fields}
+
+\subs{Groups}
+
+The set of pairs $(a,b)$, where $a$ is an element of $A$ and $b$ is an
+element of $B$ is called a {\bf product} of $A$ and $B$ and is denoted
+by $A \times B$.  A mapping $f:A \to B$ from a set $A$ to a set $B$
+is called an {\bf injective mapping} or {\bf injection} or {\bf
+  one-to-one mapping} (these are synonyms), if it maps different
+elements of the set $A$ to different elements of the set $B$. A
+mapping is called a {\bf surjective mapping} or a {\bf surjection} or
+an {\bf onto mapping} if for every element $x$ of set $B$ there exists
+at least one element of $A$ that is mapped to $x$. A mapping is called
+{\bf bijective mapping} or {\bf bijection} or a {\bf one-to-one
+  mapping} if it is surjective and injective.
+
+Let $A$ be some set, either finite or infinite. Let $S(A)$ denote
+the set of all bijective mappings from $A$ to itself. If $f, g$ are
+two such mappings then they can be ``multiplied'' using composition
+$f\circ g$:
+$$
+f \circ g (a) = f(g(a)).
+$$ A set $S(A)$ endowed with this operation is called ``permutation
+group (or substitution group)'' or more precisely ``the group of
+permutations of $A$''. Identity permutation is denoted by $1_A$
+(or $\Id_A$ as well).
+
+$S(A)$ is also called a {\bf symmetric group}. If $A$ is a finite set
+of $n$ elements then $S(A)$ is denoted by $S_n$.
+
+Permutations can be represented by tables; for example, a permutation
+$1 \mapsto 3$, $2 \mapsto 4$, $3 \mapsto 1$, $4 \mapsto 2$ of
+$1,2,3,4$ can be written down as $\sigma =
+\left(\begin{array}{cccc}1&2&3&4\\3&4&1&2\end{array}\right)$. The
+numbers are written in the ascending order in the upper line, their
+images are written in the lower line.
+
+\begin{zadacha}
+  Compute the composition
+$$
+\left(\begin{array}{ccccc}1&2&3&4&5\\4&5&2&1&3\end{array}\right) \circ 
+\left(\begin{array}{ccccc}1&2&3&4&5\\3&5&4&1&2\end{array}\right).
+$$
+\end{zadacha}
+
+\begin{zadacha}
+\begin{enumerate}
+\item How many permutations of $1,2,\dots,5$ are there? How many of
+  them leave $1$ unchanged?
+\item How many of them map $1$ to $5$?
+\item How many permutations are there such that $\sigma(1) <
+  \sigma(2)$? 
+\item How many permutations are there such that $\sigma(1) < \sigma(2)
+  < \sigma(3)$?
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha} 
+How many elements are there in $S(A)$  if $A$ is a finite set of $n$
+elements?
+\end{zadacha}
+
+\begin{zadacha}  
+Is it true that $f\circ g = g\circ f$ for any $f, g$?
+\end{zadacha}
+
+For any permutation $f\in S(A)$ (``$\in$'' means that the element
+belongs to the set) there exists a unique ``inverse permutation''
+$f^{-1}$, i.e.\ a permutation such that $f\circ f^{-1} = f^{-1}\circ f
+= 1_A$.
+
+A {\bf cyclic permutation} of a set $a,b,c,d, \dots, w$ maps $a$ to
+$b$, $b$ to $c$, $c$ to $d$ and so on.  Such a permutation is denoted
+by $(a,b,c,d,\dots,w)$.  The number of elements in the brackets is its
+{ \bf order}. {\bf Transposition} is a cyclic permutation of order 2;
+it permutes two elements and leaves all other elements unchanged.
+
+\begin{zadacha}
+Let $\sigma = (123)$, $\tau=(34)$. Calculate $\tau \circ \sigma \circ
+\tau^{-1}$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that every permutation is a product of transpositions.
+\end{zadacha}
+
+\begin{zadacha}[*] Is it possible that a product of even number of
+  transpositions be an identity permutation?
+\end{zadacha}
+
+\begin{ukazanie} What happens to a polynomial 
+$(x_1-x_2)(x_1-x_3)\dots(x_1-x_n)(x_2-x_3)\dots$ (a product of $(x_i -
+x_j)$ for all $i > j$) when  $x_i$ and $x_j$ are permuted?
+\end{ukazanie}
+
+A permutation group $S(A)$ is endowed with the following structure:
+operation of multiplication of permutations, operation of taking
+inverse of a permutation, the identity permutation. It is useful to
+axiomatize this structure.
+
+\begin{opredelenie}
+  Let $G$ be a set with the following operations defined on it: $f, g
+  \mapsto f\cdot g$ (``multiplication''), $f\mapsto f^{-1}$ (``taking
+  inverse'') and let the ``identity element'' $1_G$ be defined as
+  well. Let the following axioms be satisfied:
+\begin{enumerate}
+\item ``Associativity'': $(f\cdot g) \cdot h= f\cdot (g \cdot h)$
+for all $f$, $g$, $h$.
+
+\item ``Identity'': $f \cdot 1_G = 1_G \cdot f = f$ for all $f$.
+
+\item ``Inverse element'': $f \cdot f^{-1} = f^{-1} \cdot f = 1_G$
+for all $f$.
+\end{enumerate}
+In this case we call $G$ a {\bf group}.
+\end{opredelenie}
+
+A subset of $G$ which is closed under these operations is called a
+{\bf subgroup of $G$ }.
+
+\begin{zadacha} Consider a group $G$. Prove that for any two elements
+  $f$ and $g$ of it
+\begin{enumerate}
+\item If $fg=f$ or $gf=f$ then $g=1$;
+\item If $fg=1$ or $gf=1$ then $g=f^{-1}$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zamechanie}
+  This means that to define a group structure on a set $G$ it suffices
+  to define an operation of multiplication. Identity element and
+  operation of taking inverse are uniquely determined by it and can be
+  then reconstructed.
+\end{zamechanie}
+
+\begin{zadacha}\label{grp}
+Are these sets (with indicated operations) groups?
+\begin{enumerate}
+\item Natural numbers with an operation of addition;
+\item Integer numbers with an operation of addition;
+\item Integer numbers with an operation of multiplication;
+\item Rational numbers with an operation of multiplication;
+\item Real numbers with an operation of addition;
+\item Real numbers with an operation of multiplication;
+\item\sttr Planar motions with an operation of composition;
+\item Numbers strictly greater than $-1$ and strictly less than $1$ with
+  an operation defined by the formula $u * v = (u+v)/(1+uv)$ (check
+  that the operation is defined correctly);
+\item Figures (sets of points) on a plane with an operation of union;
+\item\sttr Figures (sets of points) on a plane with an operation of
+  symmetric difference: $A * B$ contains points that belong to
+  precisely to one of the figures ($A$ or $B$);
+\item\sttr Mappings from a fixed set $C$ into a fixed group $G$ with
+  an operation $(f \cdot g)(s) = f(s)g(s)$.
+\end{enumerate}
+\end{zadacha}
+
+``Product of groups'' $G_1$ and $G_2$ is a set of pairs $(g_1,
+g_2)$, $g_1\in G_1, g_2\in G_2$ with an operation
+$$
+(g_1, g_2) \cdot (g_1', g_2') =(g_1\cdot g_1', g_2\cdot g_2')
+$$
+A mapping $f:G \to G'$ from a group $G$ into a group $G'$ is called a
+{\bf homomorphism} if it preserves the multiplication: $f(g_1 \cdot
+g_2) = f(g_1) \cdot f(g_2)$. A homomorphism is called a {\bf
+monomorphism}, if it is injective, an {\bf epimorphism} if it is
+surjective and an {\bf isomorphism} if it is bijective. Groups $G$,
+$G'$ are {\bf isomorphic} if there exists an isomorphism between
+them. An isomorphism of a group into itself is called an {\bf
+automorphism}.
+
+\begin{zadacha} Prove that if $f:G \to G'$ is a homomorphism of groups
+  then for any $g \in G$ $f(1_G) = 1_{G'}$ and
+  $f(g^{-1})=(f(g)^{-1})$.
+\end{zadacha}
+
+\begin{opredelenie}
+  If a homomorphism $G \to S(A)$ of a group $G$ into a group $S(A)$ of
+  permutations of a set $A$ is defined then one says that {\bf $G$
+    acts on a set $A$} (and indeed every element of $G$ permutes the
+  elements of $A$ somehow). The action of $G$ on $A$ can be thought of
+  as a mapping $G \times A \overset{\rho}{\to} A$, $a, g \mapsto
+  \rho(g, a)$. Sometimes the notation for an action of a group on a set
+  is even simpler: $a, g \mapsto g(a)$.
+\end{opredelenie}
+
+\begin{zadacha} Prove that every group admits an injective
+  homomorphism into a permutation group (of a not necessarily finite
+  set).
+\end{zadacha}
+
+\begin{ukazanie} Think about what the meaning of the following phrase
+  can be: ``Group $G$ acts on itself by multiplication on the left''.
+\end{ukazanie}
+
+\begin{zadacha} Is it true that
+\begin{enumerate}
+\item every group that consists of two elements is isomorphic to 
+  permutation group $S_2$;
+\item every group that consists of six elements is isomorphic either
+  to permutation group $S_3$ or to the product of two non-trivial
+  (i.e. those that have more than one element) groups.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[*] Prove that permutation group $S_n$ is not
+  isomorphic to the product of two non-trivial groups.
+\end{zadacha}
+
+\begin{zadacha}
+Let $G$ be a group and $g \in G$ its element. Is it true that the
+sequence $g,g^2,g^3,\dots$ is periodic? Is it true if  $G$ is a finite
+group?
+\end{zadacha}
+
+Let $n$ be a natural number. One says that $g \in G$ is an {\bf
+element of order $n$} in a group $G$ if $g^n = 1_G$ but $g^k \neq 1_G$
+for any $k < n$.
+
+\begin{zadacha}[!]
+Consider a finite group of $n$ elements. Prove that $n$ is divisible
+by the order of every element of that group.
+\end{zadacha}
+
+\begin{ukazanie}
+Consider the action of the group on itself by multiplication on the
+left.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+  Consider a group with an even number of elements. Prove that it
+  contains an element of order 2.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Is it true that
+\begin{enumerate}
+\item the group $D_{12}$ of rotations of a regular 12-gon is
+  isomorphic to a product $D_{6}\times S_2$ where $D_6$ is a group of
+  rotations of a regular hexagon;
+\item the group $D_6$ is isomorphic to a product $D_{3}\times S_2$
+  where $D_3$ is a group of rotations of a triangle.
+\end{enumerate}
+\end{zadacha}
+
+A group is called {\bf commutative} or an {\bf Abelian group} if
+$f\cdot g = g \cdot f$ for all $f, g$. Two elements $f, g$ {\bf
+  commute} if $f\cdot g = g \cdot f$.
+
+\begin{zadacha}
+Which groups out of those considered in the exercise~\ref{grp} are
+commutative?
+\end{zadacha}
+
+\begin{zadacha}[*]
+\begin{enumerate}
+
+\item 
+A {\bf center} of a group $G$ is a set consisting of all the elements
+$g\in G$ such that $g g' = g' g$ for all $g'\in G$. Prove that center
+is a subgroup.
+
+\item Consider a group $G$ such that there exist an element in it of
+  order $>2$. Consider a subgroup $G'$ such that all elements $g\in G$
+  that do not belong to $G'$ have order 2. Give an example of such a
+  situation (or prove that it is not possible). Is $G$ always finite
+  when the mentioned conditions hold?\label{pa}
+
+\item In the conditions of a previous question prove that $G'$ is an
+  abelian group
+
+\item Let $G'$ contain a center $G$. Prove that a group $G$ is
+  uniquely (up to an isomorphism) determined by the $G'$ subgroup if
+  the condition from \thetag{\ref{pa}} holds. ($G'$ is called then a
+  dihedral group)
+
+\item Consider a dihedral group $G$ corresponding to an abelian group
+$G'$ as shown above. Let $G'$ be a product of $S_2$ and some other
+abelian group: $G' = S_2 \times G''$. Prove that $G$ is a product of
+$S_2$ and a dihedral group.
+\end{enumerate}
+\end{zadacha}
+
+\subs{Rings and fields}
+
+Consider real numbers, integer numbers and finite decimal
+fractions. There are the following operations defined on these structures
+\begin{enumerate}
+\item Addition which is commutative and makes a group out of a set
+  (addition is designated as ``+''; taking an inverse element is
+  designated as ``-'')
+
+\item Multiplication which is also commutative but does not make a
+  group out of any of the considered sets because some elements are
+  non-invertible (multiplication is designated by a dot; the dot is
+  often omitted: one writes $xy$ instead of $x\cdot y$).
+\end{enumerate}
+It is useful to axiomatize these structures.
+
+\begin{opredelenie} 
+Let $R$ be a set with two operations $a, b \mapsto a+b$
+(addition) and $a, b \mapsto a\cdot b$ (multiplication). Let elements
+$0$ and $1$ (zero and identity) be defined in $R$. If the following
+holds then $R$ is called a {\bf ring}:
+\begin{enumerate}
+\item $R$ is a commutative group with respect to the operation of
+  addition, $0$ is a the identity element in this group
+
+\item $1$ is an identity with respect to multiplication: $1 \cdot a = a
+\cdot 1 =a$ for all $a$.
+
+\item Associativity for multiplication: $a \cdot (b \cdot c) = (a \cdot
+  b) \cdot c$.
+
+\item Distributivity: $a\cdot (b+c) = a \cdot b + a\cdot c$.
+\end{enumerate}
+If the multiplication is commutative then one says that a ring $R$ is
+commutative. If, moreover, the multiplication is invertible for all
+$a\neq 0$, i.e. $R \backslash \{0\}$ is a group with respect to
+multiplication then $R$ is called a {\bf field}.
+\end{opredelenie}
+
+In this chapter as well as in several following chapters we will
+consider only commutative rings and we will omit the word
+``commutative'' for brevity; unless it is stated otherwise explicitly
+all the rings are assumed to be commutative.
+
+\begin{zadacha}\label{rings}
+  Are the following sets (equipped with natural operations unless they
+  are specified explicitly) the rings:
+\begin{enumerate}
+\item natural numbers
+\item integer numbers
+\item even integer numbers
+\item rational numbers
+\item irrational numbers
+\item finite decimal fractions
+\item pairs of integer numbers with the coordinatewise addition and
+multiplication
+\item pairs of integer numbers with the coordinatewise addition and
+  multiplication defined by the formula
+  $(a,b)\cdot(c,d)=(ac-bd,ad+bc)$
+\item\sttr\label{sqrt2} pairs of rational numbers with the
+coordinatewise addition and multiplication defined by the formula
+$(a,b)\cdot(c,d)=(ac+2bd,ad+bc)$.
+\item\sttr figures on the plane (addition is symmetric difference,
+  multiplication is intersection).
+\item\sttr mappings from a fixed set $C$ into a fixed group $G$ with
+  an operation $(f \cdot g)(s) = f(s)g(s)$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}
+Which rings from the exercise~\ref{rings} are fields?
+\end{zadacha}
+
+\begin{zadacha}\label{poly} 
+Consider a ring $R$. Consider a set of sequences
+$$ 
+a=(a_0,a_1,\dots,a_i,\dots,0,0,\dots)
+$$
+consisting of elements of $R$ with the finite number of non-zero
+elements. Define the operations on this set as follows
+$$
+\begin{aligned}
+(a+b)_i &= a_i+b_i,\\
+(a \cdots b)_i &= \sum_{j=0}^i a_jb_{i-j}.
+\end{aligned}
+$$
+Prove that this set is a ring (check in particular that multiplication
+is associative).
+\end{zadacha}
+
+The ring defined in the exercise~\ref{poly} is called a {\bf ring of
+  polynomials of single variable} on $R$, it is denoted by $R[x]$.
+Elements of $R[x]$ are called ``polynomials''. They are usually
+written down in the form $a_0 + a_1x + \dots + a_ix^i$ (for all $j>i$,
+$a_j$ are zero).
+
+In the algebra course we will suppose the notion of a real number
+known, (for example, you can think about real numbers as of infinite
+decimal fractions with usual operations defined on the fractions). The
+rigorous definition is given in the course of geometry, topology and
+analysis. All we need in the algebra course is
+
+\medskip
+
+\noindent
+{\bf Important note:} Real numbers form a field.
+
+\medskip
+
+This ``important note'' is also proven in the course of geometry,
+topology and analysis. Besides that, we need the following property :
+
+\begin{zadacha}[*]
+Prove that every equation of the form
+$$
+x^{2n+1} + a_{2n} x^{2n} + a_{2n-1} x^{2n-1} + \cdots + a_1 x + a_0 =0
+$$
+has a real solution.
+\end{zadacha}
+
+You should try solving this exercise when you are familiar with the
+notion of a real number.
+
+\begin{zadacha}[*]
+Will the ring defined in the exercise~\ref{rings}~\ref{sqrt2} be a
+field if we change ``rational numbers'' for ``real numbers'' in the
+definition?
+\end{zadacha}
+
+\begin{zadacha} Consider a fixed natural number $n$. Natural numbers
+  divided by $n$ have remainders $0$, $1$, $2$, \dots $n-1$.  Let us
+  denote the operation of taking remainders by $\mod n$. Two numbers
+  that have the same remainders $\mod n$ are called equal modulo $n$.
+  Let us define addition and multiplication on a set of numbers $\mod
+  n$ in such a way that
+\begin{align*}
+(x \mod n) + (y \mod n) &= ((x  + y) \mod n), \\
+(x \mod n) \cdot (y \mod n) &= (xy \mod n)
+\end{align*}
+would hold for all pairs of integer numbers $x, y$.  Prove that this
+definition is correct and the set of remainders form a ring.
+\end{zadacha}
+
+\begin{zadacha}[*]\label{modulo}
+Prove that the set of remainders $\mod n$ with the addition and
+multiplication defined as above form a field iff $n$ is a prime
+number.
+\end{zadacha}
+
+\begin{zamechanie}
+If you cannot solve this problem right away, put it away: the same
+problem will be reintroduced without an asterisk after defining some
+useful intermediate notions.
+\end{zamechanie}
+
+\begin{zadacha}
+Build the field which consists of
+\begin{enumerate}
+\item 2 elements
+\item 3 elements
+\item\sttr 4 elements.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[*]
+Prove that there is no field that consists of 6 elements
+\end{zadacha}
+
+\begin{zadacha}
+Prove that if $p$ is a prime number then a field that consists of $p$
+elements is unique up to isomorphism.
+\end{zadacha}
+
+\begin{opredelenie} {\bf Characteristic} of a field $k$ is $0$ if $1
+  \in k$ has infinite order with respect to addition, otherwise it is
+  equal to the order $p$ of an element $1 \in k$ if it is finite.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that if the characteristic $p$ of a field $k$ is not zero then
+$p$ is a prime number.
+\end{zadacha} 
+
+\begin{zadacha}[*]
+  Consider a field of characteristic $p$. Prove that Frobenius mapping
+  $x \mapsto x^p$ preserves multiplication and addition (just like
+  with the groups such a mapping is called a homomorphism).
+\end{zadacha}
+
+\begin{ukazanie} Use the binomial theorem.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Deduce Fermat's smaller theorem from that: $x^p$ is equal to $x$
+modulo $p$ for any integer number $x$.
+\end{zadacha}
+
+Let $P= x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$ be a polynomial
+with the coefficients in the field $k$. A {\bf root} $P$ is an
+element $\alpha$ of a field $k$ such that $P(\alpha)=0$.
+
+\begin{zadacha} Let $\alpha$ be the root of a polynomial $P$ over a
+  field $k$. Prove that a polynomial $P$ can be divided by $z-\alpha$
+  in the ring $k[z]$
+\end{zadacha}
+
+\begin{ukazanie} Use the long division of polynomials:
+$$
+\arraycolsep=0.05em
+\begin{array}{rrr@{\,}r|r}
+x^2&{}+2x&{}-12&&\,x+5\\
+\cline{5-5}
+x^2&{}+5x&&&\,x-3\\
+\cline{1-2}
+&{}-3x&{}-12\\
+&{}-3x&{}-15\\
+\cline{2-3}
+&&3
+\end{array}
+$$
+\end{ukazanie}
+
+\begin{zadacha} Prove that nonzero polynomial of degree $n$ over a
+  field cannot have more than $n$ different roots.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise.
+\end{ukazanie}
+
+Let $P$ be a nonzero polynomial over a field $k$. A polynomial $P$
+ is called {\bf irreducible} if it cannot be represented as a product
+ of polynomials of smaller degree.
+
+Consider the set of remainders modulo $P$ in a ring $k[x]$.
+
+\begin{zadacha} Prove that this is a ring (we denote it by $k[x] \mod
+  P$).
+\end{zadacha}
+
+\subs{Complex numbers}
+
+The set of integer numbers is denoted by $\Z$ and the set of real
+numbers is denoted by $\R$. Let $\C$ be a set of pairs of real numbers
+$(a,b)$ with addition defined by the formula $(a, b)+(c,d) = (a+c,
+b+d)$ and with multiplication defined by formula
+$$
+(a, b) \cdot (c,d) = (ac - bd, ad + bc).
+$$
+Elements of $\C$ are called complex numbers.
+
+\begin{zadacha} Check that $\C$ is a ring. Prove that an equation
+  $x^2+1=0$ has a solution in $\C$. How many solutions does it have?
+\end{zadacha}
+
+\begin{zadacha} Let us take a solution of an equation $x^2+1$ in $\C$
+  and denote it by $\1$. Prove that any complex number can be uniquely
+  represented in the form $a + b \1$, $a,b \in \R$.
+\end{zadacha}
+
+\begin{zadacha}
+Build an isomorphism $\C \cong (\R[x] \mod P)$ where $P$ is a polynomial
+$P= x^2+1$.
+\end{zadacha}
+
+\begin{zadacha} Consider a complex number $z:=a+b\1$. A number conjugate
+to $z$ is the number $\bar z := a-b\1$. Prove that complex conjugation
+preserves multiplication and addition in $\C$ (such mappings are
+called automorphisms of the field $\C$).
+\end{zadacha}
+
+\begin{zadacha} Consider a complex number $z:=a+b\1$. Prove that 
+$z\bar z$ is real (it means that in the representation of a complex
+  number $(x,y)$ the component $y$ is zero).
+\end{zadacha}
+
+\begin{zadacha} Consider a complex number $z:=a+b\1$. Prove that
+$z\bar z = a^2 + b^2$. That means in particular the this number is
+  always nonnegative and equals zero only if $z = 0$. $z\bar z$ is
+  often written down as $|z|^2$ since the length of a vector $(a,b)$
+  on a plane equals $\sqrt{a^2 + b^2}$ (the distance between $z$ до
+  $0$, $|z|$ is called a modulus of $z$).
+\end{zadacha}
+
+\begin{zadacha} 
+Deduce from the previous problem that complex numbers form a field.
+\end{zadacha}
+
+\begin{ukazanie} $z^{-1} = \bar z |z|^{-2}$
+\end{ukazanie}
+
+\begin{zadacha} Prove ``triangle inequality'': 
+$|z_1| - |z_2| \leq |z_1 + z_2| \leq |z_1|+ |z_2|$
+\end{zadacha}
+
+\begin{zadacha} Prove that $|z_1 z_2| = |z_1||z_2|$.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{povorot}
+Let $z=a+b\1$ be a complex number with the modulus equal to 1:
+$|z|=1$. Let us regard the multiplication by $z$ as a transformation
+of a plane $\R^2$ associated naturally with $\C$. Prove that if $z
+\neq 1$ then this transform is planar motion with a single fixed point
+$0 \in \R^2$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  It is known from geometry that a planar motion with the only fixed
+  point $0 \in \R^2$ is a rotation by some angle $\phi$ around $0$.
+  Given $\phi$, how $a$ and $b$ can be found in task~\ref{povorot}?
+\end{zadacha}
+
+\begin{zamechanie}
+The angle $\phi$ is called an {\bf argument} of complex number $z$.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+Prove the formula $\cos (\phi +\psi)= \cos\phi \sin \psi +
+\sin\phi \cos \psi$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Prove that an equation $z^n =1$ has precisely $n$ complex solutions.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the trigonometric interpretation of complex numbers.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Consider a polynomial $P$ of a degree less than $n$ and let  $\zeta_1, \dots,
+\zeta_n$ be ``the roots of $n$-th degree from 1''  or, simply put,
+let $\zeta_1, \dots, \zeta_n$ be all complex $z^n =1$. Prove that the
+mean $\frac 1 n \sum P(\zeta_i)$ of values of $P$ in all the points
+$\zeta_i$ equals $P(0)$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the trigonometric interpretation of complex numbers.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Consider a polynomial $P$ of a degree less than $n$. Let $\Xi$ be a regular
+$n$-gon on a complex plane $\C = \R^2$. Prove that the value of $P$ in
+the center of $\Xi$ equals to the mean of values of $P$ in the
+vertices of $\Xi$.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous problem.
+\end{ukazanie}
+
+\begin{zamechanie} Archimedes defined the perimeter of a circle
+  as a limit of perimeters of polygons inscribed into it. If we follow
+  Archimedes then we can define the mean of a function $f$ defined on a
+  circle as a limit (by $n$) of means $\frac 1 n \sum f(\zeta_i)$
+  where $z_i$ are vertices of regular $n$-gons inscribed into the
+  circle. One can deduce from the previous problem that the mean of
+  values of a polynomial function $P$ on a unity circle $|z|=1$ equals
+  the value of $P$ in its center.
+\end{zamechanie}
+
+\begin{zadacha}
+Calculate the group of automorphisms of $\C$
+\begin{enumerate}
+\item\sttr which translate $\R\subset \C$ into itself.
+\item which translate the subfield $\R\subset\C$ into itself and do
+  not move its elements.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let us change the definition of complex numbers. Instead of
+$$
+(a, b) \cdot (c,d) = (ac - bd, ad + bc).
+$$
+let us put
+$$
+(a, b) \cdot (c,d) = (ac + bd, ad + bc).
+$$
+Let us denote the obtained structure by $\R_2$. Is $\R_2$ a ring? Is
+it a field?  Find all solutions of an equation $z^2=1$ in $\R_2$.
+Find all the solutions of an equation $z^2=0$ in $\R_2$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let us change the definition of complex numbers. Instead of
+$$
+(a, b) \cdot (c,d) = (ac - bd, ad + bc).
+$$
+let us put
+$$
+(a, b) \cdot (c,d) = (ac, ad + bc).
+$$
+Let us denote the obtained structure by $\R_\epsilon$.  Is
+$\R_\epsilon$ a ring? Is it a field? Is it isomorphic to $\R_2$ from
+the previous problem?  Find all the solutions of an equation $z^2=1$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Find all the solutions of an equation $z^2=z$ in two previous problems.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+  Let $P=a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$ be a
+  polynomial of degree $n$ with $n$ roots lying outside the unit
+  circle. Prove that $\frac {a_k}{a_0} < C_n^k$ where $C_n^k=
+  \frac{n!}{k!(n-k)!}$ is a binomial coefficient.
+\end{zadacha}
+
+\end{document}

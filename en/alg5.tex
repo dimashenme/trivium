@@ -1,0 +1,395 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{5}{ALGEBRA 5: Algebras over a field}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Algebras over a field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+From now on we work with a fixed field $k$. 
+
+Recall that a mapping $(V_1\times V_2) \overset{\mu}{\arrow}
+V_2$ of vector spaces is called {\bf bilinear}, if for any
+$v_1\in V_1$, $v_2 \in V_2$, the mappings
+\[ 
+\mu(v_1, \cdot ):\; V_2 \arrow V_3, \ \mu(\cdot, v_2):\; V_1 \arrow V_3
+\]
+(one argument is fixed, another takes values in $V_2$, $V_1$
+respectively) are linear. One says that bilinear mapping is a
+mapping which is ``linear in both arguments''.  A symbol of tensor
+multiplication is used to denote bilinear mappings, for example, the
+mapping just mentioned is denoted
+\[ 
+\mu:\; V_1\otimes V_2 \arrow V_3.
+\]
+
+\begin{opredelenie}
+Let $A$ be a vector space over a field $k$ and $\mu:\; A
+\otimes A \arrow A$ be a bilinear operation (``multiplication'').  $(A, \mu)$
+is called an {\bf algebra over $k$}, if $\mu$ is associative:
+\[
+\mu(a_1, \mu(a_2, a_3)) = \mu(\mu(a_1, a_2), a_3)).
+\]
+Multiplication in an algebra is usually denoted like this: $a\cdot
+b$. If there is an element $1$ in an algebra such that $\mu(1,a) =
+\mu(a,1) =a$ for all $a\in A$ then this element is called a  {\bf
+  unit}, and an algebra is called {\bf algebra with unit}. A {\bf
+  homomorphism} $r:\; A \arrow A'$ of algebras is a linear mapping
+which preserves multiplication and an {\bf isomorphism} of algebras is
+an invertible homomorphism.  {\bf Subalgebra} of an algebra is a
+linear subspace which is closed under multiplication.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider an algebra with unit such that for all $a,b$ it is true that 
+$\mu(a,b) = \mu(b,a)$. Prove that this is a (commutative) ring.
+\end{zadacha}
+
+\begin{zadacha} 
+Give an example of an algebra without a unit.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that unit is unique.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Give an example of non-commutative algebra with unit.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $V$ be a vector space and $\End(V)$ be a space of linear
+homomorphisms from $V$ to $V$ with an operation of composition. Prove
+that $\End(V)$ is an algebra.
+\end{zadacha}
+
+\begin{opredelenie}
+$\End(V)$ is called a {\bf matrix algebra} and is denoted $\Mat(V)$. 
+\end{opredelenie}
+
+\begin{zadacha}
+Is $\Mat(V)$ commutative?
+\end{zadacha}
+
+\begin{zadacha}  Consider an isomorphism of matrix algebras
+$\Mat(V) \cong \Mat(V')$. 
+\begin{enumerate}
+\item Suppose that $V$, $V'$ are finite-dimensional.
+Prove that $V$, $V'$ are isomorphic. Find a set of all isomorphisms
+ $a:\; V \arrow V'$ which are compatible with a given isomorphism 
+ $\Mat(V) \cong \Mat(V')$.
+
+\item\sttr Prove that $V\cong V'$ for any $V$, $V'$ (possibly
+  infinite- dimensional). Use Zorn's Lemma. \footnote{We mean the
+    following statement. Suppose that a system $S$ of subsets of $V$
+    is defined, and suppose that it satisfies the following
+    conditions:
+\begin{enumerate}
+\item For any $V_\alpha\in S$ which is not equal to all $V$, there is
+  a subset $V_{\alpha'}$ in $S$ which contains $V_\alpha$ but is not
+  equal to it.
+
+\item Consider a collection  $S'\subset S$ of subsets of 
+ $V$ such that any $V_\alpha, V_{\alpha'}\in S'$ are contained one in
+ another: either  $V_\alpha\subset V_{\alpha'}$, or
+$V_{\alpha'}\subset V_{\alpha}$. Then a union 
+ $V_{\alpha_i}\in S'$ also belongs to $S$
+\end{enumerate}
+If these conditions hold $V$ is contained in $S$.
+Zorn's lemma is a corollary of the axiom of choice.
+}
+
+\item\doublesttr Is it possible to prove (b) without axiom of choice?
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider an algebra $A$ with unit. Prove that $A$ can be realized as a
+subalgebra of $\Mat V$ for some vector space $V$ (possibly infinite
+dimensional).
+\end{zadacha}
+
+\begin{ukazanie}
+Take $V=A$.
+\end{ukazanie}
+
+\begin{opredelenie} 
+An algebra $A$ with a unit is called  a {\bf division algebra}, if 
+$A\backslash 0$ is a multiplication group. In other words $A$
+is called a division algebra, if all non-zero elements $A$ are
+invertible. 
+\end{opredelenie}
+
+\begin{zadacha}\label{quat}
+Let $\mathbb H$ be a four dimensional vector space over $\R$ with a
+basis $1, I, J, K$. Prove that there exists a unique algebra structure
+on $\mathbb H$  such that
+\begin{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\item $1\cdot a=a$ for all $a\in \mathbb H$,
+
+\item $I^2=J^2=K^2=-1$,
+
+\item $I \cdot J = - J\cdot I =K$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{opredelenie}
+Algebra ${\mathbb H}$ is called a {\bf quaternion algebra}.
+\end{opredelenie}
+
+\begin{zadacha}[!] 
+Consider ``complex conjunction'' map $z\arrow \bar z$,
+defined on ${\mathbb H}$ as follows
+\[ 
+a + b I + c J + d K \arrow a - b I - c J - d K.
+\]
+Prove that $\overline{z_1 z_2} = \bar z_2 \bar z_1$.
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that $z \bar z= a^2 + b^2 + c^2 + d^2$, if $z=a + b I + c
+J + d K$.
+\end{zadacha}
+
+\begin{zadacha}[!] 
+Prove that $\mathbb H$ is a division algebra.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the argument that was used to prove invertibility of complex
+numbers. 
+\end{ukazanie}
+
+\begin{zadacha} 
+  Replace the equality $I^2=J^2=K^2=-1$ with $I^2=-1$, $J^2=K^2=1$ in
+  the statement of the problem~\ref{quat}, replace the second equality
+  with $I \cdot J \cdot K=-1$. Prove that you still get an algebra
+  structure on $\R^4$ (this algebra is called the {\bf algebra of
+    para-quaternions}). Is it a division algebra?
+\end{zadacha}
+
+\begin{zadacha}[*]
+Prove that the algebra of para-quaternions is isomorphic to $\Mat(\R^2)$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that a finite-dimensional algebra $A$ with unity is a division
+algebra iff it has no divisors of zero.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Algebras defined by generators and relations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Consider a vector space $V$ over $k$. A multilinear form
+$\phi$ on $V$ is a mapping $V\times V \times V \times \dots
+\arrow k$ which is linear in each of its arguments. We denote it like
+this:
+\[ 
+\phi:\; V\otimes V \otimes V \otimes \dots \arrow k.
+\]
+If $\phi$, $\psi$ are multilinear $i$-form and multilinear $j$-form
+then the mapping 
+\[ 
+\phi\otimes \psi :\; \underbrace{V\times V \times V \times \dots}_{i+j}
+   \arrow k,
+\]
+defined as
+\[ 
+(\phi\otimes \psi)(v_1, v_2, \dots, v_{i+j}) = \phi( v_1, \dots, v_i) \phi(
+   v_{i+1}, \dots, v_{i+j})
+\]
+is apparently multilinear. This defines multiplication on the space of
+multilinear forms.
+
+\begin{zadacha}
+Prove that a direct sum $\oplus_i {\cal M}^i V$ of spaces of
+$i$-linear forms ${\cal M}^i V$ forms an algebra with respect to
+multiplication as defined above.
+\end{zadacha}
+
+\begin{zadacha}
+  Let $V$ be finite-dimensional. Prove that any element of the algebra
+  of multilinear forms can be represented as a linear combination of
+  products of elements of $V^*$ (we say that the algebra is {\bf
+    generated by $V^*$}).
+\end{zadacha}
+
+\begin{opredelenie}
+  Let $V$, $W$ be vector spaces over $k$. Consider a space $U= \langle
+  V\times W\rangle$, freely generated by pairs of vectors $v, w\in V,
+  W$. We will denote vectors from $U$ which correspond to $v, w$ as
+  $v\otimes w$. Let us take a quotient of $U$ by a subspace generated
+  by the following elements:
+\begin{align*}
+(\lambda v)\otimes w &- \lambda (v
+  \otimes w), \qquad v\otimes (\lambda w ) - \lambda (v
+  \otimes w), 
+\qquad\qquad \lambda\in k\\
+(v+v')\otimes w &- v\otimes w - v'\otimes w, \qquad
+   v\otimes (w+w') - v\otimes w - v\otimes w'.
+\end{align*}
+The quotient space we obtain is called a {\bf tensor product of $V$ and
+  $W$} and is denoted $V\otimes W$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Prove that $(V\otimes W)^*$ is naturally isomorphic to a space of
+  bilinear forms over $(V, W)$.
+\end{zadacha}
+
+\begin{zadacha}
+  Find a number of dimensions of $V\otimes W$ when $\dim V=n$, $\dim
+  W=m$.  Prove that $V\otimes W^*$ is naturally isomorphic to a space
+  of homomorphisms from $W$ to $V$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that  $U\otimes (V\otimes W)$ is canonically isomorphic to
+$(U\otimes V)\otimes W$.
+\end{zadacha}
+
+\begin{zamechanie}
+This statement allows to omit brackets: we write
+$U\otimes V\otimes W$ which can be interpreted with any possible
+bracketing.
+\end{zamechanie}
+
+\begin{zamechanie}
+A tensor product $V$ with itself $i$ times is denoted as 
+$V^{\otimes i}$. An isomorphism of associativity constructed above
+allows to endow $\bigoplus_i V^{\otimes i}$ with associative
+multiplication 
+\[
+V^{\otimes i}\times V^{\otimes j}\arrow V^{\otimes {j+j}}
+\]
+\end{zamechanie}
+
+\begin{opredelenie}
+  The {\bf free} (or {\bf tensor}) algebra, generated by $V$ is an
+  algebra $\bigoplus_i V^{\otimes i}$ with multiplication as defined
+  above. This algebra is denoted as $T(V)$. $V^{\otimes 0}$ is
+  naturally interpreted as $k$. It follows that $T(V)$ is an algebra
+  with unit.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Let $V$ be a finite-dimensional vector space. Prove that $T(V)$ is
+  isomorphic to the algebra of multilinear forms on $V^*$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Consider a linear mapping from $V$ into some algebra $A$. Prove that
+  is can be uniquely extended to a homomorphism of algebras
+  $T(V)\arrow A$.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{_tensor_monomials_Zadacha_}
+  Let $\langle x_i\rangle $ be a basis in $V$. Prove that all the
+  monomials of the form $x_{i_1} x_{i_2} x_{i_3}\cdots$ define a basis
+  in $T(V)$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a vector space $V$ over $k$ (a ``generator space'') and a
+  subspace $W\subset T(V)$ (a ``relations space''). Consider a
+  quotient space of $T(V)$ over the space $T(V) W T(V)$ generated by the
+  vectors of the form $v w v'$ where $w\in W$. Let this space be
+  nonempty. Prove that this quotient space carries a natural structure
+  of an algebra with unit.
+\end{zadacha}
+
+\begin{opredelenie}
+In the previous problem setting let $x_i$ be a basis in $V$ and $w_i$
+be a basis in $W$. Every relation $w_i=0$ can written down using a
+non-commutative polynomial of the form
+\[ 
+\sum_I \alpha_{i_1, \dots, i_n} x_{i_1}x_{i_2}\dots =0
+\]
+where the sum is taken over some set of multiindices and $\alpha_{i_1,
+  \dots, i_n}$ are coefficients from the field $k$.  An algebra
+$T(V)/T(V) W T(V)$ is called an {\bf algebra defined by generators
+  $v_i$ and relations $w_i$}.
+\end{opredelenie}
+
+\begin{zadacha}
+  Prove that any algebra with unit $A$ can be defined by generators
+  and relations. Prove that if $A$ is finite-dimensional then
+  generator space $V$ and relation space $W$ can be made
+  finite-dimensional too.
+\end{zadacha}
+
+\begin{ukazanie}
+Take $A=V$.
+\end{ukazanie}
+
+\begin{opredelenie}
+  An algebra is called {\bf finitely generated} if it can be defined
+  by generators and relations in such a way that relations generator
+  space is finite-dimensional $V$. An algebra is called {\bf finitely
+    presented} if it can be defined in such a way that relations space
+  $W$ is also finite-dimensional.
+\end{opredelenie}
+
+\begin{zadacha}
+Give an example of an algebra that is not finitely presented.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Is it true that any finitely generated algebra is finitely presented?
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that algebra $\Mat(\R^2)$ is finitely presented.
+\end{zadacha}
+
+\begin{zadacha} 
+Define an algebra of Laurent polynomials $k[t, t^{-1}]$ by generators
+and relations.
+\end{zadacha}
+
+\begin{opredelenie}
+Let $V$ be a vector space with a bilinear symmetric form 
+$g:\; V \otimes V \arrow \R$.  Consider an algebra  $Cl(V)$,
+generated by $V$ and defined by relations of the form
+\[ 
+v_1\cdot v_2 + v_2\cdot v_1 = g(v_1, v_2)\cdot 1,
+\] 
+where $v_1, v_2$ passes through $V$. This algebra is called a   
+{\bf Clifford algebra} over the field $k$.
+\end{opredelenie}
+
+\begin{zadacha}
+  Define complex numbers as a Clifford algebra over $\R$.
+\end{zadacha}
+
+\begin{zadacha}
+Find all Clifford algebras over $\R$ for $\dim V=1,2$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Define quaternions and para-quaternions as a Clifford algebra over
+$\R$. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Let the dimension of $V$ is $n$.  What is the dimension of $Cl(V)$
+  as a vector space?
+\end{zadacha}
+
+\begin{zadacha}[**] Define an algebra $\Mat(\R^{2^n})$
+as a Clifford algebra.
+\end{zadacha}
+
+\end{document}

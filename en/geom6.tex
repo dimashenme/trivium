@@ -1,0 +1,371 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{6}{GEOMETRY 6: Point-set topology: product of spaces}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+  Consider a topological space $M$ and a collection $B$ of open
+  subsets of $M$. The collection $B$ is called a {\bf prebase} of the
+  topology on $M$, if every open set can be obtained as a union
+  (potentially infinite) of finite intersections of open subsets from
+  $B$.
+\end{opredelenie}
+
+\begin{zadacha} Consider $\R$ with discrete topology. Prove that it
+  does not have a countable prebase.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{count}
+  Consider a topological space $M$ with a countable prebase. Prove that
+  $M$ has a countable base.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Consider a finite set $M$, $|M|=2^n$ with discrete topology and a
+prebase $B$ of $M$. Prove that $|B| \geq 2n$. Find a prebase that has
+$2n$ elements.
+\end{zadacha}
+
+\begin{zadacha} 
+  Consider $\R$ with natural topology and let $B$ be the set of all
+  intervals such that their end-points are finite binary
+  fractions. Prove that $B$ is a base of topology of $\R$.
+\end{zadacha}
+
+\begin{zadacha}
+  Consider a collection $B$ of subsets of a set $M$ such that $\cup B=M$.
+  Consider all subsets of $M$ that are finite intersections and
+  arbitrary unions of elements of $B$, as well as $M$ and $\emptyset$.
+  Prove that these sets define a topology on $M$.
+\end{zadacha}
+
+\begin{opredelenie}
+  This topology is called the {\bf topology defined by the prebase $B$}.
+\end{opredelenie}
+
+\begin{opredelenie}
+  Consider topological spaces $M_1$ and $M_2$. Consider a topology $S$
+  on $M_1 \times M_2$ defined by the prebase of subsets of the form
+  $U_1\times M_2$, $M_1\times U_2$ where $U_1$, $U_2$ are open in
+  $M_1$, $M_2$ respectively. Then $(M_1\times M_2, S)$ is called the
+  {\bf product of $M_1$ and $M_2$}.
+\end{opredelenie}
+
+\begin{zadacha}
+  Prove that the natural projection $M_1 \times M_2\arrow M_1$ is
+  continuous. Prove that sets of the form $U_1\times U_2$ define a
+  base of the topology of $M_1 \times M_2$.
+\end{zadacha}
+
+\begin{zadacha}\label{_product_nepre_Zadacha_}
+Consider mappings of topological space 
+$X\overset{\gamma_1}{\arrow} M_1$, $X\overset{\gamma_2}{\arrow}
+M_2$. Prove that they are continuous iff the product
+\[
+X\overset{\gamma_1\times \gamma_2}{\arrow} M_1\times M_2
+\]
+is continuous.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider topological spaces $M_1$, $M_2$ that have one of the
+properties from the list below. Prove that $M_1\times M_2$ has
+the same property.
+\begin{enumerate}
+\item Separation axiom $T_1$.
+
+\item\shrk{} Hausdorff separation axiom ($T_2$).
+
+\item Separation axiom $T_3$.
+
+\item Being separable.
+
+\item\shrk{} Having a countable neighborhood base for every point.
+
+\item Having a countable base.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[**]
+Does this hold for the separation axiom $T_4$? What about $T_4+T_1$?
+\end{zadacha}
+
+\begin{opredelenie}
+The mapping $x\overset{\Delta}{\arrow} (x,x)\in X\times X$
+is called the {\bf diagonal embedding} and its image is called the
+{\bf diagonal} in $X\times X$.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that the diagonal embedding is a homeomorphism onto its image
+(supposing that the topology on $\Delta\subset X\times X$ is induced
+from $X\times X$).
+\end{zadacha}
+
+\begin{ukazanie}
+Use the Problem~\ref{_product_nepre_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha}
+Prove that $X$ satisfies the $T_1$ separation axiom iff the diagonal
+is the intersection of all open sets that contain it.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that $X$ is Hausdorff iff the diagonal is closed in $X\times
+X$. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+Suppose that the graph $\Gamma\subset X\times Y$ of a mapping of
+topological spaces $X\overset{\gamma}{\arrow} Y$ is closed. Is it true
+that $\gamma$ is continuous?
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a morphism of topological spaces $X\overset{\gamma}{\arrow}
+  Y$ and suppose $X$ is Hausdorff. Prove that the graph of $\gamma$ is
+  closed.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider metric spaces $M_1$, $M_2$ and their product $M=M_1\times
+M_2$, and let $d$ be one of the functions defined on $M\times M$
+listed below. Prove that $d$ defines a metric on $M$.
+\begin{enumerate}
+\item $d((m_1, m_2), (m'_1, m'_2)) = d(m_1, m_2) + d(m_1', m_2')$
+
+\item $d((m_1, m_2), (m'_1, m'_2)) = \max(d(m_1, m_2), d(m_1', m_2'))$
+
+\item\shrk{} $d((m_1, m_2), (m'_1, m'_2)) = \sqrt{d(m_1,
+m_2)^2+d(m_1', m_2')^2}$
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!] 
+  Prove that all the three metric structures from the previous problem
+  define the same topology on $M_1\times M_2$. Prove that this
+  topology is equivalent to the topology of the product $M_1\times
+  M_2$ considered as a product of topological spaces.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Tychonoff cube and Hilbert cube}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+  Consider a (possibly uncountable) index set $I$ and the set $M=X^I$
+  of all mappings from $I$ to a fixed topological space $X$. One can
+  regard $X^I$ as a set of sequences of points of $X$ indexed by $I$
+  or as an infinite product of $X$ with itself. Denote by $W(i, U)\subset
+  X^I$ the set of all mappings $I\arrow X$ that map a fixed index $i$
+  to an element from a subset $U\subset X$. Define a prebase $B$ of
+  topology on $X^I$ in the following way: let $V\in B$ if $V=W(i, U)$
+  for some index element $i\in I$ and some open subset $U\subset
+  X$. This topology is called {\bf weak}.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+Consider a sequence of points $\alpha_1, \alpha_2, \dots $ in
+$X^I$. Prove that it converges iff the sequence $\alpha_k(i)$
+converges for every index $i\in I$.
+\end{zadacha}
+
+\begin{zamechanie}
+  The previous problem statement is often expressed as follows: ``a
+  space $X^I$ with weak topology is the set of mappings from $I$ to $X$
+  with the pointwise convergence topology''.
+\end{zamechanie}
+
+\begin{opredelenie}
+Consder an index set $I$.  The space  $[0,1]^I$ with the weak topology
+is called a {\bf Tychonoff cube}.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider a set of continuous functions $\alpha_i:\; M \arrow [0,1]$
+indexed by a set $I$.  Prove that the mapping of the form
+\[ 
+\prod \alpha_i:\; m \arrow \prod_{i\in I}\alpha_i(m)
+\]
+from $M$ to Tychonoff cube $[0,1]^I$ is continuous. 
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that any point of a Tychonoff cube is closed.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Prove that a Tychonoff cube satisfies $T_2$ and $T_3$ separation axioms.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a Tychonoff cube $[0,1]^I$ where $I$ is countable. Prove that
+it has a countable base.
+\end{zadacha}
+
+\begin{ukazanie}
+  Prove that the collection of all $U=W(i, ]a,b[)$ with $a,b$ rational
+  numbers defines a countable prebase in $[0,1]^I$ and use the
+  Problem~\ref{count}.
+\end{ukazanie}
+
+\begin{zadacha}[**]
+  Prove that if the index set $I$ has the cardinality greater than or
+  equal to continuum then the Tychonoff cube $[0,1]^I$ is
+  non-separable.
+\end{zadacha}
+
+\begin{ukazanie}
+Consider a countable subset $W$ of a Hausdorff space. Prove that the
+cardinality of the closure of $W$ is not greater than continuum.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Consider a set $M=[0,1]^\N$ of sequences of real numbers in
+$[0,1]$ indexed by $\N$. Consider the function $d:\; M\times M\arrow \R$,
+\[ 
+d(\{\alpha_i\}, \{\beta_i\})= \sqrt{\sum_i i^{-2}|\alpha_i - \beta_i|^2}.
+\]
+Prove that this function is well-defined and defines a metric on
+$[0,1]^\N$. 
+\end{zadacha}
+
+\begin{opredelenie}
+A metric space $[0,1]^\N$ with the metric defined as above is called 
+{\bf Hilbert cube}.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Consider a sequence $\{\alpha_i(n)\}$ of points of $[0,1]^\N$. Prove
+  that it converges in the Tychonoff topology iff it converges in the
+  topology of the Hilbert cube.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Deduce that the identity mapping is a homeomorphism of the Tychonoff
+cube and the Hilbert cube.
+\end{zadacha}
+
+\begin{zamechanie}
+We actually proved that if the index set $I$ is countable then
+the Tychonoff cube $[0,1]^I$ is metrizable.
+\end{zamechanie}
+
+\begin{zadacha}[*] 
+  Consider a uncountable index set $I$. Is the Tychonoff cube
+  $[0,1]^I$ metrizable in that case?
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Urysohn lemma and metrization of topological spaces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+Consider two non-intersecting closed subsets $A, B\subset M$ of a
+topological space $M$. A continuous function  $f:\; M \arrow
+[0,1]$ is called an {\bf Urysohn function} if $f(A)=0, f(B)=1$.
+\end{opredelenie}
+
+\begin{zadacha}
+  Suppose that Urysohn function exists for any two non-intersecting
+  closed subsets $A, B\subset M$. Prove that $M$ satisfies the
+  separation axiom $T_4$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove in the previous problem setting that it is possible that $M$
+does not satisfy $T_1$ separation axiom.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Suppose $M$ satisfies $T_4$ separation axiom and $A, B\subset M$ are
+non-intersecting and closed. 
+Prove that there exists a sequence of neighborhoods 
+$U_{p/2^q}\supset A$ indexed by rational numbers of the form
+$0<p/2^q<1$ that satisfies the following conditions:
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\item for all $p,q$, $B$ does not intersect $U_{p/2^q}$.
+
+\item if $p_1/2^{q_1}< p_2/2^{q_2}$ then the closure of
+  $U_{p_1/2^{q_1}}$ is contained in $U_{p_2/2^{q_2}}$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{ukazanie}
+Use an inductive argument.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+In the previous problem setting define a function $f:\; M \arrow
+[0,1]$ to be 
+\[  
+f(m) = \sup \left\{ p_2/2^{q_2} \ \ | \ \ m\notin U_{p_1/2^{q_1}}\right\}
+\]
+outside $A$ and equal to zero on $A$.
+Prove that $f$ is continuous and that $f$ is an Urysohn function.
+\end{zadacha}
+
+\begin{ukazanie} 
+Prove that the intervals of the form $]p_1/2^{q_1}, p_2/2^{q_2}[$ form
+a prebase of the topology on $[0,1]$. Prove that 
+\[ 
+   f^{-1}(]p_1/2^{q_1}, p_2/2^{q_2}[) =
+   U_{p_2/2^{q_2}}\backslash \overline{U_{p_1/2^{q_1}}}.
+\]
+Deduce that $f$ is continuous.
+\end{ukazanie}
+
+\begin{zamechanie}
+We have proven the following ``Urysohn lemma'': if $M$ satisfies the 
+$T_4$ condition, then for any two non-intersecting closed subsets of 
+$M$ there is an Urysohn function.
+\end{zamechanie}
+
+\begin{zadacha}[*]
+Consider a Hausdorff space $M$ with a countable base $B$,
+which satisfies the $T_4$ condition and let $I$ be a set of all pairs
+$U_1, U_2 \in B$ such that the closures of $U_1$, $U_2$ do not
+intersect, $F_{U_1, U_2}$ are respective Urysohn functions and $F:\; M
+\arrow [0,1]^I$ is a mapping to Tychonoff cube define as $F(m) = \prod
+F_{U_1, U_2}$.  Prove that $F$ is continuous and injective.
+\end{zadacha}
+
+\begin{zadacha}[*]
+In the previous problem setting denote the inverse mapping of $F$ as
+$G:\; F(M) \arrow M$. Consider a sequence of points 
+$\{x_i\}$ such that $F_{U_1, U_2}(x_i)$ converges for every pair
+$(U_1, U_2)$ from $I$. Deduce that the sequence 
+$\{x_i\}$ converges. Prove that $G$ is continuous.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Prove that any Hausdorff space $M$ with a countable base which
+  satisfies the $T_4$ condition (such space is called a {\bf Polish}
+  space) is a subspace of a Hilbert cube.
+\end{zadacha}
+
+\begin{zamechanie}
+We have proved the following {\bf metrization theorem}:
+every Polish space is metrizable.
+\end{zamechanie}
+
+\begin{zadacha} 
+Prove that any subset of a Hilbert cube is Polish.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Is it true that every metrizable space is a Polish space?
+\end{zadacha}
+
+\end{document}

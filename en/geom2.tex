@@ -1,0 +1,265 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{2}{GEOMETRY 2: real numbers, part 2.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subs{Roots of polynomials of an odd degree.}
+
+\begin{zadacha}[!] Consider a polynomial over $\Q$ of an odd degree,
+$P= t^{2n+1} + a_{2n} t^{2n} + a_{2n-1} t^{2n-1} + \cdots + a_0$.  Let
+$R_P$ be the set of all $x\in \Q$ such that $P(t)<0$ on an interval 
+$]-\infty, x]$. Prove that $R_P$ is not empty.
+\end{zadacha}
+
+\begin{ukazanie} Prove that $R_P$ contains
+$-\max(1, \sum |a_i|)$.
+\end{ukazanie}
+
+\begin{zadacha}[!] 
+Prove that $R_P$ is not the set of all real numbers.
+\end{zadacha}
+
+\begin{ukazanie} Prove that the complement $\Q \backslash R_P$ 
+contains $\max(1, \sum |a_i|)$.
+\end{ukazanie}
+
+\begin{zadacha}[!] Prove that $R_P$ is a Dedekind section. 
+\end{zadacha}
+
+\begin{zadacha}[!]\label{lips} 
+  Prove that $P$ satisfies {\bf Lipschitz property}: for any interval
+  $I$ there exists a constant $C > 0$ such that $|P(a)-P(b)| < C|a-b|$
+  for any $a,b \in I$.
+\end{zadacha}
+
+\begin{zadacha}[!] Consider a Dedekind section
+$R_P$ as a real number. Prove that $P(R_P)=0$. It follows that any
+polynomial over $\R$ of an odd degree has a root.
+\end{zadacha}
+
+\begin{ukazanie}
+First prove that $P(R_P) \leq 0$. Then prove that $P(R_P) <
+0$ contradicts the problem~\ref{lips}.
+\end{ukazanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Limits.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie} Let $A\subset \R$ be a set of real numbers and $c$
+  be a real number. Then $c$ is called {\bf accumulation point
+    (limit point)} of a set $A$ if every open interval $I = ]x,
+  y[$ containing $c$ contains infinitely many elements of $A$.
+\end{opredelenie}
+
+\begin{opredelenie} Let $\{a_i\}$ be a sequence of real numbers and
+  $c$ be a real number. Let any open interval $I = ]x, y[$
+  containing $c$ contain all elements of $\{a_i\}$ except a
+  finite number of them. Then $c$ is called the {\bf limit of the sequence
+    $\{a_i\}$} (denoted by $c = \lim_{i \to \infty} a_i $). One says
+  that the sequence $a_i$ {\bf converges to $c$}.
+\end{opredelenie}
+
+\begin{zadacha} Let $c$ be an accumulation point of a sequence
+  $\{a_i\}$. Prove that there exists a subsequence of $\{a_i\}$ that
+  converges to $c$.
+\end{zadacha}
+
+\begin{zadacha}[*] Consider a sequence $\{a_i\}$ of points from an
+  interval $[x,y]$. Prove the existence of accumulation points of that
+  sequence.
+\end{zadacha}
+
+\begin{opredelenie} A set $A\subset \R$ is called {\bf
+discrete} if it has no accumulation points.
+\end{opredelenie}
+
+\begin{zadacha}[*] Let $\{a_i\}$ be a sequence. Denote a set of all
+  $a_i$ by $A$.  Prove that $\{a_i\}$ converges if and only if $A$ has
+  no infinite discrete subsets and has a unique accumulation point.
+\end{zadacha}
+
+\begin{zadacha} Consider a sequence $0, 1, 2, 3, 4,
+\ldots$. Prove that this sequence has no limit.
+\end{zadacha}
+
+\begin{zadacha} Consider a sequence  $0, 1, 1/2, 1/3, 1/4,
+\ldots$. Prove that this sequence converges to 0.
+\end{zadacha}
+
+\begin{zadacha} Consider an increasing sequence
+$a_1\leq a_2 \leq a_3 \leq \ldots$, $a_i\in \R$. Let all 
+$a_i$ be bounded above by $C$: $a_i \leq
+C$. Prove that this sequence has a limit. Use the definition of real
+numbers as Dedekind sections.
+\end{zadacha}
+
+\begin{ukazanie} Prove that  $\lim_{i \to \infty} a_i  = \sup\{a_i\}$,
+and use the fact that the supremum exists.
+\end{ukazanie}
+
+\begin{opredelenie} Let $\{a_i\}= a_0, a_1, a_2, \ldots$ be a sequence
+  of real numbers. $\{a_i\}$ is called a {\bf Cauchy sequence} if for
+  any $\epsilon >0$ there exists an interval $[x, y]$ of length
+  $\epsilon$ which contains all members $\{a_i\}$ except a finite number
+  of them.
+\end{opredelenie}
+
+\begin{zamechanie} This is the same definition as the definition of
+  Cauchy sequences of rational numbers.
+\end{zamechanie}
+
+\begin{zadacha} Let a sequence $\{a_i\}$ converge to a real number
+  $c$. Prove that this is a Cauchy sequence.
+\end{zadacha}
+
+\begin{zadacha} Let a Cauchy sequence  $\{a_i\}$ 
+have a subsequence that converges to $x\in \R$. Prove that  $\{a_i\}$
+converges to $x$.
+\end{zadacha}
+
+\begin{zadacha} Let $\{a_i\}$ be a Cauchy sequence.
+Consider the sequence  $\{b_i\}$, $b_i = \inf_{i\geq k}
+a_i$. Prove that this infimum is correctly defined and that the
+sequence $b_i$ increases.
+\end{zadacha}
+
+\begin{zadacha} Consider the previous problem and prove that if the
+  sequence $\{b_i\}$ has a limit then $\lim_{i \to \infty} a_i
+  =\lim_{i \to \infty} b_i$.
+\end{zadacha}
+
+\begin{zadacha}[!] Let $\{a_i\}$ be a Cauchy sequence. Prove that
+  $\{a_i\}$ converges. Use the definition of real numbers as Dedekind
+  sections.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[!] Let $\{a_i\}$ be a Cauchy sequence. Prove that
+  $\{a_i\}$ converges. Use the definition of real numbers as Cauchy
+  sequences.
+\end{zadacha}
+
+\begin{ukazanie} 
+Let a real number $\{a_i\}$ be represented by a Cauchy sequence of
+rational numbers $a_i(0)$, $a_i(1)$, $a_i(2),\ldots$. Passing to a
+suitable subsequence one can suppose that all $a_i$ ($i> n$)
+are contained in an interval on length $2^{-n}$ and that all $a_i(j)$ ($j>
+m$) are contained in an interval of length $2^{-m}$. Prove that the
+sequence $\{a_i(i)\}$ is a Cauchy sequence and that the sequence
+$\{a_i\}$ converges to the real number represented by it.
+\end{ukazanie}
+
+\begin{zadacha}[!] 
+Let $\{ a_i\}$, $\{b_i\}$,
+$\{c_i\}$ be converging sequences of real numbers and  $a_i \leq b_i
+\leq c_i$ for all $i$.  Suppose that 
+$\lim_{i \to \infty} a_i = \lim_{i \to \infty} c_i =x$.  Prove that 
+ $\lim_{i \to \infty} b_i =x$.
+\end{zadacha}
+
+\begin{zadacha}[*] Let a sequence $\{a_i\}$ converge
+to $x$. Prove that $b_j = \frac 1 j
+\sum_{i=0}^j a_i$ converges to $x$. Give an example, when $\{b_j\}$
+converges but $\{a_i\}$ does not.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Series.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie} Let $\{a_i\}$ be a sequence of real
+  numbers. Consider a sequence of partial sums 
+$\sum_{i=0}^n a_i$.  If this sequence converges one says that
+ {\bf series $\sum_{i=0}^\infty a_i$ converge}. It is denoted by
+$\sum_{i=0}^\infty a_i =x$ where
+$$ 
+   x = \lim_{i \to \infty} \sum_{i=0}^n a_i.
+$$
+It is often denoted by $\sum a_i =x$.
+\end{opredelenie}
+
+\begin{opredelenie} A series $\sum a_i$ {\bf  converges absolutely},
+if series $\sum |a_i|$ converges.
+\end{opredelenie}
+
+\begin{zadacha}[!] Consider a series $\sum a_i$ which converges
+  absolutely. Prove that these series converges.
+\end{zadacha}
+
+\begin{zadacha} Consider a series $\sum a_i$ which converges
+  absolutely. Let $b_i$ be a sequence of nonnegative numbers such that
+  $a_i \geq b_i$. Prove that the series $\sum b_i$ converges absolutely.
+\end{zadacha}
+
+\begin{zadacha}[**] Let $a_i$, $b_i$ be sequences of integer numbers
+  such that the series $\sum a_i^2$, $\sum b_i^2$ converge. Prove that
+  the series $\sum a_ib_i$ converge.
+\end{zadacha}
+
+\begin{zadacha}[*] Let $a_i$ be a sequence of positive real
+  numbers. Limit of the sequence of products
+$$
+\lim_{n\to \infty} \prod^n_{i=0} (1+a_i)
+$$
+is denoted by $\prod^\infty_{i=0} (1+a_i)$. If this limit exists one
+says that an infinite product $\prod^\infty_{i=0} (1+a_i)$ converges.
+Let the product $\prod^\infty_{i=0} (1+a_i)$ converge. Prove that the series
+$\sum^\infty_{i=0} a_i$ converges.
+\end{zadacha}
+
+\begin{zadacha}[*] Prove that the infinite product $\prod^\infty_{i=0}
+  (1+\frac 1 {3^n})$ converges.
+\end{zadacha}
+
+\begin{zadacha}[**] Let a series $\sum a_i$ converge.
+Prove that $\prod^\infty_{i=0} (1+a_i)$ converges, as well.
+\end{zadacha}
+
+\begin{zadacha}[!] Let $a_0\geq a_1 \geq a_2 \geq \ldots$ be a
+  decreasing sequence of positive real numbers converging to
+  0. Consider the series $\sum^\infty_{i=0}
+(-1)^ia_i$. Prove that these series converges. Such series are called
+{\bf sign-alternating}.
+\end{zadacha}
+
+\begin{zadacha} Prove that the series $\sum \frac 1{n (n+1)}$
+converges.
+\end{zadacha}
+
+\begin{ukazanie} Consider the value $\frac{1}{n} - \frac 1{(n+1)}$.
+\end{ukazanie}
+
+\begin{zadacha} Prove that the series
+$\sum \frac{1}{n^2}$ converges.
+\end{zadacha}
+
+\begin{zadacha} Prove that the series $\sum \frac 1{n!}$
+converges.
+\end{zadacha}
+
+\begin{zadacha}[!] Prove that the series $\sum \frac 1{2^n}$
+converges. Calculate the value it converges to.
+\end{zadacha}
+
+\begin{zadacha}[*] Prove that the series $\sum_{n=0}^\infty \frac
+{x^n}{n!}$ converges for all $x\in \R$.
+\end{zadacha}
+
+\begin{zadacha}[**] Consider the series $\sum_{n=0}^\infty \frac
+  {x^n}{n!}$ in a complete ordered field $A$. Does this series
+  converge for all $x\in A$?
+\end{zadacha}
+ 
+\end{document}

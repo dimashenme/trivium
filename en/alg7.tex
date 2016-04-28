@@ -1,0 +1,703 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{7}{ALGEBRA 7: matrices and determinants}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We suppose that all vector spaces are vector spaces over a field $k$. 
+
+\begin{zadacha}
+Let $v_1, \dots, v_n\in V$, $w_1, \dots, w_m\in W$ be bases in 
+vector spaces $V$ and $W$.  Consider a homomorphism $e_i^j$ from $V$
+to $W$ that maps $v_i$ to $w_j$ and maps $v_k$ to zero for
+$k \neq i$. Prove that $e^i_j$ form a basis in the space of
+homomorphisms $\Hom(V,W)$. 
+\end{zadacha}
+
+\begin{opredelenie}
+In the previous problem setting consider a homomorphism $\gamma\in
+\Hom(V,W)$. Consider
+$\gamma= \gamma^i_j e^i_j$, $\gamma^i_j \in k$.
+The matrix
+$$
+\begin{pmatrix}
+\gamma^1_1 & \dots & \gamma^1_n\\
+\vdots & \ddots & \vdots\\
+\gamma^m_1 & \dots & \gamma^m_n
+\end{pmatrix}
+$$
+is called the {\bf matrix of the homomorphism $\gamma$}.
+\end{opredelenie}
+
+\begin{zadacha}
+Consider homomorphisms $a\in \Hom(U,V)$, $b\in \Hom(V,W)$
+defined by the matrices $(a^i_j)$, $(b^k_l)$. Prove that the
+composition of $a$ and $b$ is defined by the matrix $c^i_k =
+\sum_{j} a^i_j b^j_k$.
+\end{zadacha}
+
+\begin{zamechanie}
+Note that the matrix product formula makes sense for matrices of
+elements of an arbitrary ring.
+\end{zamechanie}
+
+\begin{zadacha}
+Consider the space $A$ of square matrices of the size $n\times n$,
+with the multiplication $A\times A \arrow A$ defined by the
+formula $(a^i_j)\circ (b^k_l)\arrow \sum_{j} a^i_j b^j_k$.
+Prove that this is an algebra with unit. Prove that this algebra is
+isomorphic to the algebra of linear operators from $k^n$ to $k^n$. 
+\end{zadacha}
+
+\begin{opredelenie}
+This algebra is called the {\bf matrix algebra} and is denoted
+$\Mat(n)$.  The unit element of this algebra (the diagonal matrix
+with $a_i^i=1$) is called the {\bf identity matrix} and is denoted 
+$\Id$.
+\end{opredelenie}
+
+\begin{zadacha}
+  Consider a linear operator $f\in\Hom(V,V)$ and let $v_1, \dots, v_n$
+  be a basis of $V$ and $(f^i_j)$ be the matrix of $f$.  Consider
+  another basis $v_1', \dots, v_n'$ of $V$. Prove that there exists a
+  unique operator $g$ that maps $v_i$ to $v_i'$, and $g$ is
+  invertible. Let $(g^i_j)$, $((g^{-1})^i_j)$ be the matrices of $g$
+  and $g^{-1}$. Prove that $f$ is defined by the matrix $h^i_j:=
+  (g^i_j)\circ(f^i_j) \circ((g^{-1})^i_j)$ in the basis $v_1', \dots,
+  v_n'$.
+\end{zadacha}
+
+\begin{opredelenie}
+In that case the matrices $(h^i_j)$, $(f^i_j)$ are said to be {\bf
+  equivalent}. 
+\end{opredelenie}
+
+\begin{zadacha}
+Find all the matrices equivalent to $c\Id$ where $c\in k$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a matrix $E(i,j)$ 
+$$
+\begin{pmatrix}
+0 &\dots&0&\dots &0\\
+\vdots &\ddots & \vdots &\ddots & \vdots\\
+0 & \dots &1 &\dots &0\\
+\vdots &\ddots & \vdots &\ddots & \vdots\\
+0 &\dots&0&\dots &0
+\end{pmatrix},
+$$
+which has $1$ on the position $i,j$ and has $0$ everywhere else. What
+are the values of $i, j$, $i',j'$ that make the matrices $E(i,j)$ and
+$E(i',j')$ equivalent?
+\end{zadacha}
+
+\begin{zadacha}[!] 
+Consider a matrix $A$ which is equivalent to $E(i,j)$.
+Prove that all rows of $A$ are proportional.
+Prove that all columns of $A$ are proportional.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Prove that if all rows and columns of $A$ are proportional, then $A$
+is equivalent to $E(i,j)$.
+\end{zadacha}
+
+\begin{opredelenie}
+  Consider a vector space $V$ and an endomorphism $A \in \End(V)$ over it
+  (i.e.\ a homomorphism from $V$ to itself) and its dual space $V^*$.
+  An operator $A^*:\; V^*\arrow V^*$ that maps a linear functional
+  $\gamma\in V^*$ to the linear functional $A^*(\gamma)(v) =
+  \gamma(A(v))$ is called a {\bf conjugate operator} for $A$.
+\end{opredelenie}
+
+\begin{zadacha}\label{lambda.dual}
+  Consider a finite-dimensional vector space $V$ and its dual space
+  $V^*$. Construct the natural isomorphism between $\Lambda^k(V)^*$ and
+  $\Lambda^k(V^*)$.
+\end{zadacha}
+
+\begin{zamechanie}
+  ``Natural'' means that it does not require any extra choice (choice
+  of base, for example). In this situation, a natural isomorphism
+  $\Lambda^k(V)^*\cong\Lambda^k(V^*)$ is permutable with the standard
+  action of $GL(V)$ on $\Lambda^k(V)^*$, $\Lambda^k(V^*)$. The spaces
+  $V$ and $V^*$ are isomorphic, but one can prove that there is no
+  $GL(V)$-invariant isomorphism $V \cong V^*$. In other words it is
+  {\it impossible} to construct a natural homomorphism $V \cong V^*$.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+  Consider a vector space $V$, an endomorphism $A \in \End(V)$ and 
+  the conjugate operator $A^*$. Prove that $\det A^* = \det A$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{opredelenie}
+Consider a square matrix $(A^i_j)$ and a matrix $(B^i_j)$, that is
+constructed from $(A^i_j)$ by reflecting it over the diagonal: $B^i_j
+=A^j_i$.  Then $(B^i_j)$ is called the {\bf transposed matrix} of
+$(A^i_j)$, and is denoted $(A^i_j)^\bot$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Consider a basis $v_1, \dots, v_n$ in $V$ and a dual basis
+  $v^1,\dots, v^n$ in $V^*$ ($v^i$ maps $v_i$ to 1 and maps other
+  $v_j$s to zero).  Consider an operator $A \in \End(V)$ and its matrix
+  $(A^i_j)$. Prove that $A^*$ is given as the matrix $(A^i_j)^\bot$.
+\end{zadacha}
+
+\begin{opredelenie}
+  Consider a nondegenerate bilinear symmetric form $g$ defined on a
+  vector space $V$. An operator $A\in \End(V)$ is called {\bf
+    orthogonal with respect to $g$} (or simply {\bf orthogonal}) iff
+  $g(Av, Av) = g(v,v)$ for any $v\in V$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+Prove that any orthogonal operator is invertible.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Consider a linear operator $A\in \End(V)$ on a vector space endowed
+  with a nondegenerate bilinear symmetric form $g$.  Identify $V$ and
+  $V^*$ using $g$. Then the dual operator $A^*$ can be considered as an
+  endomorphism of $V$. Prove that a linear operator $A$ is orthogonal
+  iff $A^{-1} = A^*$.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{det.orth}
+  Prove that the determinant of an orthogonal operator equals $\pm 1$.
+\end{zadacha}
+
+
+\begin{opredelenie}
+A nondegenerate bilinear antisymmetric form 
+(see ALGEBRA 3) is called a {\bf symplectic form}.
+\end{opredelenie}
+
+\begin{zadacha}[*]
+  Consider a vector space $V$ with a symplectic form $\omega$ defined
+  on it. An operator $A\in \End(V)$ is called {\bf symplectic}, if it
+  preserves $\omega$, i.e.\ if $\omega(Av, Av) = \omega(v,v)$.  Prove
+  that any symplectic operator has the determinant 1.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider a two-dimensional vector space $V$ over $\R$ and let $A$ be
+the matrix
+$$
+\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}.
+$$
+Consider the matrix
+$$
+A'= \begin{pmatrix}
+d & b\\
+-c & a
+\end{pmatrix}.
+$$
+Prove that $A A'= \Delta \Id$,
+where $\Delta\in k$ is the number
+$ad-bc$. Prove that $A$ is invertible iff $\Delta\neq 0$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+In the previous problem setting prove that  $\Delta$ equals to $A$
+determinant .
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a two-dimensional vector space $V$  over  $\R$ endowed with a
+positive  bilinear symmetric form. Let $A$ be an orthogonal operator
+and its matrix in an orthonormal basis has a form
+$$
+\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}.
+$$
+It follows from the Problem~\ref{det.orth} that $\det A = \pm 1$.
+\begin{enumerate}
+\item Suppose $\det A=1$.
+Prove that  $b=-c$, $a =d$ and $a^2+b^2=1$.
+
+\item Suppose $\det A=-1$.  
+Prove that  $b=c$, $a =-d$ and $a^2+b^2=1$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[*] Use the statement of the previous problem to
+describe (in terms of 2x2 matrices) the group of movements of a
+plane which preserve the origin. Prove that this is a dihedral
+group (cf. ALGEBRA 1).
+\end{zadacha}
+
+\begin{opredelenie}
+  Consider a matrix $(A^i_j)$.  One says that the matrix $(B^i_j)$
+  is obtained from $(A^i_j)$ using the {\bf row-wise Gauss
+    transformation}, if $(B^i_j) = (A^i_j)\circ E$, where $E$ is the
+ matrix either of the following form:
+\begin{equation}\label{gauss.1}
+\begin{pmatrix}
+1 &\hdotsfor{8}\\
+\hdotsfor{1} &1 &\hdotsfor{7}\\
+\hdotsfor{9}\\
+\hdotsfor{3} &0 &\dots &1 &\hdotsfor{3}\\
+\vdots &\vdots &\vdots 
+&\vdots &\ddots &\vdots 
+&\vdots &\vdots &\vdots \\
+\hdotsfor{3} &1 &\dots &0 &\hdotsfor{3}\\
+\hdotsfor{9}\\
+\hdotsfor{7} &1 &\hdotsfor{1}\\
+\hdotsfor{8} &1
+\end{pmatrix},
+\end{equation}
+or of the following form:
+\begin{equation}\label{gauss.2}
+\begin{pmatrix}
+1 &\hdotsfor{8}\\
+\hdotsfor{1} &1 &\hdotsfor{7}\\
+\hdotsfor{9}\\
+\hdotsfor{3} &1 &\dots &\lambda &\hdotsfor{3}\\
+\vdots &\vdots &\vdots 
+&\vdots &\ddots &\vdots 
+&\vdots &\vdots &\vdots \\
+\hdotsfor{3} &0 &\dots &1 &\hdotsfor{3}\\
+\hdotsfor{9}\\
+\hdotsfor{7} &1 &\hdotsfor{1}\\
+\hdotsfor{8} &1
+\end{pmatrix}
+\end{equation}
+(dots denote zeroes). 
+If $(B^i_j) = E \circ (A^i_j)$, where $E$ is as above, then one says
+that $(B^i_j)$ is obtained from $(A^i_j)$ using the {\bf column-wise
+  Gauss transformation}.
+\end{opredelenie}
+
+\begin{zadacha} Prove that the row-wise Gauss transformation can be
+described in terms of the following matrix operations: $(B^i_j)$ is
+obtained from $(A^i_j)$ by permuting of rows or by adding the
+$j$-th row multiplied by $\lambda$ to the $i$-th. What operations
+can be used to describe the column-wise Gauss transformation?
+\end{zadacha}
+
+\begin{zadacha}
+Prove that a matrix of the form  \eqref{gauss.1} has determinant -1
+and that a matrix of the form \eqref{gauss.2} has determinant 1.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that a Gauss transformation of the form \eqref{gauss.2}
+does not change the determinant but a transformation of the form
+\eqref{gauss.1} multiplies it by -1.
+\end{zadacha}
+
+\begin{opredelenie}
+A matrix $(A^i_j)$ is called {\bf upper triangular},
+if $A^i_j=0$ when $i<j$:
+$$
+\begin{pmatrix}
+*&*&* &\hdotsfor{1} &*&*&*\\
+0&*&* &\hdotsfor{1} &*&*&*\\
+0&0&* &\hdotsfor{1} &*&*&*\\
+\vdots&\vdots&\vdots&
+\ddots
+&\vdots&\vdots&\vdots\\
+0&0&0 &\hdotsfor{1} &*&*&*\\
+0&0&0 &\hdotsfor{1} &0&*&*\\
+0&0&0 &\hdotsfor{1} &0&0&*
+\end{pmatrix}.
+$$
+A matrix is called 
+{\bf diagonal}, if $A^i_j=0$ when $i \neq j$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Consider an upper triangular matrix $(A^i_j)$ of the size $n \times
+  n$.  Prove that $\det (A^i_j)$ equals to the product of all the
+  diagonal coefficients:
+\[ \det (A^i_j) = \prod_i A^i_i.
+\]
+\end{zadacha}
+
+\begin{zadacha}\label{gss}
+\begin{enumerate}
+\item Prove that any matrix can be brought into upper triangular form
+  using row-wise Gauss transformations; 
+\item Prove that any matrix can be brought into diagonal form
+  using row-wise and column-wise Gauss transformations.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zamechanie}
+Since Gauss transformations preserve the determinant (up to $\pm 1$),
+one can compute the determinant of a square matrix by bringing it to
+diagonal form and multiplying the coefficients on the diagonal.
+\end{zamechanie}
+
+\begin{zadacha}[*]
+Consider a Euclidean ring $A$ (cf. ALGEBRA 2) such that any element
+$a \in A$ admits decomposition into prime factors. Solve the
+Problem~\ref{gss} for matrices with elements from $A$.
+\end{zadacha}
+
+\begin{ukazanie}
+First consider matrices $(a^i_j)$ of the size $1 \times 2$, then
+prove the statement by induction for matrices of the size $1 \times
+n$ (which is the same as $n \times 1$).
+Prove that after the matrix is brought into upper triangular form, the
+only non-zero element will be GCD$(a^1_1,\dots,a^1_n)$.
+Consider now an arbitrary matrix of the size $m \times n$ and permute
+the columns and the rows in such a way that $a^1_1$ be non-zero. 
+To prove (b) apply the Gauss transformation to rows, columns then once
+more to rows, once more to columns etc. and obtain a matrix where
+$a^1_1 \neq 0$ and such that all other elements of the first column
+and the first row are zeroes. 
+\end{ukazanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Grassmann algebra and minors of matrices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{zadacha}[!]
+Consider a basis $v_1, \dots, v_n$ of a vector space $V$, then
+$v_{i_1} \wedge v_{i_2} \wedge \dots \wedge v_{i_k}$, 
+$i_1< i_2< \dots < i_k$ is the corresponding basis in $\Lambda^k(V)$.
+Consider a matrix $A\in \End V$, and $A(i_1, i_2, \dots, i_k;i_1',
+i_2', \dots i_k')$, the coefficients of the matrix of the endomorphism
+induced by $A$ on $\Lambda^k(V)$ in the basis described above. Prove
+that $A(i_1, i_2, \dots, i_k;i_1', i_2', \dots, i_k')$ is the
+determinant of the matrix which is obtained from $A$ after all rows
+except $i_1$-th, $i_2$-th, $\ldots, i_k$-th and all columns except
+$i_1'$-th, $i_2'$-th, $\ldots, i_k'$-th has been removed from it.
+\end{zadacha}
+
+\begin{zamechanie}
+This determinant is called the {\bf minor} of the matrix $A$.
+\end{zamechanie}
+
+\begin{ukazanie}
+  Take the composition of $A$ with an operator that maps $v_{i_l}$ to
+  $v_{i'_l}$, and reduce the problem to the case $i_l=i'_l$. Prove
+  that the coefficients $A(i_1, i_2, \dots, i_k;i_1', i_2', \dots,
+  i_k')$ do not depend on rows except the $i_1$-th, $i_2$-th, $\ldots,
+  i_k$-th rows, and on columns except the $i_1'$-th, $i_2'$-th,
+  $\ldots, i_k'$-th columns. Then put $A^i_j=0$ if $i$ and $j$ do not
+  belong to $\{ i_1, i_2, \dots, i_k\}$. Thus you have reduced the
+  problem to the case when $V= V_1 \oplus V_2$ and $A$ is of the form
+  $B\oplus 0_{V_2}$ where $B\in \End(V_1)$ and $0_{V_2}$ acts on $V_2$
+  by mapping all vectors to $0$. In this situation one can apply the
+  formula $\Lambda^*(V) = \Lambda^*(V_1)\otimes \Lambda^*(V_2)$ to get
+  the desired result.
+\end{ukazanie}
+
+\begin{opredelenie}
+Consider a linear operator $A\in \End(V)$. Consider the endomorphism
+induced by $A$ on $\Lambda^*(V)$. Consider the biggest number $N$
+such that this endomorphism is non-zero on $\Lambda^N(V)$. This number 
+$N$ is called the {\bf rank of the linear operator $A$} (denoted $\rk
+A$). If $A$ is represented by a matrix $(A^i_j)$ then $\rk A$ is
+called the rank of this matrix.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Consider an operator $A$ that induces the zero action on
+  $\Lambda^k(V)$.  Prove that $A$ induces the zero action on
+  $\Lambda^l(V)$ for any $l>k$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that the rank of a matrix is the size of its biggest non-zero
+minor.
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that the rank of an operator $A$ is the biggest number $N$ such
+that there are vectors $v_1, \dots, v_N$ such that $A(v_1), \dots,
+A(v_N)$ are linearly independent. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that the rank of  an operator $A$ is the dimension of its image.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a matrix of rank 1. Prove that all its rows are
+proportional. Prove that all its columns are proportional. 
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that $\rk A = \rk A^*$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the Problem~\ref{lambda.dual}.
+\end{ukazanie}
+
+\begin{opredelenie}
+A bilinear form
+$\mu:\; V_1 \otimes V_2 \arrow k$ is called
+{\bf nondegenerate pairing} if for every non-zero $v_1\in V_1$
+there is a vector $v_1'\in V_2$ such that 
+$\mu(v_1, v_1')\neq 0$ and for any non-zero
+$v_2\in V_2$ there is a vector $v_2'\in V_1$ such that
+$\mu(v_2, v_2')\neq 0$.
+\end{opredelenie}
+
+\begin{zadacha} 
+Consider finite-dimensional vector spaces $V_1$, $V_2$.
+Prove that a nondegenerate pairing $\mu:\; V_1 \otimes V_2 \arrow k$
+defines an isomorphism between $V_1$ and $V_2^*$ and any isomorphism
+between those spaces is defined in this way.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider an $n$-dimensional vector space $V$.
+Construct the natural isomorphism
+\[
+\Lambda^k(V)^*\cong\Lambda^{n-k}(V)\otimes \det V^*
+\]
+($\det V$ denotes the one-dimensional vector space
+$\Lambda^{n}(V)$).
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}
+Consider an $n$-dimensional vector space $V$ with the basis
+ $v_1, v_2, \dots, v_n$ and an operator $A\in \End V$.
+Consider the basis $w_1, w_2, \dots, w_n$ 
+in $\Lambda^{n-1}(V)$ where
+$w_k= v_1\wedge v_2 \wedge \dots v_{k-1}\wedge v_{k+1}
+\wedge \dots$
+(there are all $v_i$ in the product except one). 
+Consider the matrix $(A^i_j)$ of $A$ and consider 
+$\check A^i_j$, the minor that is obtained from 
+$A$ after $i$-th row and $j$-th column have been removed. 
+Prove that $A$ acts on $\Lambda^{n-1}(V)$ as the matrix 
+ $(\check A^i_j)$.
+\end{zadacha}
+
+\begin{zadacha} 
+In the previous problem setting consider a nondegenerate bilinear
+pairing 
+\[ 
+V \otimes \Lambda^{n-1}(V) \arrow \det V,
+\]
+defined by the form $v\otimes w \arrow v\wedge w$.  Choose the
+isomorphism $k \cong \det V$ such that $v_1\wedge v_2 \wedge \dots
+\wedge v_n$ is mapped to $1$. This gives a nondegenerate pairing
+defined on $V$ and $\Lambda^{n-1}(V)$. Prove that the basis in
+$\Lambda^{n-1}(V)$ dual to $v_1, v_2, \dots, v_n$ is $w_1, -w_2, w_3,
+-w_4, \dots $.  Prove that $A$ acts on $\Lambda^{n-1}(V)$ by the
+matrix $((-1)^{i+j}\check A^i_j)$ in this basis.
+\end{zadacha}
+
+\begin{zadacha} 
+Consider a nondegenerate bilinear pairing $\mu:\; V \otimes V'\arrow
+k$ and endomorphisms $A\in \End V$ and $B\in \End V'$ such that
+$\mu(A v, B v') = \mu(v,  v')$ for all $v, v'\in V, V'$. Choose dual
+bases in $V$, $V'$ and suppose $(\alpha^i_j)$ and
+$(\beta^i_j)$ are the matrices of $A$ and $B$. Prove that
+$(\alpha^i_j)\circ (\beta^i_j)^\bot =\Id$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider an $A\in \End V$ where $V$ is an $n$-dimensional vector space
+with a basis $v_1, v_2, \dots, v_n$ and $(A^i_j)$ is the matrix of the
+operator $A$. Prove that $A$ is invertible iff $\det A\neq 0$. 
+Prove that
+\[
+A^{-1} = \frac 1{\det A} ((-1)^{i+j}\check A^i_j)^\bot.
+\]
+\end{zadacha}
+
+\begin{ukazanie}
+Prove that for the natural pairing form
+\[ 
+V \otimes \Lambda^{n-1}(V) \stackrel \mu \arrow \det V,
+\]
+it holds that $\mu(A(v), A(w)) = \det A \mu(v, w)$, where $A(w)$
+denote the natural action of $A$ on $\Lambda^{n-1}(V)$. Then use the
+previous problem for $(A^i_j)=(\alpha^i_j)$, $\frac 1{\det A}
+((-1)^i\check A^i_j) = (\beta^i_j)^\bot$.
+\end{ukazanie}
+
+\begin{zamechanie}
+  We have obtained the well-known formula for calculation of the
+  inverse matrix by expansion by minors.  The geometric meaning of
+  this formula can be explained as follows: minors of a matrix are (by
+  definition) the matrix coefficients of the action of this matrix on
+  $\Lambda^{n-1}(V)$ and the natural pairing between $V$ and
+  $\Lambda^{n-1}(V)$ is multiplied by $\det A$ by the action of
+  $A$. This allows for the calculation of $A^{-1}$ using $\det A$ and
+  $\check A$.
+\end{zamechanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Calculation of determinant}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{zadacha}[!]
+Consider the matrix $(A^i_j)$  of a linear operator $A$.
+Prove that $\det A$ is equal to 
+\[
+\sum_{\sigma\in S_n}\operatorname{\sf sgn}(\sigma) A^1_{\sigma_1} 
+A^2_{\sigma_2} \dots A^n_{\sigma_n}
+\]
+where $(\sigma_1, \sigma_2, \dots, \sigma_n)\in S_n$ is a permutation,
+the sum is over the elements of the group of all permutations and
+$\operatorname{\sf sgn}$ is the sign of the permutation $\sigma$. 
+\end{zadacha}
+
+\begin{ukazanie}
+Use the explicit formula (one that uses the sum over the elements of
+$S_n$) from ALGEBRA 6 for the tensor  
+$v_1\wedge v_2 \wedge \dots \wedge v_n$
+
+\end{ukazanie}
+
+\begin{zamechanie} 
+The determinant is usually defined using this formula.
+\end{zamechanie}
+
+\begin{zadacha}
+Consider the matrix $(A^i_j)$ of a linear operator $A$.
+Prove that $\det A$ can be calculated as follows:
+\[
+A^1_1 \check A^1_1 - A^1_2\check A^1_2 + A^1_3\check A^1_3 \dots
+\]
+where $\check A^i_j$ are minors that are obtained after removing the 
+$i$-the row and $j$-th column.
+\end{zadacha}
+
+\begin{zamechanie}
+This procedure is called {\bf determinant expansion along a row}.
+\end{zamechanie}
+
+\begin{zadacha}[*]
+(Vandermonde determinant)
+Consider the matrix
+$$
+\begin{pmatrix}
+1 &1 &1 &\dots &1\\
+t_1 &t_2 &t_3 &\dots &t_n\\
+t_1^2 &t_2^2 &t_3^2 &\dots &t_n^2\\
+\hdotsfor{5}\\
+t_1^{n-1} &t_2^{n-1} &t_3^{n-1} &\dots &t_n^{n-1}
+\end{pmatrix},
+$$
+where $n>1$. Prove that its determinant is
+$\prod_{i<j} (t_i-t_j)$.
+\end{zadacha}
+
+\begin{zadacha}[*]\label{_P_prod_Q_i_kornej_Zadacha_}
+Consider the matrix
+$$
+\begin{pmatrix}
+t &x_1 &x_2 &x_3 &\dots &x_n\\
+t^2 &x_1^2 &x_2^2 &x_3^2 &\dots &x_n^2\\
+t^4 &x_1^4 &x_2^4 &x_3^4 &\dots &x_n^4\\
+\hdotsfor{6}\\
+t^{2^{n}} &x_1^{2^{n}} &x_2^{2^{n}} &x_3^{2^{n}} &\dots &x_n^{2^{n}}
+\end{pmatrix},
+$$
+and denote its determinant as $P_n(t, x_1, ... x_n)$. Suppose that
+this matrix is over the field $\Z/2\Z$. Prove that $P_n(t, x_1, \dots,
+x_n)$ becomes zero if one takes $t=\sum \alpha_i x_i$
+to be an arbitrary linear combination of $x_i$. Deduce from B\'ezout's
+theorem that
+\[ 
+ P_n(t, x_1, \dots, x_n) = Q(x_1, \dots, x_n)\prod (t-\sum
+ \alpha_i x_i),
+\]
+where $\alpha_i\in \Z/2\Z$, and $Q \in \Z/2\Z[x_1, \dots, x_n]$ is a
+polynomial. 
+\end{zadacha}
+
+
+\begin{ukazanie}
+Use long division of $P_n$ by $t-\sum \alpha_i x_i$. If you get a
+non-zero value, then if you substitute $t$ for $t=\sum \alpha_i x_i$
+in $P(t)$ then you will also get a non-zero value.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Prove in the previous problem setting that $Q = P_{n-1}(x_n)$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Deduce from the previous problem that
+$Q(x_1, \dots, x_n)\neq 0$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+(Dickson's theorem)
+Consider the polynomial 
+$$
+F_n(t)=\prod (t-\sum
+ \alpha_i x_i)\in \Z/2\Z[x_1, \dots, x_n].
+$$ 
+Prove that 
+\[ 
+F_n(t) = t^{2^n} + \sum^{n-1}_{i=0} c_{n,i} t^{2^i},
+\]
+where $c_{n,i}\in \Z/2\Z[x_1, \dots, x_n]$ are polynomials in $x_1,
+\dots, x_n$. 
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem and problem~\ref{_P_prod_Q_i_kornej_Zadacha_}.
+\end{ukazanie}
+
+\begin{zamechanie}
+Polynomials $c_{n,i}\in \Z/2\Z[x_1, \dots, x_n]$
+are called {\bf Dickson's invariants}.
+\end{zamechanie}
+
+\begin{zadacha}[*]
+Consider the coefficients $Q_r$ (which are $c_{n,i}$ according to
+Dickson's theorem) of the polynomial $F_n(t)$ as elements of the
+symmetric algebra $S^*(V)$  where $V$ is the vector space over the
+field $\Z/2\Z$ with basis $x_1, \dots, x_n$. Consider the action of
+the group $GL(V)$ of invertible linear operators on $V$ and extend it
+naturally (by multiplicativity) over the symmetric algebra.
+Prove that $Q_r$ is invariant with respect to $GL(V)$:
+\[
+Q_r(x_1, x_2, \dots, x_n) = Q_r(h(x_1), h(x_2), \dots, h(x_n))
+\]
+where $h\in GL(V)$ is an arbitrary invertible endomorphism.
+\end{zadacha}
+
+\begin{zamechanie}
+Consider the subring of $GL(V)$-invariant polynomials in the
+polynomials ring $S^*(V)$. Dickson (1911) proved that this ring is the
+ring of polynomials with generators $c_{n,i}$.
+Consult
+\begin{quote}
+A PRIMER ON THE DICKSON INVARIANTS, 
+Contemporary Mathematics 19 (1983), 421-434.
+{\tt http://www.math.purdue.edu/$\sim{}$wilker/papers/dickson.pdf}
+\end{quote}
+for details.
+\end{zamechanie}
+
+\end{document}

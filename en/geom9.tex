@@ -1,0 +1,279 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}%,russcorr}
+%\usepackage{amsthm,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{9}{GEOMETRY 9: Connectedness}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+Let $M$ be a topological space.
+A closed and open at the same time 
+subset $W\subset M$ is called {\bf clopen}. 
+$M$ without proper clopen subsets is called
+{\bf connected}.
+A subset $Z\subset M$ is called {\bf connected} if
+it is connected in the induced topology. 
+\end{opredelenie}
+
+\begin{zadacha}
+Is $\R$ connected?
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $X$, $Y$ be connected. Show that $X\times Y$ is connected.
+\end{zadacha}
+
+\begin{ukazanie}
+Let 
+$U\subseteq X\times Y$ be clopen.
+Consider $U\cap X\times \{y\}$. Show that
+$X\times \{y\}$ (in induced topology) is homeomorphic to 
+$X$, and $U\cap X\times \{y\}$ is clopen there. 
+\end{ukazanie}
+
+\begin{zadacha}
+Is $\R^n$ connected (in its natural topology)?
+\end{zadacha}
+
+\begin{zadacha}
+Assume that it is possible to connect any two points $x, y$ in $M$
+by a path, that is, to find a continuous mapping 
+$[0,1] \stackrel \phi \arrow M$ satisfying
+$\phi(0)=x$, $\phi(1)=y$. Show that
+$M$ is connected.
+\end{zadacha}
+
+\begin{zamechanie} Such an $M$ is called {\bf path-connected}.
+ \end{zamechanie}
+
+\begin{zadacha}
+Remove a point from a circle or the plane.
+Show that the result is connected.
+\end{zadacha}
+
+\begin{zadacha}[!]
+\begin{enumerate} \item Remove a finite number of points from $\R^2$.
+Show that the result is connected.
+
+\item Remove a point from an interval.
+Show that the result is not connected.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha}[!]
+Show that the following spaces are not homeomorphic to each other:
+$\R$, $\R^2$, the circle.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Show that the following spaces are not homeomorphic to each other:
+closed interval, half-open interval, open interval.
+\end{zadacha}
+
+\begin{zadacha}
+Let
+$f:\; X \arrow Y$ be continuous and  $X$ be connected.
+Show that $f(X)$ is connected.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $U\subseteq [0,1]$ be connected.
+Show that $U$ is either a
+closed interval, or a half-open interval, or an open interval.
+\end{zadacha}
+
+\begin{zadacha}
+Let
+$f:\; X \arrow \R$ be continuous and  $X$ be connected.
+Assume that $f$ takes positive as well as negative values.
+Show that $f(x)=0$ for some $x\in X$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $M$ be a connected metrizable countable topological space.
+Show that $M$ consists of one point.
+\end{zadacha}
+
+\begin{zadacha} 
+Show that the union of two connected subsets of a topological space
+$M$ is connected, provided that their intersection is nonempty.
+\end{zadacha}
+
+
+\begin{zadacha}[!]
+Let $x\in M$ and  $W$ be the union of all the connected subsets of $M$
+containing $x$. Show that $W$ is connected.
+\end{zadacha}
+
+
+\begin{opredelenie}
+In this case $W$ is called {\bf the connected component}
+of $x$ (or just {\bf a connected component}).
+\end{opredelenie}
+
+\begin{zadacha}
+Show that $W\subset M$ is a connected component if and only if
+any connected subset containing $W$ coincides with $W$.
+\end{zadacha}
+
+\begin{zadacha}
+Show that $M$ is the disjoint union of its connected components.
+\end{zadacha}
+
+\begin{zadacha}
+Show that each connected component of $M$ is closed.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Totally disconnected spaces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+A topological space
+$M$ is called {\bf totally disconnected}
+if each connected component of $M$ consists of one point.
+\end{opredelenie}
+
+\begin{zadacha}
+Show that $\Q$, the space of rational numbers, 
+in the topology induced by $\R$, is totally disconnected,
+but not discrete.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Show that $\Q_p$, the space of $p$-adic numbers, is totally disconnected.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Show that the product of totally disconnected spaces is totally disconnected.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $S$ be a subbase in a Hausdorff topological space $M$, and all the
+elements of $S$ clopen. Show that $M$ is totally disconnected. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider the set $\{0, 1\}$ equipped with the discrete topology.
+Let $\{0, 1\}^I$ be the product of 
+$I$ copies of  $\{0, 1\}$ with Tychonoff topology, 
+with $I$ being an arbitrary index set.
+Show that $\{0, 1\}^I$ is totally disconnected.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the preceding problem.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Let $M$ be Hausdorff topological space, 
+$M_1$ be the sets of connected components of $M$, and
+$M\overset{\pi}{\arrow} M_1$ the natural projection (each point
+is mapped to its connected component).
+On $M_1$ introduce the following topology:
+$U\subset M_1$ open if $\pi^{-1}(U) \subset M$ is open.
+Show that $M_1$ is totally disconnected.
+Show that any continuous mapping
+$M\overset{\pi_2}{\arrow} M_2$
+from $M$ to a totally disconnected space $M_2$
+can be written as a composition of continuous mappings
+$M\overset{\pi}{\arrow} M_1 \arrow  M_2$.
+\end{zadacha}
+
+\begin{ukazanie}
+If $S\subset M_1$ is connected then the preimage
+$\pi^{-1}(S)$ is connected, too. Indeed, if
+$W\subset \pi^{-1}(S)$ is clopen then 
+$W= \pi^{-1}(W_1)$ (if $W$ intersects a connected component of 
+$M$, then $W$ contains it). Thus $W_1$ is clopen.
+\end{ukazanie}
+
+\begin{zadacha} 
+Let $U$ be an open subset of a compact Hausdorff space
+and a collection of closed subsets
+$\{K_i\}$, so that their intersection is conatined in $U$.
+Show that $\{K_i\}$ contains a finite subcollection
+so that their intersection is contained in $U$.
+\end{zadacha}
+
+\begin{zadacha}[*] 
+Let $M$ be a totally disconnected compact Hausdorff space.
+Show that, for each point $x\in M$, the intersection of all the
+clopen subsets of $M$ containing $x$ is $\{x\}$.
+\end{zadacha}
+
+\begin{ukazanie}
+Let $P$ be the intersection of the clopen subsets containing $x$.
+Obviously $P$ is closed. Show that $P$ is either $\{x\}$ or disconnected.
+In the latter case $P$ is the disjoint union of two nonempty 
+closed subsets $P_1$, $P_2$. As T4 holds in $M$ (show this),
+find for 
+$P_1$, $P_2$ nonintersecting open neighbourhoods $U_1$, $U_2$.
+Derive from the preceding problem that $U_1 \cup U_2$ contains
+a clopen subset $W\subset M$ containing $x$.
+Show that $W\cap U_i$ are clopen, and derive from this 
+that $P=\{x\}$.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Let $M$ be a totally disconnected compact Hausdorff space.
+Show that the clopen subsets form a base of the topology of $M$.
+\end{zadacha}
+
+
+\begin{ukazanie}
+Let $U\subset M$ be open and 
+$x\in U$. 
+For each point in  $M\backslash U$ pick a clopen neighbourhood that
+does not contain $x$ (show that this is always possible).
+This is a cover $\{U_\alpha\}$ of
+$M\backslash U$. As $M\backslash U$ is compact,
+$\{U_\alpha\}$ contains a finite subcover $U_1, ... U_n$. 
+Show that the complement to 
+$\cup U_i$ is clopen, contains $x$, and is contained in $U$.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Let $M$ be a totally disconnected compact Hausdorff space.
+Let $x, y \in M$ be two distinct points.
+Show that $M$ admits a continuous mapping to 
+$\{0, 1\}$ (with discrete topology) such that $x$ goes to $0$ and 
+$y$ goes to $1$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $M$ be a totally disconnected compact Hausdorff space.
+Let $I$ be the set of all continuous mappings from 
+$M$ to $\{0, 1\}$. Define a natural mapping
+$M \arrow \{0, 1\}^I$. Show that it is a continuous embedding, 
+and that the image of $M$ is closed.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $M$ be a compact Hausdorff space. Show that the following
+statements are equivalent.
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\item $M$ is totally disconnected.
+\item $M$ can be embedded into $\{0, 1\}^I$
+for some set $I$ of indices.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zamechanie}
+Recall that if a compact
+$M$ admits a continuous injective mapping
+$f:M \to X$ into a Hausdorff space $X$ then $f$ is a homeomorphism
+between $M$ and $f(M) \subset X$ with induced topology.
+\end{zamechanie}
+
+\end{document}
+
