@@ -1,0 +1,857 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\def\Mor{\operatorname{Mor}}
+
+\input{listki.tex}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{11}{GEOMETRY 11: Galois coverings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The subject of Galois covering that is covered in this exercise sheet
+is very similar to the Galois theory of field extensions. This is not
+a coincidence. In algebraic geometry methods from topology and
+differential geometry are applied to objects of algebro-geometric and
+number-theoretic nature. The version of Galois theory that is
+presented in ALGEBRA-11 goes back to A. Grothendieck. Grothendieck has
+given a definition of a fundamental group in such a way that Galois
+group and fundamental group of a topological space turned out to be
+particular cases of a more general construction. If one studies
+coverings and field extensions, it is very useful to keep in mind that
+these two things are similar.
+
+All topological spaces in this exercise sheet are supposed to be
+Hausdorff. 
+
+%\begin{opredelenie}
+%Пусть $M$ топологическое пространство, а
+%$\tilde M \stackrel \pi \arrow M$ -- непрерывное отображение.
+%Говорят, что $\pi$ {\bf этально}, если
+%у каждой точки $\tilde M$ есть такая окрестность $U$,
+%что ограничение $\pi$ на $U$ 
+%осуществляет гомеоморфизм $U$ на $\pi(U)$.
+%Иначе говоря, этальное отображение -- отображение,
+%которое локально является гомеоморфизмом.
+%\end{opredelenie}
+%
+%\begin{zadacha}
+%Докажите, что этальное отображение открыто.
+%\end{zadacha}
+
+\begin{zadacha}
+Let $\tilde M \stackrel \pi \arrow M$ be a covering
+and let $M_1$ be a connected component of $\tilde M$.
+Prove that $\pi^{-1}(M_1)$ is a connected component of  $\tilde M$. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $\tilde M \stackrel \pi \arrow M$ be a covering and let $\tilde M$
+and  $M$ be connected and non-empty,
+and $\pi$ injective. Prove that $\pi$ is a homeomorphism.
+\end{zadacha}
+
+\begin{opredelenie}
+  Let $\tilde M \stackrel \pi \arrow M$,
+  $\tilde M'\stackrel {\pi'} \arrow M$ be coverings.  A {\bf morphism
+    of coverings} is a continuous map
+  $\phi:\; \tilde M\arrow \tilde M'$, that respects the projection to
+  $M$, in other words, such that $\phi\circ \pi' = \pi$.  The set of
+  all morphisms between coverings is denoted by
+  $\Mor(\tilde M, \tilde M')$.  An isomorphism of covering is a
+  morphism that is invertible, and moreover $\phi^{-1}\circ \phi=\Id$,
+  $\phi\circ \phi^{-1}=\Id$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Let $\phi:\; \tilde M\arrow \tilde M'$ be a morphism of
+  coverings. Prove that $\phi:\; \tilde M\arrow \tilde M'$ is a
+  covering.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $M$ be connected and $\tilde M \stackrel \pi \arrow M$ be a
+covering. Prove that $\tilde M$ is locally connected.
+\end{zadacha}
+
+\begin{zadacha}
+Let $M_1\arrow M_2$ and $M_2\arrow M_3$  be coverings.
+
+\item[**] Is it true that the composition $M_1\arrow M_3$ is also a covering?
+
+\item[!] Assume every point of $М_3$ has a simply connected neighbourhood.
+Prove that  $M_1\arrow M_3$ is a covering.
+\end{zadacha}
+
+\begin{zadacha}
+Let $\tilde M \stackrel \pi \arrow M$,
+$\tilde M' \stackrel {\pi'} \arrow M$ be coverings and  $\tilde
+M'\coprod \tilde M$ be their disjoint sum. Prove it is also a covering
+of $M$.
+\end{zadacha}
+
+\begin{zadacha}
+  Let $M$ be connected and $\tilde M \stackrel \pi \arrow M$ be a
+  covering. Prove that 
+  $\tilde M\cong \coprod_{\alpha\in I} \tilde M_\alpha$ where 
+  $\{\tilde M_\alpha\}$ is the set of connected components of $\tilde
+  M$ regarded as coverings of $M$.
+\end{zadacha}
+
+\begin{opredelenie}
+  A {\bf splitting} of a covering $\tilde M \stackrel \pi \arrow M$ is
+  an isomorphism between $\tilde M$ and a covering of the form
+  $\tilde M \cong V \times M$ where $V$ is a set with discrete
+  topologogy.
+\end{opredelenie}
+
+\begin{zadacha}
+Let  $\tilde M \stackrel \pi \arrow M$ be a covering of a connected
+space $M$. Prove that 
+$\pi$ splits if and only if all connected components $\tilde M$ are
+isomorphic to $M$.
+\end{zadacha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Galois coverings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{zadacha}[!]
+Let $M_1 \stackrel {\pi_1} \arrow M$,
+$M_2 \stackrel {\pi_2} \arrow M$ be coverings.
+Consider the following subset in $M_1\times M_2$
+\[ M_1\times_M M_2:= 
+\{ (m_1, m_2)\in M_1\times M_2 \ \ | \ \ \pi_1(m_1)= \pi_2(m_2)\}
+\]
+We consider $M_1\times_M M_2$ as a topological space (with the
+topology induced from $M_1\times M_2$).  Prove that the natural map
+$M_1\times_M M_2\arrow M$ is a covering.
+\end{zadacha}
+
+\begin{opredelenie}
+  The space $M_1\times_M M_2$ together with the natural map to $M$ is
+  called the {\bf product of coverings $M_1$, $M_2$}. The product of
+  arbitrary number of coverings is defined similarly.
+\end{opredelenie}
+
+\begin{zamechanie}
+  If one uses the analogy between field extensions and coverings then
+  disjoint unions of coverings correspond to a direct sums of
+  semisimple Artinian rings, and products of coverings correspond to
+  tensor products.
+\end{zamechanie}
+
+\begin{zadacha} 
+Let $M_1$, $M_2$, $M_3$ be coverings of $M$. Proe that
+morphisms from $M_3$ to $M_1\times M_2$
+are in bijective correspondence
+with pairs of morphisms  $\phi_1:\; M_3\arrow M_1$, 
+$\phi_2:\; M_2\arrow M_1$.
+\end{zadacha}
+
+\begin{zadacha}
+Consider $\R$ as a covering of $S^1$.
+How many connected components does $\R\times_{S^1}\R$ have?
+\end{zadacha}
+
+\begin{opredelenie}
+Let $M_1\stackrel\phi\arrow M_2$ be a morphism between two coverings
+of $М$. Define the  {\bf graph of $\phi$} as a subset in $M_1\times_M
+M_2$ that consists of pairs of the form вида $(m, \phi(m))$ for all
+$m\in M_1$.
+\end{opredelenie}
+
+\begin{zadacha}[!] 
+Let $M_1\stackrel\phi\arrow M_2$ be a morphism between two coverings
+$М$ and let $\Gamma_\phi$ be its graph. Prove that $\Gamma_\phi$ is
+both open and closed in $M_1\stackrel\phi\arrow M_2$.
+\end{zadacha}
+
+\begin{zadacha}
+  Let $[\tilde M:M]$ be a covering, and moreover let $M$ and
+  $\tilde M$ be connected (such a covering is called {\bf connected}).
+  Let $X\subset \tilde M\times_M\tilde M$ be a connected
+  component. Prove that $X$ is the graph of an automorphism
+  $\nu:\; \tilde M \arrow \tilde M$ if and only if the projection on
+  the first components is an isomorphism $X\cong \tilde M$.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{_Mor_v_pro_Zadacha_}
+Let $[\tilde M:M]$ be a connected covering.
+Consider the projection on the first argument
+$\tilde M\times_M\tilde M \arrow \tilde M$ as a covering of 
+$\tilde M$. Construct a bijective correspondence between
+  $\Mor_{\tilde M}(\tilde M, \tilde M\times_M)$ and the set of
+  automorphisms of $\tilde M$ over $M$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{opredelenie} 
+  Let $[\tilde M:M]$ be a covering and assume $M$ and $\tilde M$ are
+  connected. Then $[\tilde M:M]$ is called a {\bf Galois covering}, if
+  the covering $\tilde M\times_M\tilde M \arrow \tilde M$ is split. In
+  this situation the automorphism group of $\tilde M$ over $M$ is
+  called the {\bf Galois group of the covering $[\tilde M:M]$}
+  (denoeted $\Gal([\tilde M:M])$). Sometimes the Galois group is
+  called {\bf monodromy group}, or {\bf deck transform group}.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+Let $M$ be connected and let $[\tilde M:M]$ be such a Galois covering
+that every point of $M$ has exactly $n$ preimages
+(such a covering is called $n$-sheet covering). Prove that the Galois
+group  $[\tilde M:M]$ has exactly $n$ elements.
+\end{zadacha}
+
+\begin{ukazanie} Prove thta $[\tilde M\times_M\tilde M:\tilde M]$ is
+  $n$-sheet covering too, and use the previous problem.
+\end{ukazanie}
+
+\begin{opredelenie} Let a group $G$ act on a set $S$. The action is
+  called {\bf free} if $s\neq gs$ for any $g\in G$, $s\in S$, if
+  $g\neq 1$. The action is called {\bf transitive} if for any two
+  points $s_1$, $s_2\in S$ there exists $g\in G$ such that
+  $g(s_1)=s_2$.
+\end{opredelenie}
+
+\begin{zadacha}
+Let $\tilde M \stackrel\pi\arrow M$ be a covering
+and $G=\Aut_M(\tilde M)$ be its automorphism group. Assume that $M$ is
+connected. Prove that for any  $x\in M$ the group $G$ acts freely on
+$\pi^{-1}(x)$. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $\tilde M \stackrel\pi\arrow M$ be a Galois covering and let $x\in
+M$ be any point. Prove that $\Gal([\tilde M:M])$ acts on $\pi^{-1}(x)$
+freely and transitively.
+\end{zadacha}
+
+\begin{ukazanie}
+Find a bijective correspondence between
+ $\pi^{-1}(X)$ and the set of connected componentns
+$\tilde M\times_M\tilde M$, and apply
+Exercise~\ref{_Mor_v_pro_Zadacha_}. 
+\end{ukazanie}
+
+\begin{zadacha}[!]\label{_transi_na_sloe_Zadacha_}
+Let $\tilde M \stackrel\pi\arrow M$ be a covering and let $x\in M$ be
+any point. Prove that $\Aut_M(\tilde M)$ acts transitively on
+$\pi^{-1}(X)$ if and only if  $[\tilde M: M]$ is a Galois covering. 
+\end{zadacha}
+
+\begin{zadacha} 
+  Consider the covering $\R^n \arrow \R^n/\Z^n \cong (S^1)^n$.  Prove
+  that it is a Galois covering.
+\end{zadacha}
+
+\begin{zadacha} 
+  Take $n\in \Z$ and consider an $n$-sheeted covering
+  $S^1 \arrow S^1$, $t \mapsto nt$.  Prove that this is a Galois
+  covering.
+\end{zadacha}
+
+\begin{opredelenie} Let $M$ be a topological space and let 
+$G$ be a group that acts on $M$ by continuous transformations. 
+Consider the space of $G$-orbits
+$M/G$. Recall (GEOMETRY-10) that the topology on $M/G$ is introduced a
+follows: a subset of $M/G$ is open if and only if 
+its preimage in  $M$ is open. The set $M/G$ with this topology is called
+a  {\bf quotient of} $M$ by the action of $G$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+  Let $[\tilde M:M]$ be a covering and assume
+  $G\subset \Aut_M(\tilde M)$ acts on $[\tilde M:M]$ by
+  automorphisms. Prove that this action is free and that the quotient
+  $\tilde M/G$ is Hausdorff and is a covering of $M$.
+\end{zadacha}
+
+\begin{zamechanie}
+Taking a quotient by the action of $G$ plays the same role in the
+Galois coverings theory as taking  $G$-invariant in the Galois theory
+of field extensions.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+  Let $[\tilde M:M]$ be a covering and let $G$ be its automorphism
+  group. Prove that $\tilde M/G$ is isomorphic to $M$ if and only if
+   $[\tilde M:M]$ is a Galois covering. 
+\end{zadacha}
+
+\begin{ukazanie}
+Use Exercise~\ref{_transi_na_sloe_Zadacha_}.
+\end{ukazanie}
+
+\begin{zamechanie}
+  In the several exercises that follow the statement and the proof
+  mimic almost verbatim the corresponding exercises about Galois field
+  extensions.
+\end{zamechanie}
+
+\begin{zadacha}\label{_kompo_rasshe_Zadacha_}
+Let $M_1\stackrel{\phi_1}\arrow M_2 \stackrel{\phi_2}\arrow M_3$
+be a sequence of coverings, and moreover
+$\phi_i$ are surjective and their composition is split.
+Prove that $\phi_i$'s split.
+\end{zadacha}
+
+By analogy with Galois theory of field extension
+the coverings of the form $\tilde M \stackrel \pi \arrow M$ will
+further be denoted $[\tilde M:M]$.
+
+
+\begin{zadacha}[!]\label{_M_1_times_promezhu_Zadacha_}
+  Let $M_1\arrow M_2 \arrow M_3$ be a sequence of coverings, and
+  assume all $M_i$ are connected and $[M_1:M_3]$ is a Galos
+  covering. Prove that $M_1 \times_{M_3} M_2$ splits as a covering of
+  $M_1$.
+\end{zadacha}
+
+\begin{ukazanie} 
+Use Exercise~\ref{_kompo_rasshe_Zadacha_}, apply it to 
+the sequence of coverings
+\[ 
+  M_1\times_{M_3}M_1\arrow M_1\times_{M_3}M_2 \arrow M_1\times_{M_3}M_3.
+\]
+\end{ukazanie}
+
+\begin{zadacha}[!]
+  Let $M_1\arrow M_2 \arrow M_3$ be a sequence of coverings and assume
+  that $[M_1:M_3]$ is a Galois covering. Prove that $[M_1:M_2]$ is a
+  Galois covering.
+\end{zadacha}
+
+\begin{ukazanie}
+Use Exercise~\ref{_kompo_rasshe_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha} 
+  Let $M_1\arrow M_2 \arrow M_3$ be a sequence of coverings. Prove
+  that
+\[ M_1\times_{M_3} M_1 \cong 
+   M_1\times_{M_2} (M_2\times_{M_3}M_2)\times_{M_2}M_1.
+\]
+\end{zadacha}
+
+\begin{zadacha} Deduce the following statement from the previous exercise:
+if $M_1\arrow M_2 \arrow M_3$ is a sequence of coverings and if $[M_1:M_2]$
+and $[M_2:M_3]$ is a Galois covering then $[M_1:M_3]$ is also a Galois
+covering. 
+\end{zadacha}
+
+\begin{zadacha} 
+Let $[\tilde M:M]$ be a covering and let 
+$G$ be its Galois gorup and $G'\subset G$ be its subgroup. Consider
+the quotient $\tilde M/G'$. Prove that
+$[\tilde M: \tilde M/G']$ is a Galois covering with Galois group
+$G'$. 
+\end{zadacha}
+
+\begin{opredelenie}
+Let $\tilde M \arrow M$ be a covering.
+A {\bf quotient covering} $[\tilde M:M]$ is a covering $\tilde
+M'\arrow M$ together with a sequence of coverings
+$\tilde M \arrow \tilde M' \arrow M$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+(fundamental theorem of Galois theory)
+Let $[\tilde M:M]$ be a Galois covering with Galois group
+$G$. Consider the correspondence that to a subgroup $G'\subset G$
+associates a quotient covering $[\tilde M/G':M]$.
+Prove that this correspondence defines a bijection between the set of
+subgroups of $G$ and the set of isomorphism classed of quotient
+coverings. 
+\end{zadacha}
+
+\begin{zadacha} 
+Let $M_1\arrow M_2 \arrow M_3$ be a sequence of coverings and assume
+that $[M_1:M_3]$ is a Galois covering. Consider the natural projection 
+\[ M_1 \times_{M_3} M_1 \stackrel\Psi\arrow  M_2 \times_{M_3} M_2.
+\]
+Let $g\in \Gal([M_1:M_3])$ and $e_g\subset M_1 \times_{M_3} M_1$ be
+the graph 
+$\{(m, g(m))\}$ of the action of $g$ in $M_1 \times_{M_3} M_1$.
+Prove that  $g\in \Gal([M_1:M_2])\subset \Gal([M_1:M_3])$
+if and only if $e_g$ projects to the diagonal componont in 
+$M_2 \times_{M_3} M_2$.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $M_1\arrow M_2 \arrow M_3$ be a sequence of Galois
+coverings. Prove that the natural projection
+\[ M_1 \times_{M_3} M_1 \stackrel\Psi\arrow  M_2 \times_{M_3} M_2.
+\]
+defines a surjective homomorphism
+$\Gal([M_1:M_3])\stackrel\psi\arrow \Gal([M_2:M_3])$. 
+Prove that $\ker\psi=\Gal([M_1:M_2])$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the fact the Galois $\Gal([M_i:M_3])$ is identified with the set
+of connected components of 
+$M_i\times_{M_3}M_i$ and use the previous problem.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Let $\tilde M \arrow M$ be a Galois covering and  $G' \arrow \tilde
+M/G'$ be the bijective correspondence between quotient coverings and
+subgroups of the Galois gorup defined above.
+Prove that  $G'$ is a normal subgroup if and only if $[\tilde M/G':M]$
+is a Galois covering.
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Coverings of linearly connected spaces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+Let $M$ be a metric space. Recall that a 
+{\bf geodesic} in $M$ is a path
+$[a,b] \stackrel\gamma\arrow M$ such that $d(\gamma(x), \gamma(y))=|x-y|$.
+The {\bf length} of the geodesic is the distance between its ends. A
+path is called {\bf piece-wise geodesic} if it can be decomposed into
+a union of a finite number of geodesic segments. The {\bf length} of a
+piece-wise geodesic path is defined to be  the sum of lengths of its
+geodesic pieces. We denote the length of a path  $\gamma$ by $|\gamma|$.
+\end{opredelenie}
+
+\begin{opredelenie}
+Let $\Gamma$ be a graph and $M_\Gamma$ be its topological space.
+We say that $\Gamma$ is {\bf  connected} if its topological space is
+connected.  
+\end{opredelenie}
+
+\begin{zadacha}[!]
+Prove that a graph is connected if and only if any two vertices are
+connected by a finite sequence of edges. Prove that a connected graph
+is linearly connected.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Let $\Gamma$ be a connected graph. By construction, on each edge
+  $r_\alpha\subset M_\gamma$ of the graph are defined the coordinates
+  that identify the edge with $[0,1]$.  Let $\gamma$ be a piece-wise
+  linear path in $\Gamma_M$, that is, a path that consists of a finite
+  number of intervals of the form
+  $[a_i,b_{i}]\stackrel{\phi_i}\arrow [\lambda_i, \mu_i]\subset
+  r_\alpha$, where $\phi_i$ is linear. Define 
+  $|\gamma|:= \sum|\lambda_i,\mu_i|$ as the sum of lengths of all
+  intervals that contain this path. Define $d(x,y):= \inf |\gamma|$ where
+  $\gamma$ runs throuh all piece-wise linear paths from $x$ to $y$.
+  Prove that $d(x,y)$ defines a metric and $M_\Gamma$ is geodesically
+  connected. 
+\end{zadacha}
+
+\begin{opredelenie}
+  This metric is called the {\bf standard metric on the topological
+    space of a graph}.
+\end{opredelenie}
+
+\begin{opredelenie}
+Geodesically connected manifold $M$ is called
+{\bf star-shaped} if any two points of $M$ are connnected by a unique
+geodesic.
+\end{opredelenie}
+
+\begin{zadacha} 
+  Prove that any convex subset in $\R^n$ (with the standard metric) is
+  star-shaped.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Find a metric on $M=\R^2$ such that  $М$ is geodesically connected and
+there are infinitely many geodesics connecting arbitrary two fixed points.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $\Gamma$ be a tree, that is, a connected finite graph that has 
+$n$ vertices and $n-1$ edges. Prove that 
+$M_\Gamma$ with the standard metric is start-shaped.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $\Gamma$ be a finite graph such that $\Gamma_M$
+is star-shaped. Prove that $\Gamma$ is a tree.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $M$ be a geodesically connected manifold, 
+$\tilde M\stackrel\pi\arrow M$ be a covering, and $x$ and $y$ be two
+points in $\tilde M$.  Consider the set $S_{x,y}$ of all paths on
+$\tilde M$ that connect $x$ and $y$, such that their projection to $M$
+is piece-wise geodesic.
+Consider the following function on $\tilde M \times \tilde M$
+\[ \tilde d(x,y) = \inf_{\gamma\in S_{x,y}}|\pi(\gamma)|\] Prove that
+it is a metric. Prove that $\tilde d(x,y)\geq d(\pi(x),\pi(y))$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+In the previous problem setting prove that
+$\tilde M$ is geodesically connected.
+\end{zadacha}
+
+\begin{zadacha} Let $M$ be a geodesicall connected metric space and
+  $\tilde M\arrow M$ be its covering. Prove that the connected
+  component of the preimage of a geodesic is a geodesic in
+  $(\tilde M, \tilde d)$.
+\end{zadacha}
+
+\begin{ukazanie} 
+Prove that the preimage of a geodesic is a geodesic in a neighbourhood
+of every point. Then use the inequality 
+$\tilde d(x,y)\geq d(\pi(x),\pi(y))$.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+  Let $(M, d)$ be a star-shaped metric space and
+  $\tilde M \stackrel\pi \arrow M$ be its connected covering. Let
+  moreover $x\in \tilde M$ be any point and $U_x$ be the set of points
+  $y\in M$ that can be connected with $x$ by a geodesic. Prove that
+  $U_x$ is open and closed in $\tilde M$ and that $(U_x, \tilde d)$ is
+  star-shaped. Deduce that the natural projection 
+  $\tilde M \stackrel\pi \arrow M$ is an isometry and a homeomorphism.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha}
+  Let $M=[0,1]\times [0,1]$ be a square and $\tilde M \arrow M$ be its
+  connected covering. Prove that it is a homeomorphism.
+\end{zadacha}
+
+\begin{zadacha}
+Let $M$ be a linearly connected and simply connected space, 
+and $\tilde M \stackrel\pi\arrow M$ be a connected covering. Prove that
+it is a homeomorphism
+\end{zadacha}
+
+\begin{ukazanie}
+  Prove that $\tilde M$ is linearly connected.  Let
+  $x, y\in \pi^{-1}(x_0)$ be two points and $\tilde \gamma$ be a path
+  that connects them.  Then $\gamma:=\pi(\tilde\gamma)$ is a
+  loop. Since $M$ is simply connected, $\gamma$ can be extended to a
+  map from the square to $X\subset M$ (prove it).  Consider the
+  preimage of this square in $\tilde M$ and let $\tilde X$ be the
+  component of the preimage that contains $\tilde\gamma$.  Use the
+  previous exercise to prove that $\tilde X\stackrel\pi\arrow X$ is a
+  homeomorphism and deduces that $x=y$.
+\end{ukazanie}
+
+\begin{zadacha}
+In the previous problem setting prove that any covering $M$ splits.
+\end{zadacha}
+
+\begin{opredelenie}
+Let $M$ be a any (not necessarily linearly connected) connected
+topological space. The space $M$  is called 
+ {\bf simply connected} if any covering of $M$ is split.
+\end{opredelenie}
+
+\begin{zamechanie} 
+Thanks to the previous exercise this definition is consistent with the
+definition of a simply connected linearly connected topological spaces
+given in GEOMETRY 10.
+\end{zamechanie}
+
+\begin{opredelenie}
+Let $M$ be connected. A covering  $\tilde M \arrow M$  is called  {\bf
+  universal} if it is simply connected.
+\end{opredelenie}
+
+\begin{zadacha}[!] Prove a universal covering is a Galois covering. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that universal covering is unique up to isomorphism.
+\end{zadacha}
+
+\begin{ukazanie} Let $\tilde M$, $\tilde M'$ be two universally
+  coverings of $M$. Since $\tilde M\times_M\tilde M'$ is a covering of
+  $\tilde M$, $\tilde M'$, it splits over $\tilde M$, $\tilde
+  M'$. This means that any connected component
+  $\tilde M\times_M\tilde M'$ projects isomorphically to $\tilde M$,
+  $\tilde M'$.
+\end{ukazanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Existence of the universal covering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{zadacha}
+Let $M$ be linearly connected,
+$\tilde M \overset{\pi}{\arrow} M$ be a connected covering and 
+$x\in M$ be any point.
+Prove that the cardinality of the set $\pi^{-1}(x)$  is not greater
+than the cardinality of $\pi_1(M)$.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that
+the cardinality  $\pi^{-1}(x)$ is not greater than the cardinality of
+the set $M^{[0,1]}$ of maps from  $[0,1]$ to $M$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Let $\tilde M \overset{\pi}{\arrow} M$ be a connected covering of a
+  connected $M$ and $x\in M$ be any point. Prove that the cardinality
+  of $\pi^{-1}(x)$ is not greater than $|2^{2S}|$, where $|2^{2S}|$ is
+  the cardinality of the set of subsets of $S\times S$.
+\end{zadacha}
+
+\begin{ukazanie}
+Choose $x_1, x_2\in \pi^{-1}(x)$. Prove that there exists a collection
+of such connected open subsets $\{\tilde U_\alpha\}\in \pi^{-1}(S)$
+that  $\tilde U_{\alpha_0}$ has non-empty intersection with the union
+of all  $\tilde U_\alpha$ that are not equal to $U_{\alpha_0}$, and
+moreover 
+\[ \{x_1 ,x_2\}= \pi^{-1}(x)\cap (\bigcup \tilde U_\alpha)\]
+Decreasing the base $S$ if necessary one can assume that
+ $\pi$ splits over  $\pi(U_\alpha)$ for all
+$\alpha$. Prove that $x_2$ is determined uniquely if  $x_1$,
+$\{\pi(U_\alpha)\}$ is given, and if it is known which $U_{\alpha}$
+have non-empty intersection.
+\end{ukazanie}
+
+\begin{zadacha} 
+Let $M$ be connected and let $V$ be a set of a cardinality defined below.
+Denote by ${\cal R}$ the set of all topologies defined on some subset  
+$X\subset M \times V$ in such a way that 
+the only natural projection $X\arrow M$
+is a covering. Prove that any connected covering $M$ is isomorphic to
+some element of  ${\cal R}$ if 
+\begin{enumerate}
+\item $M$ is linearly connected and the cardinality of $V$ 
+is $|M^{[0,1]}|$
+\item\sttr{} The cardinality of
+$V$ is $|2^{2S}|$ where $S$ is the base of topology on  $M$.
+\end{enumerate}
+\end{zadacha}
+
+\begin{zamechanie}
+This exercise allows one to speak of  ``the set of isomorphism classes
+of coverings''. Recall that not all mathematical objects are sets;
+thus, the class of all sets is not a set. In order to prove that a
+class is a set, one has to restrict its cardinality.
+\end{zamechanie}
+
+\begin{opredelenie}
+Let $\{M_\alpha\stackrel{\pi_\alpha}\arrow M\}$ be a collection of
+maps onto $M$ indexed b $I$ (possibly infinite, and even
+uncountable). Consider the set of all  
+$(m_{\alpha_1}, m_{\alpha_1},\dots)\in \prod M_{\alpha}$ such that
+$\pi_{\alpha}(m_\alpha)=m$ for some
+$m\in M$. This set is called the {\bf fibre product of
+  $\{M_{\alpha}\}$} and is denoted by
+$\prod_M M_{\alpha}$.
+\end{opredelenie}
+
+\begin{zadacha}
+Let $M$ be a topological space and
+$\{M_\alpha\stackrel{\pi_\alpha}\arrow M\}$ be a collection of its
+coverings. Introduce on  $\prod_M M_{\alpha}$ a topology in the
+following way. Let
+$U\subset M$ be open and let $\{U_\alpha\subset M_{\alpha}\}$ be the
+collection of open sets that cover $U$. Prove that the sets of the
+form $\prod_U U_\alpha\subset \prod_M M_{\alpha}$ define the base of
+topology on $\prod_M M_{\alpha}$. Prove thta $\prod_M M_{\alpha}$ is
+Hausdorff.
+
+\item[*] Is it true that the natural projection
+$\prod_M M_{\alpha}\arrow M$ is a covering?
+
+\item[!] Suppose that every point of $М$ has a simply connected
+  neighbourhood. Prove that the natural projection $\prod_M
+  M_{\alpha}\arrow M$ is a covering.
+
+\end{zadacha}
+
+\begin{opredelenie}
+In this situation $\prod_M M_{\alpha}$ is called
+the {\bf fibred product of $M_{\alpha}$ over $M$} or just a product of
+coverings 
+$M_\alpha\stackrel{\pi_\alpha}\arrow M$.
+\end{opredelenie}
+
+\begin{zadacha} \label{_rascheplya_product_Zadacha_}
+Assume all coverings $\{M_\alpha\stackrel{\pi_\alpha}\arrow M\}$ are
+split. Prove that  $\prod_M M_{\alpha}$ split too.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $\{M_\alpha\stackrel{\pi_\alpha}\arrow M\}$ be a Galois
+covering. Prove thta any connected component of their product over $M$
+is a Galois covering too.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the Exercise~\ref{_rascheplya_product_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha} 
+Let $\tilde M$ be a covering of $M$.
+Constructi the natural bijection between 
+$\Mor(\prod_M M_{\alpha}, \tilde M)$
+and $\prod \Mor(M_{\alpha}, \tilde M)$
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $\{M_\alpha\stackrel{\pi_\alpha}\arrow M\}$ be the set of all
+coverings $S^1 \arrow S^1$, $t\arrow nt$,
+indexed by $n\in \Z$. Prove that any
+connected component of $\prod_M M_{\alpha}$ is isomorphic to 
+$\R\arrow \R/\Z = S^1$.
+\end{zadacha}
+
+\begin{zadacha} 
+  Let $\tilde M\stackrel\pi\arrow M$ be a covering, and assume that
+  $\tilde M$ and $M$ are connected, $x\in M$,
+  $x_1, x_2 \in \pi^{-1}(x)$, $W$ is the connected component of
+  $\tilde M\times_M\tilde M$ that contains $x_1\times x_2$, and $W_1$
+  is the connected component of
+  $\tilde M\times_M\tilde M\times_M\tilde M$, that contains
+  $x_1\times x_2\times x_2$. Prove that the natural projection
+  $W_1 \arrow W$ (forgetting the third argument) is an isomorphism.
+\end{zadacha}
+
+\begin{zadacha} 
+  In the same situation, let $\{x_\alpha\}$ be a set of points in
+  $\pi^{-1}(x)$, indexed by $\alpha\in I$, and let $W$ be the
+  corresponding component in the fibre product $\prod_{M,I}\tilde M$
+  of $I$ copies of $\tilde M$, and $W_1$ be a component in
+  $\left(\prod_{M,I}\tilde M\right)\times_M\tilde M$, that contains
+  $\{x_\alpha\}$ and $x_0$, and moreover $x_0\in \{x_\alpha\}$.  Prove
+  that the natural projection $W_1 \arrow W$ is an isomorphism.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Let $\tilde M \stackrel \pi \arrow M$ be a connected covering and
+  $x\in M$. Consider the product $\prod_{M,\{\pi^{-1}(x)\}}\tilde M$
+  of $\tilde M$ with itself indexed by the set $\pi^{-1}(x)$, and let
+  $\tilde M_G$ be the connected component in
+  $\prod_{M,\{\pi^{-1}(x)\}}\tilde M$ containing the product of all
+  $x_\alpha \in \{\pi^{-1}(x)\}$.  Prove that 
+  $\tilde M_G\times_M \tilde M$ splits over $\tilde
+  M_G$. Prove that $\tilde M_G \arrow M$ is a Galois covering.
+\end{zadacha}
+
+\begin{zamechanie}
+We have proved that any covering is a quotient covering of a Galois
+covering. 
+\end{zamechanie}
+
+\begin{zadacha}  
+Let $M$ be a connected topological space,  
+${\cal R}$ be the set of all isomorphism classes of connected
+coverings of  $M$, and let $\{M_\alpha\stackrel{\pi_\alpha}\arrow M\}$
+be the corresponding set of coverings, and 
+$\tilde M\subset \prod_M M_{\alpha}$ be the connected component of
+their product. Prove that for any connected covering  $\tilde M'
+\arrow \tilde M$ there exists a surjective morphism of coverings
+$\tilde M \arrow \tilde M'$. 
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha}
+In the previous problem setting prove that $\tilde M$ is a Galois
+covering. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Deduce tht for any $\tilde M \arrow M$ the covering 
+$\tilde M \times_M \tilde M'\arrow \tilde M$ splits.
+\end{zadacha}
+
+\begin{ukazanie} Use the Exercise~\ref{_M_1_times_promezhu_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Let $M$ any connected topological space,
+$\tilde M \arrow M$ be a Galois covering constructed above.
+Prove that $\tilde M$ is simply connected.
+\end{zadacha}
+
+\begin{zamechanie}
+We have obtained that any connected topological space has a universal
+covering.  
+As was shown above, the universal cover is unique.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+Let $M$ be linearly connected, and $\tilde M$ be its universal
+covering, and $\Gal([\tilde M:M])$ be the corresponding Galois
+group. Prove that $\Gal([\tilde M:M])$ is not isomorphic to the Galoi
+group of $M$.
+\end{zadacha}
+
+\begin{opredelenie}
+The {\bf fundamental group} of a topological space $М$ is the group
+$\pi_1(M):=\Gal([\tilde M:M])$, where  $\tilde M$ is the universal
+covering. 
+\end{opredelenie}
+
+\begin{opredelenie} 
+Subgroups $G_1, G_2\subset G$ are called {\bf
+conjugated} if there exists $g\in G$
+such that $G_1$ is mapped to $G_2$ by the automorphism 
+$x\arrow x^g$.
+\end{opredelenie}
+
+\begin{zadacha}[*]
+Let $M_1\arrow M$ be a covering, and let
+$\tilde M \arrow M_1\arrow M$ be the universal covering.
+Consider the subgroup  $G_1\subset \Gal([\tilde M:M])=\pi_1(M)$, 
+obtained as a result of the fundamental theory of the Galois
+theory. Prove that this correspondence defines a bijection
+between isomorphism classes of coverings of $M$
+and conjugacy classes of subgroups of  $\pi_1(M)$. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Find all coverings of a circle up to isomorphism. Construct them explicitly.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $M$ be a connected topological space such that all linear
+connected components of it are simply connected. Can it have a
+non-trivial fundamental group?
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $B$ be the set of polynomials
+$P(t)= t^n+ a_{n-1}t^{n-1}+ a_{n-2}t^{n-2}+ \dots + a_0$
+over $\C$ that have distinct roots and let $B_1$ be the set of all
+tuplese $(x_1,\dots, x_n)\in \C^n$ of pairwise distinct numbers
+$x_i \in \C$. Introduce on $B$ and $B_1$ the natural topology of a
+subset of $\C^n$. Consider the map
+$B_1\stackrel\pi\arrow B$, $(x_1,\dots, x_n)\arrow \prod(t-x_i)$.
+Prove that  $\pi$ is a Galois covering. Find its Galois group.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Construct a connected covering that is not a Galois cover.
+\end{zadacha}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: koi8-r
+%%% ispell-local-dictionary: "british"
+%%% TeX-master: t
+%%% End: 
