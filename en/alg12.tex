@@ -1,0 +1,800 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb}
+
+\input{listki.tex}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{12}{ALGEBRA 12: semisimple and nilponent operators}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Artinian algebras over an algebraically closed field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let $R$ be an Artinian ring over a field $k$. 
+Recall that in the exercise sheet 9 we have constructed a canonical
+decomposition $R\cong \oplus_i e_i R_i$ where $e_i$ are indecomposable
+orthogonal idempotents and $e_i R$ is Artinian with no non-unit
+idemotents; moreover, this decomposition is unique.
+
+\begin{zadacha}[!]
+Assume that $R$  does not have non-unit idempotents
+and $k$ is algebraically closed. Prove that if $R$ is semisimple then
+$R=k$. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Assume that  $R$ does not have non-unit idempotents, and $k$ is
+algebraically closed. Prove that $R= k \oplus {\goth n}$ where
+${\goth n}$ is a nilradical.
+\end{zadacha}
+
+\begin{ukazanie}
+Prove that  $R/{\goth n}$ is semisiple and apply the previous
+exercise. 
+\end{ukazanie}
+
+\begin{zadacha}[!]\label{_razlozhe_kolca_Zadacha_}
+Let $R$ be an Artinian ring over an algebraically closed field 
+ $k$. Prove that $R= R_{ss} \oplus {\goth n}$ where  $R_{ss}$ is a
+ semisimple Artinian subring in  $R$. Prove that $R_{ss}\subset R$ is
+uniquely defined.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Is this true if $k$ is not algebraically closed?
+\end{zadacha}
+
+We will further need the following statement.
+
+\begin{zadacha}[!]\label{_Syurie_polupro_Zadacha_}
+Let $R$ be a semi-simple Artinian ring over a field $k$,
+and $R\arrow R'$ be a surjective homomorphism of $k$-algebras.
+Prove that $R'$ is a semisimple Artinian ring too.
+\end{zadacha}
+
+\begin{ukazanie}
+There is a similar problem in ALGEBRA 9.
+\end{ukazanie}
+
+\begin{opredelenie}
+Let $R$ be an algebra over a field $k$. A {\bf representation} of an
+algebra $R$ is a homomorphim of algebras from $R$ to $\End(V)$, where
+$V$ is a vector space over $k$.
+\end{opredelenie}
+
+\begin{zadacha}
+Let $R$  be an algebra over a field  $k$.
+Consider a mapping $R\arrow \End(R)$, defined by the formula
+$r \mapsto (v\arrow rv)$. Prove that this is a representation.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $R$ be an algebra over $k$, isomorphic to a finite extension $k$,
+and let $V$ be a finite dimensional representation of  $R$. Prove that
+$V\cong R^n$, that is,
+$V$ is isomorphic (as a representation of $R$) to a sum of several
+copies of  $R$.
+\end{zadacha}
+
+\begin{zadacha}
+  Let $V$ be a finite dimensional representation of the quaternion
+  algebra ${\mathbb H}$ over $\R$.  Prove that $V$ is isomorphic to
+  ${\mathbb H}^n$.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $G$ be a group, and $k$ be a field. 
+A {\bf group algebra} $G$ over $k$ (denoted $k[G]$)
+is the vector space of linear combinations of the form $\sum \lambda_i
+g_i$ ($\lambda_i \in k$, $g_i\in G$) with multiplication defined by
+the formula
+\[ 
+(\sum \lambda_i g_i)(\sum \lambda'_j g'_j) = 
+ \sum_{i,j}\lambda_i\lambda'_jg_ig'_j.
+\]
+Prove that this is indeed an algebra. Prove that 
+any representation of a group $G$ can be uniquely extended to a
+representation of the group algebra.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $G_1, G_2$ be groups and $k[G_1\times G_2]$ be the group algebra
+of their product. Prove that $k[G_1\times G_2]\cong k[G_1]\otimes
+k[G_2]$. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $G = (\Z/2\Z)^n$ be a product of 
+$n$ copies of $\Z/2\Z$. Prove that $k[G]\cong k^{\oplus_{2^n}}$
+(direct sum of $2^n$ copies of $k$).
+\end{zadacha}
+
+\begin{ukazanie}
+  Prove that $k[\Z/2\Z]\cong k\oplus k$, and use the isomorphism
+  $k[G_1\times G_2]\cong k[G_1]\otimes k[G_2]$.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Consider the Klein group (the subgroup of order 8 in the quaternions
+that consists of elements $\{\pm 1, \pm I, \pm J, \pm K\}$). 
+Prove that its group algebra over $\R$ is isomorphic to
+${\mathbb H}\oplus \R \oplus \R \oplus \R \oplus \R$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let  $G$ be a finite Abelian group, and let $k$ be an algebraically
+closed field of characteristic 0. Prove that $k[G]$ is a semisimple
+Artinian ring over $k$. Deduce from this that $k[G]$ is a direct sum
+of $|G|$ copies of $k$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the criterion mentioned in ALGEBRA 9: an Artinian ring $R$ over a
+field of characteristic 0 is semisimple if and only if the trace
+defines a nondegenerate form on $R$.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Let $G$ be a finite Abelian group,
+$k$ be an algebraically closed field characteristic 0, and
+ $\rho:\; G \arrow \End(V)$ be a representation of $G$ over $k$.
+Prove that $V$ decomposes into a direct sum of one-dimensional
+$G$-invariant subspaces.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise and the exercise
+ \ref{_Syurie_polupro_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+  Let $G$ be a finite Abelian group, and $\R[G]$ its group ring over
+  $\R$.  Prove that $\R[G]$ is isomorphic to a direct sum of several
+  copies of $\R$ and $\C$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $G$ be a finite Abelian group,
+and $\rho:\; G \arrow \End(V)$ be a representation of $G$ over
+$\R$. Prove that $V$ can be decomposed into a direct sum of
+one-dimensional and two-dimensional 
+$G$-invariant subspaces.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $G$ be a finite Abelian group,
+and let $\rho:\; G \arrow \End(V)$ be its three-dimensional
+representation over $\R$. Prove that there is a $G$-invariant line in
+$V$. 
+\end{zadacha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Semi-simple operators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let $A \in \End(V)$ be a linear operator over a finite-dimensional
+vector space. It is easy to see that the subalgebra 
+$\langle 1, A, A^2, A^3, \dots \langle\subset \End(V)$
+generated by $A$ is commutative.
+
+\begin{opredelenie}
+The operator $A\in \End(V)$ is called  {\bf semi-simple} if the
+algebra generated by it in $\End(V)$ is semi-simple.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that a linear operator over an algebraically closed field is
+semi-simple if and only if it is diagonalizable.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $k\subset \bar k$  be two fields, moreover $\bar k$
+is algebraically closed, and let $V$ be a finite dimensional vector
+space over $k$. Consider $V\otimes_k \bar k$ as a vector space over
+$\bar k$.  Prove that $\End(V)\otimes_k \bar k$ is naturally
+isomorphic to $\End_{\bar k}(V\otimes_k \bar k)$.
+This defines a natural inclusion
+$\End(V)\arrow \End_{\bar k}(V\otimes_k \bar k)$.
+Prove that the linear operator 
+$A\in \End(V)$ is semi-simple if and only if 
+the corresponding linear operator in $V\otimes_k \bar k$ is
+diagonalizable. 
+\end{zadacha}
+
+\begin{zadacha}
+Let $V$  be a two-dimensional vector space over $\R$ endowed with a
+positive definite bilinear symmetric form, and let 
+$A\in \End(V)$ be an orthogonal operator. Prove that it is
+semi-simple. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $V$ be a vector space over $\R$ of arbitrary finite dimension
+endowed with a positive definite bilinear symmetric form, and let
+$A\in \End(V)$ be an orthogonal operator. Prove that it is
+semi-simple. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $V$ be a vector space over $\R$ endowed with a non-degenerate
+bilinear symmetric form, not necessarily positive definite, and let
+$A\in \End(V)$ be an orthogonal operator. Is it always semi-simple? 
+\end{zadacha}
+
+\begin{opredelenie}
+An element of an Artinian ring over $k$ is called {\bf semi-simple} if
+it generates a semi-simple subalgebra in $R$.
+\end{opredelenie}
+
+\begin{zadacha}
+  Let $R$ be an Artinian ring over $k$ and let $r\in R$ be a
+  semi-simple element. Prove that in any representation of
+  $R \arrow \End(V)$, $r$ is mapped to a semi-simple endomorphism of
+  $V$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the exercise~\ref{_Syurie_polupro_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+  Let $V$ be a finite dimensional vector space over an algebraically
+  closed field, and let $A\in \End(V)$ be a linear operator. Prove
+  that $A$ decomposes into a direct sum of a semi-simple and a
+  nilpotent operator, $A= A_{ss}+A_n$, which commute. Prove that this
+  decomposition is unique and $A_{ss}$, $A_n$ can be expressed as
+  polynomials of $A$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use exercise~\ref{_razlozhe_kolca_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Is this true if the base field $k$ is not algebraically closed? 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $A$ be a upper-triangular matrix,
+$A_\delta$ be its diagonal part. Prove that  $A$ and $A_\delta$
+commute. 
+\end{zadacha}
+
+\begin{zadacha}[**]
+Let $(V,g)$ be a vector space endowed with a  bilinear skew-symmetric
+form, and let $A$ be anti-symmetric operator and $A=A_{ss}+A_n$ be its
+decomposition into a semi-simple and nilpotent part. Prove that
+$A_{ss}$, $A_n$ are anti-symmetric.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Is it possible that an antisymmetric operator over $\C$ be nilpotent?
+\end{zadacha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Hamilton-Cayley theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Let $k$ be any field and let $k(t)$ be the field of rational functions
+over $k$, and $V$ be an $n$-dimensional vector space over $k$, and
+$B(t)\in \End(V)[t]$ a polynomial with coefficients in
+$\End(V)$. Recall that in this situation $\det(B(t))$ is a polynomial
+of $t$ (see ALGEBRA 8).  Let us consider $B(t)$ as a $k(t)$-linear
+endomorphism of $V\otimes k(t)$. Consider the endomorphism
+$\Lambda^{n-1}(V\otimes k(t))$ induced by $B(t)$ and let $\check B(t)$
+be the adjoint endoorphim of $V \otimes k(t)$ with respect to the
+natural pairing
+\[ 
+\Lambda^{n-1}(V\otimes k(t))\otimes V\otimes k(t)
+\arrow \det V\otimes  k(t)
+\]
+It is shown in ALGEBRA 7 that $B(t)\check B(t)= \check
+B(t)B(t)=\det(B(t))\Id_V$. 
+
+\begin{zadacha}
+In this situation show that $\check B(t)$ is
+$\End(V)$-valued polynomial:  $\check B(t)\in \End(V)[t]$.
+\end{zadacha}
+
+\begin{ukazanie}
+Express $\check B(t)$ via the minors of  $B(t)$.
+\end{ukazanie}
+
+\begin{zadacha}
+Let $A\in \End(V)$. Applying the argument from the Remark to $B=t-A$
+prove that $(t-A)\check{(t-A)}= \chpoly_A(t)$.
+Prove the the coefficients of the polynomial
+$\check{(t-A)}\in \End(V)[t]$ commute with $A$.
+\end{zadacha}
+
+\begin{zadacha}
+Let $R\subset \End(V)$ be a subset.
+Denote by $Z(R)$ the set of all operators
+$A'\in \End(V)$ that commute with all operators
+ $r\in R$ (this set is called the {\bf centralizer} of $R$). Prove
+ that $Z(R)$ is a subalgebra of $\End(V)$. 
+\end{zadacha}
+
+\begin{zadacha} 
+Let $R\in \End(V)$ be a subalgebra and let
+$A_1\in Z(A)$ be an element of the centralizer $R$, 
+$R[t]$ be the algebra of $R$-valued polynomials,
+and $R[t]\stackrel \phi \arrow R'$ be a homomorphism of algebras.
+Denote by  $R[A_1]$ the subalgebra $\End(V)$, generated by 
+$R$ and $A_1$. Prove that there exists a homomorphism
+ $\phi_0:\; R[A_1]\arrow R'$ such that
+ $\phi_0\restrict R = \phi\restrict R$
+and $\phi_0(A_1) = \phi(t)$. Prove that these conditions determine
+$\phi_0$ uniquely. 
+\end{zadacha}
+
+\begin{zadacha} 
+  Let $A\in \End(V)$ be a linear operator, apply the previous exercise
+  and construct a homomorphism $Z(A)[t]\stackrel \Psi\arrow Z(A)$ that
+  maps $t$ to $A$, and which is identity on $Z(A)$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  (Cayley-Hamilton theorem) Consider the equality
+  $(t-A)\check{(t-A)}= \chpoly_A(t)$ in $Z(A)[t]$. Apply the
+  homomorphism $\Psi$ constructed above to both left and right parts
+  of the equality. Prove that this results in the following equality
+  in the algebra $\End(V)$:
+  \[ \chpoly_A(A)=0.
+  \]
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $A,B\in \End V$ be linear operators. 
+Consider a function of two variables $Q(t_1, t_2) = \det(t_1A + t_2 B)$,
+where $t_1A + t_2 B$ is considered as a linear operator
+on $V\otimes_k k(t_1,t_2)$, and $k(t_1,t_2)=k(t_1)(t_2)$ is the field
+of rational functions over $k(t_1)$. Prove that 
+$Q(t_1, t_2)$ is a polynomial with coefficients in $k$. 
+Prove that in the ring $\End V$ the equality $Q(-B,A)=0$ holds. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $A\in \End(V)$ be a linear operator that acts on a finite
+dimensional vector space over an algebraically closed field $k$. Let
+$\{\lambda_1,\dots,\lambda_n\}$ be the roots of the characteristic
+polynomial of the operator $A$. Consider the space  $V_{\lambda_i}$ of
+all $v\in V$ such that $(A-\lambda_i)^{m_i}(v)=0$ where 
+$m_i$ is the multiplicity of the root $\lambda_i$ of the polynomial
+$\chpoly_A(t)$.  Prove that  $V= \oplus V_{\lambda_i}$, where
+summation is over all roots $\lambda_i$  of the characteristic
+polynomial  $A$.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the Cayley-Hamilton theorem.
+\end{ukazanie}
+
+\begin{zamechanie}
+The space $V_{\lambda_i}$ is called an
+{\bf generalized eigenspace} of operator $A$.
+\end{zamechanie}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Minimal polynomial and characteristic polynomial}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{opredelenie}
+Let $A\in \End(V)$ be a linear operator that acts on a vector space of
+finite dimension over  $k$. Рассмотрим
+a sequence of endomorphisms $1, A, A^2,\dots \in \End(V)$.
+Since the space $\langle 1, A, A^2, \dots \rangle$
+is finite dimensional, then starting from some -то $i$
+all $A^i$ can be expressed as a sum of the form:
+$A^N = \sum_{i=0}^{l-1} \lambda_i A^i$, где $\lambda_i\in k$,
+$l=\dim \langle 1, A, A^2,\dots \rangle$. 
+Let us write down such an equation for $A^l$:
+$A^l+ \sum_{i=0}^{l-1} \lambda_i A^i=0$.
+Recall that the polynomial $P(t)=t^l +  \lambda_{l-1} t^{l-1} + \dots
++\lambda_0$ is called the  {\bf minimal polynomial } of $A$ and is
+denoted $\minpoly_A(t)$.
+\end{opredelenie}
+
+\begin{zadacha}[!]
+Prove that the following identity holds in the algebra $\End(V)$: 
+$$
+\minpoly_A(A)=0.
+$$
+Prove that any polynomial 
+$Q(t)=t^{m} +  \mu_{m-1} t^{l-1} + \dots +\mu_0$,
+such that $Q(A)=0$, is divided by $\minpoly_A(t)$.
+\end{zadacha}
+
+\begin{zadacha} 
+Prove that the characteristic polynomial of the operator is divided by
+its minimal polynomial.
+\end{zadacha}
+
+
+\begin{zadacha}
+Let $A\in \End(V)$ be a linear operator.
+\begin{enumerate}
+\item Prove that $A$  is nilpotent if and only if  $\minpoly_A(t) =
+  t^n$. 
+
+\item Prove that $A$ is a non-identity idempotent if and only if
+  $\minpoly_A(t)= t^2-t$. 
+\end{enumerate}
+\end{zadacha}
+
+\begin{zadacha} 
+  Let $A\in \End(V)$ be a linear operator that acts on a finite
+  dimensional vector space over an algebraically closed field $k$ and
+  let $V=\oplus V_{\lambda_i}$ be a decomposition of $V$ into a direct
+  sum of generalized eigenspaces.  Let $P(t)$ be a minimal polynomial
+  of $A$ and let $P_i(t)$ be minimal polynomials of restrictions of
+  $A$ to $V_{\lambda_i}$. Prove that $P(t)=P_1(t)P_2(t)\dots$.  Prove
+  that $P_i(t)= (t-\lambda_i)^k$ where $k\leq \dim V_{\lambda_i}$.
+\end{zadacha}
+
+\begin{ukazanie}
+  It is clear that $P_i(t)= (t-\lambda_i)^k$, since the operator
+  $A-\lambda_i$ on $V_{\lambda_i}$ is nilpotent. That
+  $P(t)=P_1(t)P_2(t)\dots$ follows easily from the fact that all
+  $P_j(A)$ ($j\neq i$) are invertible on $V_{\lambda_i}$.
+\end{ukazanie}
+
+\begin{zamechanie} 
+  The characteristic polynomial also has this muliplicativity
+  property, as can be easily observed.
+\end{zamechanie}
+
+
+\begin{zadacha} \label{_minpoly_chpoly_nilpo_Zadacha_}
+Let $A\in \End(V)$ be a linear operator in a 
+ $n$-dimensional vector space. Prove that
+$\minpoly_A(t)= (t-\lambda)^n$ if and only if 
+in some basis $A$ has the form
+\begin{equation}\label{_Zhordanova_Cletka_Equation_}
+\begin{pmatrix}
+\lambda & 1 & 0 &\hdotsfor{3} &0\\
+0 & \lambda & 1 & 0 &\hdotsfor{2} &0\\
+0 & 0 & \lambda & 1 & 0 &\dots &0\\
+\vdots &\vdots &\vdots
+&\ddots 
+&\vdots &\vdots &\vdots\\
+0 & 0 &\hdotsfor{2} &\lambda & 1 &0\\
+0 & 0 &\hdotsfor{3} &\lambda & 1\\
+0 & 0 &\hdotsfor{4} &\lambda
+\end{pmatrix}
+\end{equation}
+\end{zadacha}
+
+\begin{ukazanie} 
+Replacing $A$ by $A-\lambda \Id_V$ one may assume that
+ $\minpoly_A(t)=t^n$. Take a vector $v\in V$ such that
+ $(A-\lambda)^{n-1}(v)\neq 0$. Prove that 
+$v, A(v), A^2(v), \dots, A^{n-1}(v)$ constitute a basis in $V$,
+and in this basis $A$ hase the form
+\eqref{_Zhordanova_Cletka_Equation_}.
+\end{ukazanie}
+
+\begin{zamechanie}
+Such a matrix is called a {\bf Jordan block}.
+We will denote it by $J(n,\lambda)$.
+\end{zamechanie}
+
+\begin{opredelenie}
+Let $e_1,\dots,e_n$ be a basis in a vector space and let
+$A_i^j$ be a matrix of a linear operator $A$ in this basis.
+Assume that $e_1,\dots,e_n$ are divided into groups (blocks)
+$[e_1,\dots, e_{k_1}] [e_{k_1+1},\dots, e_{k_2}] \dots$,
+in such a way that $A$ maps every $e_i$ into a linear combination of
+vectors that belong to the same block. In this case
+$A$ consists of square pieces of size $k_i-k_{i-1}$, and is zero
+outside of these square pieces:
+$$
+\begin{pmatrix}
+* & \dots & * &0 &\dots &0 &0 &\dots &0\\
+\vdots &\ddots &\vdots
+&\vdots &\ddots &\vdots
+&\vdots &\ddots &\vdots\\
+* & \dots & * &0 &\dots &0 &0 &\dots &0\\
+0 & \dots & 0 &* &\dots &* &0 &\dots &0\\
+\vdots &\ddots &\vdots 
+&\vdots &\ddots &\vdots
+&\vdots &\ddots &\vdots\\
+0 & \dots & 0 &* &\dots &* &0 &\dots &0\\
+0 &\dots &0 &0 &\dots &0 &* & \dots & * \\
+\vdots &\ddots &\vdots
+&\vdots &\ddots &\vdots
+&\vdots &\ddots &\vdots\\
+0 &\dots &0 &0 &\dots &0 &* & \dots & *
+\end{pmatrix}
+$$
+A matrix of this form is called \textbf{ block diagonal}.
+\end{opredelenie}
+
+\begin{zadacha} \label{_cikli_zhorda_Zadacha_}
+Let $A\in \End(V)$ be a linear operator that acts on a finite
+dimensional vector space over an algebraically closed field 
+$k$. Assume that the minimal polynomial 
+$\minpoly_A(t)$ equals characteristic polynomial
+$\chpoly_A(t)$. Prove that in some basis $A$ 
+can be represented as a block diagonal matrix that consists of Jordan blocks
+$J(n_i, \lambda_i)$ where all $\lambda_i$ are distinct.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the multiplicativity of 
+$\minpoly$ and $\chpoly$ with respect to decomposition of 
+$V$ into a direct sum of generalized eigenspaces, and reduce the
+problem to the case $V=V_{\lambda_i}$.
+Now apply exercise \ref{_minpoly_chpoly_nilpo_Zadacha_}.
+\end{ukazanie}
+
+\begin{opredelenie}
+Assume that operator $A$ can be represented in some basis as a block
+diagonal matrix that consists of Jordan blocks.
+The operator $A$ is said then to be in a {\bf Jordan normal form}.
+\end{opredelenie}
+
+We will now show the unicity of the Jordan normal form, and then we
+will show its existence. We work assuming the base field to be
+algebraically closed.
+
+\begin{zadacha} 
+Let $A\in\End(V)$ be a nilpotent operator with the Jordan normal form
+that consists of Jordan blocks $J(0, n_1),\dots,J(0,n_k)$. Prove that
+the number of blocks in the Jordan normal form of $A$ equals the
+dimension of the space $V/AV$. Prove that 
+$A^jV/A^{j+1}V$ is the number of blocks $J(0,n_i)$
+with $n_j\geq j$. Deduce that Jordan normal form of a nilpotent
+operator is determined uniquely, up to permutation of the blocks.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that Jordan normal form of any operator is unique, up to
+permutation of the blocks.
+\end{zadacha}
+
+\begin{ukazanie} 
+Decompose $V$ into a direct sum of generalized eigenspaces, and reduce
+the problem to the case $V=V_{\lambda_i}$. 
+Replacing $A$ by $A-\lambda_i$, one can content oneself with nilpotent
+operators. Now the statement follows from the previous exercise.
+\end{ukazanie}
+
+\begin{opredelenie}
+  Let $A\in \End(V)$ be a linear operator.  We say that $A$ {\bf acts
+    cyclically} on $V$ if there exists an element $v$ such that
+  $v, Av, A^2v, A^3 v, \dots$ generates $V$.
+\end{opredelenie}
+
+\begin{zadacha} 
+  Let $A\in \End(V)$ be a linear operator that acts cyclically on $V$.
+  Prove that $\minpoly_A(t)=\chpoly_A(t)$.
+\end{zadacha}
+
+\begin{ukazanie}
+If $A$ act cyclically then the degree of
+$\minpoly_A(t)$ equals $\dim V$ equals the degree of 
+$\chpoly_A(t)$.
+\end{ukazanie}
+
+\begin{zadacha} 
+Let $A\in \End(V)$ be a linear operator such that $V$ decomposes as a
+sum of  $A$-invariant subspaces on which $A$ acts cyclically.
+Prove that $A$ can be represented in some basis in a Jordan normal
+form. 
+\end{zadacha}
+
+\begin{ukazanie}
+Use the exercise \ref{_cikli_zhorda_Zadacha_}.
+\end{ukazanie}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Modules over a ring and Jordan normal form}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+Let $R$ be a ring. A {\bf module} over $R$ is an Abelian group $М$
+endowed with an operation $R\times M\arrow M$ that is compatible with
+the addition in the following sense
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\item For any $\lambda\in R$, $u, v\in M$ we have  $\lambda(u+v) =
+\lambda u+ \lambda v$. For any $\lambda_1, \lambda_2\in R$, $u\in
+M$ we have $(\lambda_1+\lambda_2) u = \lambda_1 u +\lambda_2 u$
+(distributivity of multiplication over addition).
+
+\item For any $\lambda_1, \lambda_2\in R$, $u\in M$ we have
+$\lambda_1(\lambda_2 u) = (\lambda_1 \lambda_2) u$ (associativity of
+multiplication ).
+
+\item For any $v\in M$ we have $1v=v$ where 1 denotes the identity in
+  $R$. 
+\end{enumerate}
+\end{opredelenie}
+
+\begin{zamechanie} 
+This definition repeats almost verbatim the definition of a vector
+space over a field. Many notions that were defined for vector spaces 
+(for example, homomorphism, monomorphism, epimorphism, kernel, image,
+quotient space)  can be redefined without modification for modules
+over a ring.
+\end{zamechanie}
+
+\begin{zadacha} 
+Let $R$ be an algebra over a field $k$. For any module 
+ $M$ over $R$ consider $M$ as a vector space over  $k\subset
+ R$. Consider each the operation of multiplication by an elements of $R$
+as an endomorphism of $M$. Prove that this defines a homomorphism 
+$R\arrow \End_k(M)$. Prove that all representations can be obtained in
+this way.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that any Abelian group has a unique structure of a module over
+ $\Z$.
+\end{zadacha}
+
+\begin{opredelenie}
+Consider the group $R^n$ as a module over $R$, with the action given
+by  $r\cdot(x_1,\dots, x_n) = (rx_1,\dots, rx_n)$. This module is
+called {\bf free}. The quotient of $R^n$ by a submodule is called
+{\bf finitely generated}. If  $M$ can be represented as a quotient of
+a free module by a finitely generated submodule then
+$M$ is called {\bf finitely presented}.
+\end{opredelenie}
+
+\begin{opredelenie}
+Let $\phi:M \to M'$ be a homomorphism of modules over an algebra $R$.
+The {\bf cokernel} $\phi$ (denoted by $\coker \phi$)
+is the quotient of $M'$ by the image of $\phi$.
+\end{opredelenie}
+
+\begin{zadacha} 
+  Let $M$ be a module over $R$. Prove that $M$ is finitely generated
+  if and only if it has a collection of elements $m_1,\dots,m_N$ such
+  that any element of $M$ can be represented as a linear combination ,
+  $m = r_1m_1 + \dots + r_Nm_N$, $r_1,\dots,r_N \in R$.
+\end{zadacha}
+
+\begin{zadacha}
+Let $M$ be a module over $R$. Prove that $M$ is finitely presented
+if and only if it is isomorphic to a cokernel of a homomorphism 
+$\phi:R^N \to R^M$ of free $R$-modules.
+\end{zadacha}
+
+\begin{zadacha}[!]\label{_kone_poro_Zadacha_}
+Let $k$ be a field and $M$ be a module over $k[t]$ that has
+a finite dimension over $k$. Prove that
+$M$ is finitely generated and finitely presented over $k[t]$.
+\end{zadacha}
+
+\begin{ukazanie}
+Consider  $M$ as a vector space over $k$, pick  a basis
+ $m_1,\dots,m_M \in M$, and consider these elements as
+ generators. Then prove that the kernel of the map
+$\phi: M \otimes_k k[t] \to M$ is generated by elements of the
+form  $m_i \otimes t - tm_i \otimes 1$. 
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Let $M$ be a finite Abelian group. Prove that $M$ is finitely
+generated and finitely presented as a module over  $\Z$.
+\end{zadacha}
+
+\begin{ukazanie}
+Take all elements of $M$ as the set of generators $m_1,\dots,m_N \in
+M$. 
+\end{ukazanie}
+
+\begin{zadacha}
+  Let $R$ be a ring and $V$ a module over $R$ represented as the
+  cokernel of the homomorphism $(R)^n\stackrel\phi\arrow (R)^m$.
+  Write down $\phi$ as a matrix $A^i_j$ with coefficients in $R$. Let
+  $B^i_j$ be a matrix obtained from $R$ using elementary (Gaussian)
+  row and column transformations (see ALGEBRA 7).  Prove that $V$ is
+  isomorphic to a cokernel of a homomorphism that corresponds to
+  $B^i_j$.
+\end{zadacha}
+
+\begin{opredelenie}
+Let $R$ be a ring and $a\in R$ be an element. Consider  $aR$ as a
+module over $R$.
+A {\bf cyclic module} over $R$ is a quotient module $R/aR$.
+\end{opredelenie}
+
+\begin{zadacha}
+Let $M$ be  a $Z$-module.
+Prove that $M$  is cyclic if and only if
+the corresponding Abelian group is cyclic.
+\end{zadacha}
+
+\begin{zadacha}
+Let $M$ be a  $k[t]$-module.
+Prove that $M$ is cyclic if and only if
+for some  $v\in M$, 
+$v, tv, t^2v, t^3v , \dots$
+generated $M$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $R$ be a ring such that any 
+ $n \times m$ matrix with coefficients in 
+$R$ can be brought into a diagonal form using elementary row and
+column operations. Prove that any finitely generated and finitely
+presented module over $R$ is isomorphic to a direct sum of cyclic
+ones. 
+\end{zadacha}
+
+\begin{ukazanie}
+If  $(R)^n\stackrel\phi\arrow (R)^n$ is represented by a diagonal matrix
+with $a_i^i$ on the diagonal then the cokernel of this homomorphism
+has the form $\oplus_i R/a_i^i R$.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+  Let $R$ be a Euclidean ring (see ALGEBRA 2).  Prove that any matrix
+  of size $n \times m$ with coefficients in $R$ can be brought to a
+  diagonal form using elementary row and column operations. Deduce
+  that any finitely generated and finitely presented module over $R$
+  is a direct sum of cyclic ones.
+\end{zadacha}
+
+\begin{ukazanie}
+A similar problem is in ALGEBRA 7.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Let $G$ be a finite Abelian group.
+Prove that $G$ is a finite sum of cyclic groups.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let  $V$ be a module over $k[t]$ which is finite dimensional over
+$k$. Prove that $V$ is a direct sum of cyclic modules.
+\end{zadacha}
+
+\begin{ukazanie} The ring $k[t]$ is Euclidean and 
+$V$ is finitely generated and finitely presented as fallows from
+exercise \ref{_kone_poro_Zadacha_}.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Let  $A\in \End(V)$ be a linear operator. Prove that $V$ can be
+decomposed into a direct sum of  $A$-invariant subspaces so that on
+each of them $A$ acts cyclically. Deduce that if the field $k$ is
+algebraically closed then $A$ can be brought into Jordan normal form. 
+\end{zadacha}
+
+\begin{ukazanie}
+Consider the action of $k[t]$ on $V$ given by
+$P(t)(v) = P(A)v$. Prove that $V$ is a
+$k[t]$-module. Decompose $V$ into a direct sum of cyclic submodules:
+$V=\oplus V_i$.  Prove that all $V_i$  are $A$-invariant,
+and $A$  acts on them cyclically.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Find a commutative ring and a module over it that does not decompose
+into a direct sum of cyclic ones.
+\end{zadacha}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: koi8-r
+%%% ispell-local-dictionary: "british"
+%%% TeX-master: t
+%%% End: 

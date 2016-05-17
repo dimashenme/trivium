@@ -248,10 +248,10 @@ group (cf. ALGEBRA 1).
 \end{zadacha}
 
 \begin{opredelenie}
-  Consider a matrix $(A^i_j)$.  One says that the matrix $(B^i_j)$
-  is obtained from $(A^i_j)$ using the {\bf row-wise Gauss
-    transformation}, if $(B^i_j) = (A^i_j)\circ E$, where $E$ is the
- matrix either of the following form:
+  Consider a matrix $(A^i_j)$.  One says that the matrix $(B^i_j)$ is
+  obtained from $(A^i_j)$ using the {\bf elementary (Gaussian) row
+    operation}, if $(B^i_j) = (A^i_j)\circ E$, where $E$ is the matrix
+  either of the following form:
 \begin{equation}\label{gauss.1}
 \begin{pmatrix}
 1 &\hdotsfor{8}\\
@@ -285,15 +285,15 @@ or of the following form:
 \end{equation}
 (dots denote zeroes). 
 If $(B^i_j) = E \circ (A^i_j)$, where $E$ is as above, then one says
-that $(B^i_j)$ is obtained from $(A^i_j)$ using the {\bf column-wise
-  Gauss transformation}.
+that $(B^i_j)$ is obtained from $(A^i_j)$ using the {\bf elementary
+  (Gaussian) column operation}.
 \end{opredelenie}
 
-\begin{zadacha} Prove that the row-wise Gauss transformation can be
+\begin{zadacha} Prove that the elementary row transformation can be
 described in terms of the following matrix operations: $(B^i_j)$ is
 obtained from $(A^i_j)$ by permuting of rows or by adding the
 $j$-th row multiplied by $\lambda$ to the $i$-th. What operations
-can be used to describe the column-wise Gauss transformation?
+can be used to describe an elementary column operation?
 \end{zadacha}
 
 \begin{zadacha}
@@ -338,9 +338,9 @@ A matrix is called
 \begin{zadacha}\label{gss}
 \begin{enumerate}
 \item Prove that any matrix can be brought into upper triangular form
-  using row-wise Gauss transformations; 
+  using elementary row operations; 
 \item Prove that any matrix can be brought into diagonal form
-  using row-wise and column-wise Gauss transformations.
+  using elementary row and column operations.
 \end{enumerate}
 \end{zadacha}
 
