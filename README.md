@@ -57,5 +57,4 @@ Compiled PDFs are available at <http://shenme.de/listki/>
 12. Fundamental group and homotopies.
 
 -- 
-May 2016
-Dima Sustretov (dmitri83@hcoop.net)
+translation by Dima Sustretov (dmitri83@hcoop.net), 2016
