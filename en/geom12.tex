@@ -1,0 +1,450 @@
+\documentclass[12pt]{article}
+
+\usepackage{theorem,amsmath,amssymb,}
+
+\input{listki.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listok{12}{GEOMETRY 12: fundamental group and homotopies}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Homotopies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All topological spaces in this exercise sheet are assumed locally
+arcwise connected and Hausdorff, unless the contrary is stated.
+
+\begin{opredelenie}
+Let $f_1, f_2:\; X \arrow Y$ be a continuous map of topological
+spaces. Recall that a {\bf homotopy}
+between $f_1$ and $f_2$ is a continuous map
+$F:\; [0,1]\times X \arrow Y$ such that 
+$F\restrict{\{0\}\times X}$ equals $f_1$, and
+$F\restrict{\{1\}\times X}$ equals $f_2$. 
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that maps that are homotopic induce the same morphism
+$\pi_1(X)\arrow \pi_1(Y)$. 
+\end{zadacha}
+
+\begin{opredelenie}
+  Let $f:\; X \arrow Y$, $g:\; Y \arrow X$ be continuous maps of
+  topological spaces, moreover, $f\circ g$ и $g\circ f$ are homotopic
+  to identity maps from $X$ to $X$ and from $Y$ to $Y$.  Such maps are
+  called {\bf homotopy equivalences } and $X$ and $Y$ are then called
+  {\bf homotopy equivalent}.
+\end{opredelenie}
+
+\begin{zadacha} 
+Prove that a composition of homotopy equivalence between maps is a
+homotopy equivalence. Prove that a homotopy equivalence of spaces is
+an equivalence relation.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $f:\; X \arrow Y$ be a homotopy equivalence.
+Prove that  $f$ induces an isomorphism of fundamental groups. 
+\end{zadacha}
+
+\begin{zadacha}
+Let $X\subset Y$ be a retraction. Prove that $X$ are $Y$ homotopy
+equivalent. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $X$ be a topological spaces. Prove that 
+$X$ is contractible if and only if it is homotopy equivalent
+to a point. 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider the connected graph $\Gamma$ which has
+$n$ edges and $n$ vertices. Prove that the associated topological
+space is homotopy equivalent to a circle.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Let $M$ be a connected topological space and let $x,x', y, y'\in M$
+  be any points.  Prove that the spaces of paths $\Omega(M,x,x')$ and
+  $\Omega(M,y,y')$ are homotopy equivalent.
+\end{zadacha}
+
+\begin{ukazanie} 
+  Consider a path $\gamma_{xy}$ that connects $x$ and $y$ and let
+  $\gamma_{x'y'}$ be the path that connects $x'$ and $y'$. Let
+  $\gamma^{-1}_{xy}(t)=\gamma_{xy}(1-t)$ and
+  $\gamma^{-1}_{x'y'}(t)=\gamma_{x'y'}(1-t)$.  Consider the map
+  $f:\Omega(M,x,x')\arrow\Omega(M,y,y')$ that maps any path
+  $\gamma\in \Omega(M,x,x')$ into the composition
+  $\gamma^{-1}_{xy}\gamma\gamma_{x'y'}$, and the analogous map
+  $g:\Omega(M,y,y')\arrow\Omega(M,x,x')$ that maps
+  $\gamma\in \Omega(M,y,y')$ to $\gamma_{xy}\gamma\gamma^{-1}_{x'y'}$.
+  Prove that $fg$ is homotopic to the identity maps and that $gf$ is
+  homotopic to the identity map.
+\end{ukazanie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{The space of paths on locally contractible spaces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+  Let $M$ be a topological space. The space $M$ is called {\bf locally
+    contractible } if every point has a contractible neighbourhood.
+\end{opredelenie}
+
+\begin{zadacha} Let
+$M$ be a locally contractible topological space. 
+Prove that  $M$ is locally arcwise connected.
+\end{zadacha}
+
+\begin{zadacha}[*]
+  Let $M$ be a geodesically connected metric space such that for some
+  $\delta>0$ any two points that are at a distance $<\delta$ one from
+  another are connected by a unique geodesic. Prove that $M$ is
+  locally contractible.
+\end{zadacha}
+
+\begin{zadacha}
+Prove that any graph is locally contractible.
+\end{zadacha}
+
+\begin{opredelenie} 
+  A topological space $M$ is called a {\bf manifold of dimension $n$}
+  if any point has a neighbourhood that is homeomorphic to an open
+  ball in $\R^n$.
+\end{opredelenie}
+
+\begin{zamechanie}
+Manifolds are easily seen to be locally contractible.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+Prove that a sphere $S^n$ is a manifold.
+\end{zadacha}
+
+\begin{ukazanie} 
+Use the stereographic projection.
+\end{ukazanie}
+
+\begin{zadacha}
+Let $M$ be contractible, $x,y\in M$. Prove that all paths  $\gamma\in
+\Omega(M, x,y)$ are homotopic.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $\gamma\in \Omega(M, x,y)$ be a path in a locally contractible
+space $M$ and $\{U_\alpha\}$ be the set of contractible open sets in 
+ $M$. Choose a finite set in $\{U_\alpha\}$ such that it covers
+ $\gamma$ (this can be done since $\gamma$ is compact). Let
+ $V_1,\dots,V_n$ be the corresponding cover of 
+$[0,1]$ with connected intervals where every $V_i$ is a connected
+component of $\gamma^{-1}(U_i)$, and all $U_i$ are contractible. Order
+$V_i$ in such a way that  $V_i$ and $V_{i+1}$ intersect at a point
+$t_i$, and let $a_i := \gamma(t_i)$. Prove that any path
+$\gamma'\in \Omega(M, x,y)$ such that $\gamma'(t_i)=a_i$, and
+$\gamma'([t_i, t_{i+1}])\subset U_i$, is homotopic to $\gamma$.
+\end{zadacha}
+
+\begin{ukazanie} Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha}[!] \label{_gomoto_bli_petli_Zadacha_}
+Let $M$ be a locally contractible topological space, and $\gamma\in
+\Omega(M, x,y)$ is a path. Prove that $\gamma$ has a neighbourhood 
+${\mathcal U}\subset \Omega(M, x,y)$ such that all
+$\gamma'\in {\mathcal U}$ are homotopic.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous problem.
+\end{ukazanie}
+
+\begin{zamechanie} Notice that on all compact manifolds of dimension
+  $>1$ there are loops that are defined by a surjective map. Such
+  loops can be constructed in the same way as the Peano curve.
+\end{zamechanie}
+
+\begin{zadacha}[!]
+Let $M$ be a manifold (for instance, a sphere) 
+of dimension greater than $1$, and $\gamma\in \Omega(M, x)$ be a
+loop. Prove that $\gamma$ is homotopic to a loop that is not surjective.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Let $n>1$. Prove that $n$-dimensional sphere is simply connected.
+\end{zadacha}
+
+\begin{ukazanie}
+  Let $\gamma$ be a loop on a sphere.  Use the previous exercise and
+  find a homotopy from $\gamma$ to a loop that maps $[0,1]$ to
+  $S^n\backslash \{x\}$ where $x$ is some point. Prove that a sphere
+  without a point is homeomorphic to $\R^n$, and in particular is
+  contractible.
+\end{ukazanie}
+
+\begin{zadacha}[*] \label{_puti_iz_styagi_Zadacha_}
+Let $M$ be contractible and let
+$F:\; M\times [0,1]\arrow M$ be a homotopy from the identity map to
+the constant map $M \to y \in M$. Consider the following map
+$M\arrow \Omega(M, y, *)$, $t, m \arrow F(m, t)$ 
+($t\in[0,1]$, $m\in M$). Prove that it is continuous.
+\end{zadacha}
+
+\begin{zadacha} 
+Let $M$  be locally contractible, $x, y\in M$ be two points and
+$\gamma\in \Omega(M, x, y)$ be a path. Prove that 
+ $\gamma$ has a neighbourhood ${\mathcal U}\in \Omega(M, x, *)$,
+such that all paths $\gamma'\in {\mathcal U}$ that connect
+$x$ and $a$ are homotopic in $\Omega(M, x, a)$.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $M$ be a locally contractible topological space, and let $x \in M$
+be a point, and $\Omega(M, x, *)$ be the set of all paths that start
+at the point $x$ endowed with the compact-open topology.
+Consider the equivalence relation on 
+$\Omega(M,x, *)$: $\gamma\sim\gamma'$ if 
+$\gamma$ and $\gamma'$ connect $x$ and $y$,
+and homotopic in $\Omega(M, x, y)$. Consider
+$\Omega(M, x, *)/\sim$ with the quotient topology.
+Consider a contractible neighbourhood $U_y\ni y$,
+and let $U_y\stackrel F \arrow \Omega(U_y, y, *)$ be a mapping that
+was constructed in the exercise~\ref{_puti_iz_styagi_Zadacha_}. 
+Let $\gamma\in \Omega(M, x, y)$ be a path and $U_y \stackrel\Psi\arrow
+\Omega(M, x, *)$ be a mapping that maps $a\in U_y$ to a path
+$\gamma F(a)$ (that is, to a path that is defined on
+ $[0, 1/2]$ as $t \arrow \gamma(2t)$, and on
+ $[1/2,1]$ as $F(a, 2t-1)$.
+Prove that (for sufficiently small$U_y$) $\Psi$ composed with
+$\Omega(M, x, *)\stackrel\pi\arrow\Omega(M, x, *)/\sim$ is a
+homeomorphism  $U_y$ on some open 
+subset in $\Omega(M, x, *)/\sim$.
+\end{zadacha}
+
+\begin{ukazanie}
+  Continuity of $\Psi\circ\pi$ is obvious by construction and
+  injectivity follows from the previous exercise. In order to show
+  that $\Psi\circ\pi$ defines a homeomorphism $U_y$ on
+  $\Psi\circ\pi(U_y)$ we need to show that prove $\Psi\circ\pi$ maps
+  open sets to open sets. This is clear from the fact that the natural
+  map $\Omega(M, x, *)/\sim\arrow M$, $\gamma'\arrow \gamma'(1)$ is
+  continuous and defines a homeomorphism $U_y$ on its image.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Consider the mapping $\Omega(M, x, *)/\sim\arrow M$ that maps a path $\gamma\in \Omega(M, x, y)$
+to the point  $y=\gamma(1)$. Prove that this is a covering.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the previous exercise.
+\end{ukazanie}
+
+\begin{zadacha}[!]
+Prove that $\Omega(M, x, *)$ is contractible.
+\end{zadacha}
+
+\begin{zadacha}[*]
+Prove that $\gamma$ is a path in $\Omega(M, x, *)/\sim$.
+Prove that $\gamma$ is homotopic to an image of some path from 
+$\Omega(M, x, *)$.
+\end{zadacha}
+
+\begin{ukazanie}
+  Prove that $\gamma$ can be lifted to a path in $\Omega(M, x, *)$
+  locally and use the fact that for any point in
+  $\Omega(M, x, *)/\sim$ its preimage in $\Omega(M, x, *)$ is
+  connected.
+\end{ukazanie}
+
+\begin{zadacha}[*]
+Deduce that $\Omega(M, x, *)/\sim$ is simply connected.
+\end{zadacha}
+
+\begin{zamechanie}
+Let $(M, x)$ be a locally connected topological space
+with a marked point. The universal covering of $M$ can be thus
+identified  with the set of pairs ($y\in M$, homotopy class
+of a path  $\gamma\in \Omega(M,x,y)$).
+\end{zamechanie}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subs{Free group and wedge sum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opredelenie}
+Let $(M_1, x_1)$, $(M_2, x_2)$, $(M_3, x_3)$, $\ldots$ be a collection
+(possibly infinite) of connected topological
+spaces with  a marked point. Consider the quotient space of a
+disconnected sum of all
+$(M_\alpha, x_\alpha)$ by the equivalence relation
+$\{x_1\}\sim \{x_2\}\sim \{x_3\}\sim \dots$
+This quotient space is called a 
+{\bf wedge sum}, denoted by
+$\bigvee_\alpha (M_\alpha,x_\alpha)$.
+A wedge sum can also be denoted by
+$(M_1, x_1)\vee(M_2, x_2)\vee(M_3, x_3)\vee \dots$
+\end{opredelenie}
+
+\begin{zadacha} 
+Assume that all $M_\alpha$ are connected (arcwise connected,
+Hausdorff). Prove that the wedge sum is connected (arcwise connected,
+Hausdorff). 
+\end{zadacha}
+
+\begin{zadacha}[!]
+Assume that all $M_\alpha$ are connected and simply connected. Prove
+that their wedge sum is simply connected.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Let $\Gamma$ be a connect graph that has $n$ vertices and $n+k-1$
+  edges. Prove that its associated topological space $M_\Gamma$ is
+  homotopy equivalent to a wedge sum of $k$ circles.
+\end{zadacha}
+
+\begin{ukazanie} 
+  Assume $\Gamma$ has an edge $r$ that connects two distinct vertices
+  $v_1, v_2$. Consdireth graph $\Gamma'$ with $n-1$ vertices and
+  $n+k-2$ edges that is obtained from $\Gamma$ in the following
+  way. Remove an edge $r$ from $\Gamma$ and glue vertices $v_1$ and
+  $v_2$ together. Prove that $M_\Gamma$ and $M_{\Gamma'}$ are homotopy
+  equivalent.
+\end{ukazanie}
+
+\begin{opredelenie}
+Consider a set $\{a_1, a_2, \dots\}$ of cardinality 
+$N$ ($N$ by either finite or infinite). An {\bf $N$-ary tree} $D_N$ is
+an infinite graph that is defined in the following way.
+The verticesof $D_N$ are finite sequences of symbols $a_i$. The edges
+connect vertices that correspond to  $A_1A_2 \dots A_k$
+and $A_1A_2 \dots A_kA_{k+1}$ (all $A_i$ belong to 
+$\{a_1, a_2, \dots\}$).
+\end{opredelenie}
+
+\begin{zadacha} Prove that every vertex 
+$D_N$ has $N+1$ incoming edges.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Let $M_N$ be a topological space of an
+$N$-ary tree, with the natural metric, defined in the beginning of
+this exercise sheet.  Prove that $M_N$ is star-shaped
+(any two points can be connected by a unique geodesic).
+Prove that it is contractible.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Consider an  $2N-1$-ary tree.
+Colour its edges in $N$ colours in such a way that any vertex has  2
+incoming edges of each colour.
+Consider the wedge sum of  $N$ circles and colour
+each of the circles in a diffferent colour. Consider the mapping from
+$M_{2N-1}$ to the wedge sum of $N$ circles that maps the vertices of
+the graph to the vertices of the wedge sum and an edge of colour $a_i$
+to the circle of the same colour. Prove that this is a universal cover.
+\end{zadacha}
+
+\begin{zadacha} 
+  Let $\{a_1, a_2, \dots\}$ be a set of cardinality $N$, and let
+  ${\mathcal W}$ be the set of finite sequences (``words'') of symbols
+  $a_i$, $a_j^{-1}$, such that subsequences of the form $a_ia_i^{-1}$
+  and $a_i^{-1}a_i$ never occur. A sequence of length 0 is denoted
+  $e$. We multiply words by juxtaposing them and striking out all
+  $a_ia_i^{-1}$, $a_i^{-1}a_i$ that might occur.  Prove that
+  ${\mathcal W}$ forms a group.
+\end{zadacha}
+
+\begin{opredelenie}
+This group is called the {\bf free group generated by 
+ $\{a_1, a_2, \dots\}$} and is denoted $F_N$.
+\end{opredelenie}
+
+\begin{zadacha}
+Prove that $F_1$ is isomorphic to $\Z$.
+\end{zadacha}
+
+\begin{zadacha}[!]
+  Let $G$ be a group and $\{g_1, g_2, \dots \}$ be a collection of
+  elements from $G$, labelled $\{a_1, a_2, \dots\}$.  Prove that there
+  exists a unique homomorphism $F_N\arrow G$ that maps $a_i$ to $g_i$.
+\end{zadacha}
+
+\begin{zadacha}[!] Find a free action  of $F_N$ 
+on the topological space $M_{2N-1}$ of an $2N-1$-ary tree that is
+transitive on vertices.
+\end{zadacha}
+
+\begin{zadacha}[!] Prove that
+$M_{2N-1}/F_N$ is a wedge sum of $N$ circles and that the fundamental
+group of the wedge sum is free.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Prove that any (possibly infinite) graph is homotopy equivalent to a
+wedge sum of circles.
+\end{zadacha}
+
+\begin{zadacha}[!]
+Deduce that any subgroup of a free group is free.
+\end{zadacha}
+
+\begin{ukazanie}
+Use the Galois theory of coverings.
+\end{ukazanie}
+
+\begin{zadacha}[*] 
+  Let $G_1,G_2,\dots$ be a set of groups. Consider the set
+  ${\mathcal W}$ of finite sequences of non-identity elements from
+  different $G_i$ such that elements of the same group never occur
+  next to each other. Given any sequence $A$
+  of elements from $G_i$ one can obtain an element ${\mathcal W}$
+  the following way. If $A$ has to successive elements from $G_i$,
+  we multiply them and replace these elements with their product. If 
+   $A$ встречается an identity element of one of the groups we strike
+   it out. Repeat this procedure as many times as needed in order to
+   get an element from ${\mathcal W}$. The elements of ${\mathcal W}$
+  can be multiplied by juxtaposing words and applying the procedure above.
+  Prove that this defines a group.
+\end{zadacha}
+
+\begin{opredelenie}
+  This group is called the {\bf free product of groups $G_1$, $G_2$,
+    $\dots$}.
+\end{opredelenie}
+
+\begin{zadacha} Prove that the free group on 
+ $N$ generators is the free product of  $N$ copies of $\Z$.
+\end{zadacha}
+
+\begin{zadacha} Prove that a free product of free groups is free. 
+\end{zadacha}
+
+\begin{zadacha}[*]
+Let $(M_1, x_1), (M_2, x_2), (M_3, x_3), \dots$ be a collection of
+connected topological spaces with a marked point. Prove that $\pi_1(\bigvee_\alpha(M_\alpha,x_\alpha))$
+is isomorphic to a free product of groups $\pi_1(M_1, x_1),
+\pi_1(M_2, x_2), \pi_1(M_3, x_3), \dots$.
+\end{zadacha}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: koi8-r
+%%% ispell-local-dictionary: "british"
+%%% TeX-master: t
+%%% End: 

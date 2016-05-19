@@ -114,8 +114,11 @@ Geometry 5
 шар с центром в u --- ball with a center u
 естественная топология (на R^n) -- natural topology
 
+линейно связно --- arcwise connected 
+
 %%% Local Variables: 
 %%% mode: latex
 %%% coding: utf-8
 %%% End:
+
 
