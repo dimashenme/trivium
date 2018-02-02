@@ -1,5 +1,5 @@
 
-This is an English translation of a of course that was taught by Misha
+This is an English translation of a course that was taught by Misha
 Verbitsky and Dmitry Kaledin at the Independent University of Moscow
 in the fall of 2004 (also known under the name “Trivium”). The course
 was targeted for first-year students, so the prerequisites include
