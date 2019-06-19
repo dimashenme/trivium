@@ -1,0 +1,27 @@
+ALGEBRA 1
+
+  -- 1.32: ``Fermat's smaller theorem'' --> ``Fermat's little theorem''
+  (https://en.wikipedia.org/wiki/Fermat's_little_theorem)
+
+  -- 1.6: ``Prove that every permutation is a product of transpositions''
+  Почему every? В начале листка даётся определение перестановки как конечного,
+  так и бесконечного множества.
+
+  -- 1.7, Hint: ``for all i>j'' --> ``for all i<j''.
+
+  -- 1.7: ``product of even number'' --> ``product of odd number''.
+
+  -- определение порядка элемента: ``Let n be a natural number...''. Лучше,
+  наверное, positive integer, а не natural.
+
+  -- 1.20.k: какое здесь умножение?
+
+  -- 1.21.k: то же самое, что и в 1.20.k.
+
+ALGEBRA 2
+
+  -- 2.2: ``Describe all the unities'' может всё-таки units? 
+
+GEOMETRY 1
+
+  -- Remark после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
