@@ -22,8 +22,11 @@ ALGEBRA 2
 
   -- 2.2: ``Describe all the unities'' может всё-таки units? 
 
-  -- Def. 2.4: ``for all z' which divides x'' --> ``for all z' which divides x and y''
+  -- Def. 2.4: ``...and for all z' which divides x...'' --> ``...and for all z'
+  which divides x and y...''
 
 GEOMETRY 1
 
-  -- Remark после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
+  -- Hint после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
+
+  -- Remark после 1.29: inf и sup поменять местами?
