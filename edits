@@ -1,37 +1,37 @@
 ALGEBRA 1
 
-  -- 1.32: ``Fermat's smaller theorem'' --> ``Fermat's little theorem''
-  (https://en.wikipedia.org/wiki/Fermat's_little_theorem)
+  • 1.32: ``Fermat's smaller theorem'' → ``Fermat's little theorem''
+    (https://en.wikipedia.org/wiki/Fermat's_little_theorem)
 
-  -- 1.6: ``Prove that every permutation is a product of transpositions''
-  Почему every? В начале листка даётся определение перестановки как конечного,
-  так и бесконечного множества.
+  • 1.6: ``Prove that every permutation is a product of transpositions''
+    Почему every? В начале листка даётся определение перестановки как
+    конечного, так и бесконечного множества.
 
-  -- 1.7, Hint: ``for all i>j'' --> ``for all i<j''.
+  • 1.7, Hint: ``for all i>j'' → ``for all i<j''.
 
-  -- 1.7: ``product of even number'' --> ``product of odd number''.
+  • 1.7: ``product of even number'' → ``product of odd number''.
 
-  -- определение порядка элемента: ``Let n be a natural number...''. Лучше,
-  наверное, positive integer, а не natural.
+  • определение порядка элемента: ``Let n be a natural number...''. Лучше,
+    наверное, positive integer, а не natural.
 
-  -- 1.20.k: какое здесь умножение?
+  • 1.20.k: какое здесь умножение?
 
-  -- 1.21.k: то же самое, что и в 1.20.k.
+  • 1.21.k: то же самое, что и в 1.20.k.
 
 ALGEBRA 2
 
-  -- 2.2: ``Describe all the unities'' может всё-таки units? 
+  • 2.2: ``Describe all the unities'' может всё-таки units? 
 
-  -- Def. 2.4: ``...and for all z' which divides x...'' --> ``...and for all z'
-  which divides x and y...''
+  • Def. 2.4: ``...and for all z' which divides x...'' → ``...and for all z'
+    which divides x and y...''
 
 ALGEBRA 3
 
-  -- 3.5: не отображается буква, обозначающая надполе. В оригинальных .ps
-  отображается как K, в исходниках записано $ë$.
+  • 3.5: не отображается буква, обозначающая надполе. В оригинальных .ps
+    отображается как K, в исходниках записано $ë$.
 
 GEOMETRY 1
 
-  -- Hint после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
+  • Hint после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
 
-  -- Remark после 1.29: inf и sup поменять местами (или above и below)?
+  • Remark после 1.29: inf и sup поменять местами (или above и below)?
