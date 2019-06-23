@@ -25,8 +25,13 @@ ALGEBRA 2
   -- Def. 2.4: ``...and for all z' which divides x...'' --> ``...and for all z'
   which divides x and y...''
 
+ALGEBRA 3
+
+  -- 3.5: не отображается буква, обозначающая надполе. В оригинальных .ps
+  отображается как K, в исходниках записано $ë$.
+
 GEOMETRY 1
 
   -- Hint после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
 
-  -- Remark после 1.29: inf и sup поменять местами?
+  -- Remark после 1.29: inf и sup поменять местами (или above и below)?
