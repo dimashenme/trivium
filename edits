@@ -19,7 +19,11 @@ ALGEBRA 1
   • 1.21.k: то же самое, что и в 1.20.k.
 
   • 1.41: ``That means in particular the this...'' → ``That means in particular
-    that this...''
+  that this...''
+
+  • 1.47: ``\cos(\phi + \psi) = ...'' → ``\sin(\phi + \psi) = ...''
+
+  • 1.53: что значит ``вычислить группу автоморфизмов''? почему ``вычислить''?
 
 ALGEBRA 2
 
