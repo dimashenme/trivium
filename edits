@@ -49,7 +49,7 @@ ALGEBRA 2
 
 ALGEBRA 3
 
-  • ``[Ll]inear hull'' --> ``[Ll]inear span'' заменить везде.
+  • ``[Ll]inear hull'' → ``[Ll]inear span'' заменить везде.
 
   • Ex. 3.5: Не отображается буква, обозначающая надполе. В оригинальных .ps
     отображается как K, в исходниках записано $ë$.
@@ -64,7 +64,7 @@ ALGEBRA 3
 
   • Ex. 3.14: Путаница с \Phi и \Psi? 
 
-  • Ex. 3.22: ``where \lambda_1 are arbitrary...'' --> ``where \lambda_i are
+  • Ex. 3.22: ``where \lambda_1 are arbitrary...'' → ``where \lambda_i are
     arbitrary...''.
 
 GEOMETRY 1
