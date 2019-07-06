@@ -11,7 +11,7 @@ ALGEBRA 1
 
   • 1.7: ``product of even number'' → ``product of odd number''.
 
-  • определение порядка элемента: ``Let n be a natural number...''. Лучше,
+  • Определение порядка элемента: ``Let n be a natural number...''. Лучше,
     наверное, positive integer, а не natural.
 
   • 1.20.k: какое здесь умножение?
@@ -19,23 +19,53 @@ ALGEBRA 1
   • 1.21.k: то же самое, что и в 1.20.k.
 
   • 1.41: ``That means in particular the this...'' → ``That means in particular
-  that this...''
+    that this...''
 
   • 1.47: ``\cos(\phi + \psi) = ...'' → ``\sin(\phi + \psi) = ...''
 
-  • 1.53: что значит ``вычислить группу автоморфизмов''? почему ``вычислить''?
+  • 1.53: Что значит ``вычислить группу автоморфизмов''? Почему ``вычислить''?
 
 ALGEBRA 2
 
-  • 2.2: ``Describe all the unities'' может всё-таки units? 
+  • Определение простого и дальнейшее использование этого слова неверное.
+    Определяется и используется в дальнейшем фактически понятие неприводимого.
+
+  • Ex. 2.2: ``Describe all the unities'' может всё-таки units? 
 
   • Def. 2.4: ``...and for all z' which divides x...'' → ``...and for all z'
     which divides x and y...''
 
+  • Ex. 2.13: ``GCD(y,z)'' → ``GCD(x,y)''
+
+  • Ex. 2.16: ``is divisible by p^\alpha for some natural number \alpha'' →
+    ``is divisible by p^\alpha for some positive integer \alpha''
+
+  • Ex. 2.18: ``factoriazation ring'' → ``factorization ring''
+
+  • Ex. 2.25: Какая-то не очень ясная формулировка. Подразумевается, что нужно
+    доказать то же, что и в предыдущей задаче?
+
+  • Ex. 2.40: Это подсказка к 2.39? Перепутаны слова Exercise и Hint?
+
 ALGEBRA 3
 
-  • 3.5: не отображается буква, обозначающая надполе. В оригинальных .ps
+  • ``[Ll]inear hull'' --> ``[Ll]inear span'' заменить везде.
+
+  • Ex. 3.5: Не отображается буква, обозначающая надполе. В оригинальных .ps
     отображается как K, в исходниках записано $ë$.
+
+  • Ex. 3.6.b: Что значат слова ``each element of a collection corresponding to
+    precisely one element of S''? Допускается ли тогда, что в одной коллекции
+    есть два одинаковых a из поля k? т.е. a_s = a_{s'} для некоторых различных
+    s, s' \in S и a \in k. По сути это оно:
+    https://en.wikipedia.org/wiki/Free_module#Another_construction но без слов
+    типа ``corresponding to precisely one''. Эти слова должны говорить о том,
+    что элементы этого в.п. суть функции или это ещё и инъекции?
+
+  • Ex. 3.14: Путаница с \Phi и \Psi? 
+
+  • Ex. 3.22: ``where \lambda_1 are arbitrary...'' --> ``where \lambda_i are
+    arbitrary...''.
 
 GEOMETRY 1
 
