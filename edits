@@ -1,75 +1,76 @@
 ALGEBRA 1
 
-  • 1.32: ``Fermat's smaller theorem'' → ``Fermat's little theorem''
-    (https://en.wikipedia.org/wiki/Fermat's_little_theorem)
+  • Exercise 1.6: ``Prove that every permutation is a product of
+    transpositions'' Почему every? В начале листка даётся определение
+    перестановки как конечного, так и бесконечного множества.
 
-  • 1.6: ``Prove that every permutation is a product of transpositions''
-    Почему every? В начале листка даётся определение перестановки как
-    конечного, так и бесконечного множества.
+  • Hint 1.7: ``for all i>j'' → ``for all i<j''.
 
-  • 1.7, Hint: ``for all i>j'' → ``for all i<j''.
-
-  • 1.7: ``product of even number'' → ``product of odd number''.
+  • Exercise 1.7: ``product of even number'' → ``product of odd number''.
 
   • Определение порядка элемента: ``Let n be a natural number...''. Лучше,
     наверное, positive integer, а не natural.
 
-  • 1.20.k: какое здесь умножение?
+  • Exercise 1.20.k: какое здесь умножение?
 
-  • 1.21.k: то же самое, что и в 1.20.k.
+  • Exercise 1.21.k: то же самое, что и в 1.20.k.
 
-  • 1.41: ``That means in particular the this...'' → ``That means in particular
-    that this...''
+  • Exercise 1.32: ``Fermat's smaller theorem'' → ``Fermat's little theorem''
+    (https://en.wikipedia.org/wiki/Fermat's_little_theorem)
 
-  • 1.47: ``\cos(\phi + \psi) = ...'' → ``\sin(\phi + \psi) = ...''
+  • Exercise 1.41: ``That means in particular the this...'' → ``That means in
+    particular that this...''
 
-  • 1.53: Что значит ``вычислить группу автоморфизмов''? Почему ``вычислить''?
+  • Exercise 1.47: ``\cos(\phi + \psi) = ...'' → ``\sin(\phi + \psi) = ...''
+
+  • Exercise 1.53: Что значит ``вычислить группу автоморфизмов''? Почему
+    ``вычислить''?
 
 ALGEBRA 2
 
   • Определение простого и дальнейшее использование этого слова неверное.
     Определяется и используется в дальнейшем фактически понятие неприводимого.
 
-  • Ex. 2.2: ``Describe all the unities'' может всё-таки units? 
+  • Exercise 2.2: ``Describe all the unities'' может всё-таки units? 
 
-  • Def. 2.4: ``...and for all z' which divides x...'' → ``...and for all z'
-    which divides x and y...''
+  • Definition 2.4: ``...and for all z' which divides x...'' → ``...and for all
+    z' which divides x and y...''
 
-  • Ex. 2.13: ``GCD(y,z)'' → ``GCD(x,y)''
+  • Exercise 2.13: ``GCD(y,z)'' → ``GCD(x,y)''
 
-  • Ex. 2.16: ``is divisible by p^\alpha for some natural number \alpha'' →
-    ``is divisible by p^\alpha for some positive integer \alpha''
+  • Exercise 2.16: ``is divisible by p^\alpha for some natural number \alpha''
+    → ``is divisible by p^\alpha for some positive integer \alpha''
 
-  • Ex. 2.18: ``factoriazation ring'' → ``factorization ring''
+  • Exercise 2.18: ``factoriazation ring'' → ``factorization ring''
 
-  • Ex. 2.25: Какая-то не очень ясная формулировка. Подразумевается, что нужно
-    доказать то же, что и в предыдущей задаче?
+  • Exercise 2.25: Какая-то не очень ясная формулировка. Подразумевается, что
+    нужно доказать то же, что и в предыдущей задаче?
 
-  • Ex. 2.40: Это подсказка к 2.39? Перепутаны слова Exercise и Hint?
+  • Exercise 2.40: Это подсказка к 2.39? Перепутаны слова Exercise и Hint?
 
 ALGEBRA 3
 
   • ``[Ll]inear hull'' → ``[Ll]inear span'' заменить везде.
 
-  • Ex. 3.5: Не отображается буква, обозначающая надполе. В оригинальных .ps
+  • Exercise 3.5: Не отображается буква, обозначающая надполе. В оригинальных .ps
     отображается как K, в исходниках записано $ë$.
 
-  • Ex. 3.6.b: Что значат слова ``each element of a collection corresponding to
-    precisely one element of S''? Допускается ли тогда, что в одной коллекции
-    есть два одинаковых a из поля k? т.е. a_s = a_{s'} для некоторых различных
-    s, s' \in S и a \in k. По сути это оно:
+  • Exercise 3.6.b: Что значат слова ``each element of a collection
+    corresponding to precisely one element of S''? Допускается ли тогда, что в
+    одной коллекции есть два одинаковых a из поля k? т.е. a_s = a_{s'} для
+    некоторых различных s, s' \in S и a \in k. По сути это оно:
     https://en.wikipedia.org/wiki/Free_module#Another_construction но без слов
     типа ``corresponding to precisely one''. Эти слова должны говорить о том,
     что элементы этого в.п. суть функции или это ещё и инъекции?
 
-  • Ex. 3.14: Путаница с \Phi и \Psi? 
+  • Exercise 3.14: Путаница с \Phi и \Psi? 
 
-  • Ex. 3.22: ``where \lambda_1 are arbitrary...'' → ``where \lambda_i are
+  • Exercise 3.22: ``where \lambda_1 are arbitrary...'' → ``where \lambda_i are
     arbitrary...''.
 
 GEOMETRY 1
 
-  • 1.18, Hint: ``Prove that there exists a closed interval [x,y] which does
+  • Hint 1.18: ``Prove that there exists a closed interval [x,y] which does
     not contain 0 s.t. almost all {a_i} are contained in [x,y]....''. Не
     сказано ли в задаче 1.18 то же самое в условии ``Let {a_i} be ...''? Также
     неясно, какое число тут имеется в виду ``... of a length
