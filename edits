@@ -36,6 +36,9 @@ ALGEBRA 2
   • Definition 2.4: ``...and for all z' which divides x...'' → ``...and for all
     z' which divides x and y...''
 
+  • Exercise 2.4: ``Fix a positive integer n. Consider ...'' зачем здесь первое
+    предложение про n? Дальше n никак не упоминается.
+
   • Exercise 2.13: ``GCD(y,z)'' → ``GCD(x,y)''
 
   • Exercise 2.16: ``is divisible by p^\alpha for some natural number \alpha''
@@ -44,7 +47,11 @@ ALGEBRA 2
   • Exercise 2.18: ``factoriazation ring'' → ``factorization ring''
 
   • Exercise 2.25: Какая-то не очень ясная формулировка. Подразумевается, что
-    нужно доказать то же, что и в предыдущей задаче?
+    нужно доказать то же, что и в предыдущей задаче? В версии на русском ясно
+    написано.
+
+  • Exercise 2.26: ``Prove that an equation x\cdot y = 0 has a solution...'' →
+    ``Prove that an equation x\cdot y = 0 has no solutions...''
 
   • Exercise 2.40: Это подсказка к 2.39? Перепутаны слова Exercise и Hint?
 
