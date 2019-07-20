@@ -1,68 +1,71 @@
 ALGEBRA 1
 
-  • Exercise 1.6: ``Prove that every permutation is a product of
+  * Exercise 1.6: ``Prove that every permutation is a product of
     transpositions'' Почему every? В начале листка даётся определение
     перестановки как конечного, так и бесконечного множества.
 
-  • Hint 1.7: ``for all i>j'' → ``for all i<j''.
+  * Hint 1.7: ``for all i>j'' -> ``for all i<j''.
 
-  • Exercise 1.7: ``product of even number'' → ``product of odd number''.
+  * Exercise 1.7: ``product of even number'' -> ``product of odd number''.
 
-  • Определение порядка элемента: ``Let n be a natural number...''. Лучше,
+  * Определение порядка элемента: ``Let n be a natural number...''. Лучше,
     наверное, positive integer, а не natural.
 
-  • Exercise 1.20.k: какое здесь умножение?
+  * Exercise 1.20.k: какое здесь умножение?
 
-  • Exercise 1.21.k: то же самое, что и в 1.20.k.
+  * Exercise 1.21.k: то же самое, что и в 1.20.k.
 
-  • Exercise 1.32: ``Fermat's smaller theorem'' → ``Fermat's little theorem''
+  * Exercise 1.32: ``Fermat's smaller theorem'' -> ``Fermat's little theorem''
     (https://en.wikipedia.org/wiki/Fermat's_little_theorem)
 
-  • Exercise 1.41: ``That means in particular the this...'' → ``That means in
+  * Exercise 1.41: ``That means in particular the this...'' -> ``That means in
     particular that this...''
 
-  • Exercise 1.47: ``\cos(\phi + \psi) = ...'' → ``\sin(\phi + \psi) = ...''
+  * Exercise 1.47: ``\cos(\phi + \psi) = ...'' -> ``\sin(\phi + \psi) = ...''
 
-  • Exercise 1.53: Что значит ``вычислить группу автоморфизмов''? Почему
+  * Exercise 1.53: Что значит ``вычислить группу автоморфизмов''? Почему
     ``вычислить''?
 
 ALGEBRA 2
 
-  • Определение простого и дальнейшее использование этого слова неверное.
+  * Определение простого и дальнейшее использование этого слова неверное.
     Определяется и используется в дальнейшем фактически понятие неприводимого.
 
-  • Exercise 2.2: ``Describe all the unities'' может всё-таки units? 
+  * Exercise 2.2: ``Describe all the unities'' может всё-таки units? 
 
-  • Definition 2.4: ``...and for all z' which divides x...'' → ``...and for all
+  * Definition 2.4: ``...and for all z' which divides x...'' -> ``...and for all
     z' which divides x and y...''
 
-  • Exercise 2.4: ``Fix a positive integer n. Consider ...'' зачем здесь первое
+  * Exercise 2.4: ``Fix a positive integer n. Consider ...'' зачем здесь первое
     предложение про n? Дальше n никак не упоминается.
 
-  • Exercise 2.13: ``GCD(y,z)'' → ``GCD(x,y)''
+  * Exercise 2.13: ``GCD(y,z)'' -> ``GCD(x,y)''
 
-  • Exercise 2.16: ``is divisible by p^\alpha for some natural number \alpha''
-    → ``is divisible by p^\alpha for some positive integer \alpha''
+  * Exercise 2.16: ``is divisible by p^\alpha for some natural number \alpha''
+    -> ``is divisible by p^\alpha for some positive integer \alpha''
 
-  • Exercise 2.18: ``factoriazation ring'' → ``factorization ring''
+  * Exercise 2.18: ``factoriazation ring'' -> ``factorization ring''
 
-  • Exercise 2.25: Какая-то не очень ясная формулировка. Подразумевается, что
+  * Exercise 2.25: Какая-то не очень ясная формулировка. Подразумевается, что
     нужно доказать то же, что и в предыдущей задаче? В версии на русском ясно
     написано.
 
-  • Exercise 2.26: ``Prove that an equation x\cdot y = 0 has a solution...'' →
+  * Exercise 2.26: ``Prove that an equation x\cdot y = 0 has a solution...'' ->
     ``Prove that an equation x\cdot y = 0 has no solutions...''
 
-  • Exercise 2.40: Это подсказка к 2.39? Перепутаны слова Exercise и Hint?
+  * Hint после Exercise 2.35: ``Prove that p cannot be represented as a sum of
+    squares.'' может стоить добавить, что a и b должны быть ненулевыми?
+
+  * Exercise 2.40: Это подсказка к 2.39? Перепутаны слова Exercise и Hint?
 
 ALGEBRA 3
 
-  • ``[Ll]inear hull'' → ``[Ll]inear span'' заменить везде.
+  * ``[Ll]inear hull'' -> ``[Ll]inear span'' заменить везде.
 
-  • Exercise 3.5: Не отображается буква, обозначающая надполе. В оригинальных .ps
+  * Exercise 3.5: Не отображается буква, обозначающая надполе. В оригинальных .ps
     отображается как K, в исходниках записано $ë$.
 
-  • Exercise 3.6.b: Что значат слова ``each element of a collection
+  * Exercise 3.6.b: Что значат слова ``each element of a collection
     corresponding to precisely one element of S''? Допускается ли тогда, что в
     одной коллекции есть два одинаковых a из поля k? т.е. a_s = a_{s'} для
     некоторых различных s, s' \in S и a \in k. По сути это оно:
@@ -70,19 +73,25 @@ ALGEBRA 3
     типа ``corresponding to precisely one''. Эти слова должны говорить о том,
     что элементы этого в.п. суть функции или это ещё и инъекции?
 
-  • Exercise 3.14: Путаница с \Phi и \Psi? 
+  * Exercise 3.14: ``P \arrow \Phi_P'' -> ``P \arrow \Psi_P''.
 
-  • Exercise 3.22: ``where \lambda_1 are arbitrary...'' → ``where \lambda_i are
+  * Exercise 3.22: ``where \lambda_1 are arbitrary...'' -> ``where \lambda_i are
     arbitrary...''.
 
 GEOMETRY 1
 
-  • Hint 1.18: ``Prove that there exists a closed interval [x,y] which does
+  * ``Dedekind section'' -> ``Dedekind cut'' везде.
+
+  * Hint 1.18: ``Prove that there exists a closed interval [x,y] which does
     not contain 0 s.t. almost all {a_i} are contained in [x,y]....''. Не
     сказано ли в задаче 1.18 то же самое в условии ``Let {a_i} be ...''? Также
     неясно, какое число тут имеется в виду ``... of a length
     \epsilon(min(|x|,|y|)^{-1}''. 
 
-  • Hint после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
+  * Hint после 1.28: ``Prove that inf A = R''. Почему inf, а не sup?
 
-  • Remark после 1.29: inf и sup поменять местами (или above и below)?
+  * Remark после 1.29: inf и sup поменять местами (или above и below)?
+
+GEOMETRY 2
+
+  * Exercise 2.3: ``Dedekind section'' -> ``Dedekind cut''.
