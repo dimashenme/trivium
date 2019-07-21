@@ -96,4 +96,4 @@ GEOMETRY 2
 
   * Exercise 2.3: ``Dedekind section'' -> ``Dedekind cut''.
 
-  * Exercise 2.14: ``b_i = inf_{i\leq k} a_i'' нет ли здесь опечатки?
+  * Exercise 2.14: ``b_i = inf_{i\geq k} a_i'' нет ли здесь опечатки?
