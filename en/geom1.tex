@@ -212,7 +212,7 @@ mapping from a set $\Q$ of all rational numbers into $\R$.
   the structure of a field.
 \end{zadacha}
 
-\subs{Dedekind sections}
+\subs{Dedekind cuts}
 
 The main disadvantage of defining real numbers using Cauchy sequences
 is that there are too many Cauchy sequences and the definition appears
@@ -224,8 +224,8 @@ proposed by Dedekind.
 \begin{opredelenie}
 Let $R \subset \Q$ be a subset of a set of rational numbers which is
 non-empty and does not equal to the whole $\Q$. One says said that $R$ is
-a {\bf Dedekind section} if $a \in R$ and $b < a$ entails that $b \in
-R$. Dedekind section $R$ is called {\bf closed} if there exists a
+a {\bf Dedekind cut} if $a \in R$ and $b < a$ entails that $b \in
+R$. Dedekind cut$R$ is called {\bf closed} if there exists a
 rational number $a$ such that $b \in R$ as soon as $b \leq
 a$. Otherwise $R$ is called {\bf open}.
 \end{opredelenie}
@@ -234,9 +234,9 @@ Let $\{a_i\}$ be a Cauchy sequence. Let us denote the set of all
 rational numbers $b$ such that $\{b\} < \{a_i\}$ by $R_{\{a_i\}}$.
 
 \begin{zadacha}
-Prove that $R_{\{a_i\}}$ is a Dedekind section (i.e.\ if $b \in
+Prove that $R_{\{a_i\}}$ is a Dedekind cut (i.e.\ if $b \in
 R_{\{a_i\}}$ and $c < b$ then $c \in R_{\{a_i\}}$). Prove that this
-section is open.
+cut is open.
 \end{zadacha}
 
 \begin{zadacha} Let $\{ a_i\}$ and $\{b_i\}$ be equivalent Cauchy
@@ -265,7 +265,7 @@ Use the problem~\ref{order} (as well as the preceding problems).
 \end{ukazanie}
 
 \begin{zadacha}[*]
-Let $R \subset \Q$ be an open Dedekind section. Prove that $R
+Let $R \subset \Q$ be an open Dedekind cut. Prove that $R
 = R_{\{a_i\}}$ holds for some Cauchy sequence $\{a_i\}$.
 \end{zadacha}
 
@@ -277,12 +277,12 @@ as $a_i$.
 \end{ukazanie} 
 
 We observe that the set of equivalence classes of Cauchy sequences is
-the same thing as the set of open Dedekind sections. That is why the
-real numbers can be defined as Dedekind sections. In what follows you
+the same thing as the set of open Dedekind cuts. That is why the
+real numbers can be defined as Dedekind cuts. In what follows you
 can use the definition that suits you best.
 
 \begin{zadacha}[**]
-Define arithmetic operations on $\R$ explicitly on Dedekind sections
+Define arithmetic operations on $\R$ explicitly on Dedekind cuts
 without using Cauchy sequences. Check that the axioms of a field hold.
 \end{zadacha}
 
@@ -321,9 +321,9 @@ $c$ there are elements of $a$.
  exists.
 \end{zadacha}
 
-\begin{ukazanie} Consider every $a\in A$ as Dedekind sections,
+\begin{ukazanie} Consider every $a\in A$ as Dedekind cuts,
 i.e.\ subsets of $\Q$. Consider their union $R$; since every $a \leq C$
-this will be Dedekind section too. Prove that $\inf A = R$.
+this will be Dedekind cut too. Prove that $\sup A = R$.
 \end{ukazanie}
 
 \begin{zadacha}[!] Let $A \subset \R$ a set bounded below.
@@ -331,7 +331,7 @@ Prove that $\inf A$ exists.
 \end{zadacha}
 
 \begin{zamechanie} Let $A\subset \R$ is not bounded above (below).
-It is denoted by $\inf A = -\infty$ ($\sup A = \infty$).
+It is denoted by $\sup A = -\infty$ ($\inf A = \infty$).
 \end{zamechanie}
 
 \end{document}
