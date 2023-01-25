@@ -2,7 +2,7 @@
 This is an English translation of a course that was taught by Misha
 Verbitsky and Dmitry Kaledin at the Independent University of Moscow
 in the fall of 2004 (also known under the name “Trivium”). The course
-was targeted for first-year students, so the prerequisites include
+was targeted at first-year students, and the prerequisites include
 only elementary high-school mathematics. It covers a broad range of
 material that the authors believe is fundamental for one's
 mathematical education, and culminates in algebraic Galois theory and
