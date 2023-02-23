@@ -91,16 +91,16 @@ Let $\sigma = (123)$, $\tau=(34)$. Calculate $\tau \circ \sigma \circ
 \end{zadacha}
 
 \begin{zadacha}
-Prove that every permutation is a product of transpositions.
+Prove that permutation (of a finite set) is a product of transpositions.
 \end{zadacha}
 
-\begin{zadacha}[*] Is it possible that a product of even number of
+\begin{zadacha}[*] Is it possible that a product of odd number of
   transpositions be an identity permutation?
 \end{zadacha}
 
 \begin{ukazanie} What happens to a polynomial 
 $(x_1-x_2)(x_1-x_3)\dots(x_1-x_n)(x_2-x_3)\dots$ (a product of $(x_i -
-x_j)$ for all $i > j$) when  $x_i$ and $x_j$ are permuted?
+x_j)$ for all $i < j$) when  $x_i$ and $x_j$ are permuted?
 \end{ukazanie}
 
 A permutation group $S(A)$ is endowed with the following structure:
@@ -223,7 +223,7 @@ sequence $g,g^2,g^3,\dots$ is periodic? Is it true if  $G$ is a finite
 group?
 \end{zadacha}
 
-Let $n$ be a natural number. One says that $g \in G$ is an {\bf
+Let $n$ be a positive integer. One says that $g \in G$ is an {\bf
 element of order $n$} in a group $G$ if $g^n = 1_G$ but $g^k \neq 1_G$
 for any $k < n$.
 
@@ -484,7 +484,7 @@ $p$ is a prime number.
 \end{ukazanie}
 
 \begin{zadacha}[*]
-Deduce Fermat's smaller theorem from that: $x^p$ is equal to $x$
+Deduce Fermat's little theorem from that: $x^p$ is equal to $x$
 modulo $p$ for any integer number $x$.
 \end{zadacha}
 
@@ -566,12 +566,11 @@ $z\bar z$ is real (it means that in the representation of a complex
   number $(x,y)$ the component $y$ is zero).
 \end{zadacha}
 
-\begin{zadacha} Consider a complex number $z:=a+b\1$. Prove that
-$z\bar z = a^2 + b^2$. That means in particular the this number is
-  always nonnegative and equals zero only if $z = 0$. $z\bar z$ is
-  often written down as $|z|^2$ since the length of a vector $(a,b)$
-  on a plane equals $\sqrt{a^2 + b^2}$ (the distance between $z$ до
-  $0$, $|z|$ is called a modulus of $z$).
+\begin{zadacha} Consider a complex number $z:=a+b\1$. Prove that $z\bar z = a^2
++ b^2$. That means in particular that this number is always nonnegative and
+equals zero only if $z = 0$. $z\bar z$ is often written down as $|z|^2$ since
+the length of a vector $(a,b)$ on a plane equals $\sqrt{a^2 + b^2}$ (the
+distance between $z$ and $0$, $|z|$ is called a modulus of $z$).
 \end{zadacha}
 
 \begin{zadacha} 
@@ -607,7 +606,7 @@ The angle $\phi$ is called an {\bf argument} of complex number $z$.
 \end{zamechanie}
 
 \begin{zadacha}[!]
-Prove the formula $\cos (\phi +\psi)= \cos\phi \sin \psi +
+Prove the formula $\sin (\phi +\psi)= \cos\phi \sin \psi +
 \sin\phi \cos \psi$.
 \end{zadacha}
 
