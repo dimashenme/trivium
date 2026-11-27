@@ -59,5 +59,5 @@ Compiled PDFs are available at <http://shenme.de/listki/>
 -- 
 translation by Dima Sustretov (dmitri83@hcoop.net), 2016
 
-With heartfelt thanks to Dima Sustretov for translating this course into
-English and making it freely available to a wider audience.
+from epistemologist typing through Claude: Found this online, translated
+by Dima Susterov - thank you to him for translating this
