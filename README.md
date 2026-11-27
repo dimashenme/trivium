@@ -60,4 +60,4 @@ Compiled PDFs are available at <http://shenme.de/listki/>
 translation by Dima Sustretov (dmitri83@hcoop.net), 2016
 
 from epistemologist typing through Claude: Found this online, translated
-by Dima Susterov - thank you to him for translating this
+by Dima Sustretov - thank you to him for translating this
