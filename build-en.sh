@@ -47,3 +47,12 @@ for f in alg1 alg2 alg3 alg4 alg5 alg6 alg7 alg8 alg9 alg10 alg11 alg12 \
 done
 echo "BUILT (${#ok[@]}): ${ok[*]}"
 echo "FAILED (${#fail[@]}): ${fail[*]}"
+
+# Merge every chapter into a single PDF in the repo root, in course order.
+merged=(); for n in $(seq 1 12); do merged+=("$OUT/alg$n.pdf"); done
+for n in $(seq 1 12); do merged+=("$OUT/geom$n.pdf"); done
+if printf '%s\n' "${merged[@]}" | xargs -I{} test -f {}; then
+  pdfunite "${merged[@]}" "$ROOT/trivium-en.pdf" 2>/dev/null \
+    || gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$ROOT/trivium-en.pdf" "${merged[@]}"
+  echo "MERGED: trivium-en.pdf"
+fi
